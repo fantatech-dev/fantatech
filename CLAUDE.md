@@ -446,6 +446,10 @@ animation). Their UI text is `ft_ui_strings` (`i18n.c`), which `ftconv i18n-temp
   where it was. Save is on whenever a game is going: at a command menu it saves there (resuming
   after its `%cmnd.wait`, like the system verb's), elsewhere the last save point (see above);
   loading and settings work anywhere, the title screen included. The panels' back returns to it.
+  Esc, Backspace or a right-click backs out, and the quit prompt starts on メニューに戻る.
+- **Held keys** (`ft_runtime_event`): only cursor keys auto-repeat. A held Enter, Space or Esc acts
+  once, or its repeats would pick through whatever menu comes up next (the quit prompt, a story
+  choice).
 - **Intro movie** (`game/movie.c`): start.txt's `movieplay.load` / `movieplay.wait` play
   `movie0508_cinepak.avi` centred on black at the screen width (×1024/740, like event art; where the
   original draws it isn't traced). Video follows `game_ms()`, the audio is decoded whole at load and

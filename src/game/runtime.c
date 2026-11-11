@@ -309,6 +309,7 @@ struct ft_runtime {
     int face_formation;
 
     SDL_Texture *text;
+    const ft_sline *line;       /* the dialogue line it shows, redrawn on a language change */
     float text_w, text_h, text_scale;   /* x TEXT_SCALE for textbmp lines, x1 for font fallback */
     bool text_visible;
     uint64_t hold_until_ms;     /* dialogue hold after a line; a click ends it */
@@ -442,6 +443,7 @@ static void pause_show(ft_runtime *rt, int sel);
 static void pause_close(ft_runtime *rt);
 static bool any_save(const ft_runtime *rt);
 static void settings_open(ft_runtime *rt, bool from_title);
+static void choicemenu_open(ft_runtime *rt, const ft_interp *in, const ft_choice *c, int count);
 static void host_entered(void *user, ft_interp *in, const ft_script *s);
 static void reset_scene(ft_runtime *rt, uint64_t now);
 static void checkpoint_take(ft_runtime *rt);
@@ -1586,12 +1588,9 @@ static void dbg_note(ft_runtime *rt, const ft_sline *l)
     d->recent_pos = (d->recent_pos + 1) % DBG_RECENT;
 }
 
-static bool host_dialogue(void *user, ft_interp *in, const ft_sline *l)
+/* The line's picture: its translation, else the textbmp image, else the Japanese in the font. */
+static void line_texture(ft_runtime *rt, const ft_sline *l)
 {
-    (void)in;
-    ft_runtime *rt = user;
-    dbg_note(rt, l);
-    snprintf(rt->dbg.dialogue, sizeof rt->dbg.dialogue, "%s", l->argv[0]);
     if (rt->text)
         SDL_DestroyTexture(rt->text);
     const char *tr = l->argv[0][0] ? ft_i18n_get(&rt->i18n, l->argv[0]) : ft_i18n_text(&rt->i18n, l->argv[1]);
@@ -1614,6 +1613,16 @@ static bool host_dialogue(void *user, ft_interp *in, const ft_sline *l)
         rt->text = text_texture(rt, l->argv[1], &rt->text_w, &rt->text_h);
         rt->text_scale = 1.0f;
     }
+}
+
+static bool host_dialogue(void *user, ft_interp *in, const ft_sline *l)
+{
+    (void)in;
+    ft_runtime *rt = user;
+    dbg_note(rt, l);
+    snprintf(rt->dbg.dialogue, sizeof rt->dbg.dialogue, "%s", l->argv[0]);
+    line_texture(rt, l);
+    rt->line = l;
     if (SDL_getenv("FT_AUDIO_TRACE"))
         SDL_Log("[audio %llu ms] line %s (clock %lld)", (unsigned long long)game_ms(rt), l->argv[0],
                 (long long)clock_value(rt, game_ms(rt)));
@@ -1669,14 +1678,18 @@ static int title_choose(ft_runtime *rt, const ft_choice *c, int count)
     return rt->title_pick;
 }
 
+static void choicemenu_open(ft_runtime *rt, const ft_interp *in, const ft_choice *c, int count)
+{
+    ft_choicemenu_open(rt->menu, in->menu == FT_MENU_CMND ? FT_CHOICE_COMMAND : FT_CHOICE_SELECT, c, count, &rt->i18n);
+}
+
 static int host_choose(void *user, ft_interp *in, const ft_choice *c, int count)
 {
     ft_runtime *rt = user;
     if (rt->title && is_title_menu(in))
         return title_choose(rt, c, count);
     if (!ft_choicemenu_is_open(rt->menu)) {
-        ft_choicemenu_open(rt->menu, in->menu == FT_MENU_CMND ? FT_CHOICE_COMMAND : FT_CHOICE_SELECT, c, count,
-                           &rt->i18n);
+        choicemenu_open(rt, in, c, count);
         rt->menu_pick = -1;
         if (in->menu == FT_MENU_CMND) /* the game's own save point */
             checkpoint_take(rt);
@@ -2490,6 +2503,11 @@ static void settings_event(ft_runtime *rt, const SDL_Event *ev)
         ft_runtime_set_language(rt, cfg->lang);
         ft_settingspanel_retranslate(rt->settings);
         ft_savepanel_retranslate(rt->panel);
+        if (rt->text && rt->line)
+            line_texture(rt, rt->line);
+        if (ft_choicemenu_is_open(rt->menu)) /* the same entries, in the new language */
+            choicemenu_open(rt, &rt->in, rt->in.choices, rt->in.choice_count);
+        ft_titlemenu_close(rt->title); /* title_choose reopens it */
         break;
     case FT_SETTINGS_VOLUME:
         rt->cfg = *cfg;
@@ -2834,8 +2852,9 @@ static void pause_show(ft_runtime *rt, int sel)
 {
     static const char *const items[PAUSE_ITEMS] = { "セーブ", "ロード", "設定", "終了する", "ゲームに戻る" };
     static const char *const quit[2] = { "ゲームを終了する", "メニューに戻る" };
-    if (rt->pause_quit) {
+    if (rt->pause_quit) { /* no by default */
         ft_titlemenu_open(rt->pause, quit, NULL, 2, SCREEN_H / 2, &rt->i18n);
+        ft_titlemenu_select(rt->pause, 1);
         return;
     }
     bool enabled[PAUSE_ITEMS] = { true, true, true, true, true };
@@ -2901,7 +2920,8 @@ static void pause_pick(ft_runtime *rt, int pick)
 
 static void pause_event(ft_runtime *rt, const SDL_Event *ev)
 {
-    if (ev->type == SDL_EVENT_KEY_DOWN && (ev->key.key == SDLK_ESCAPE || ev->key.key == SDLK_BACKSPACE)) {
+    if ((ev->type == SDL_EVENT_KEY_DOWN && (ev->key.key == SDLK_ESCAPE || ev->key.key == SDLK_BACKSPACE)) ||
+        (ev->type == SDL_EVENT_MOUSE_BUTTON_DOWN && ev->button.button == SDL_BUTTON_RIGHT)) { /* like the panels */
         if (rt->pause_quit) {
             rt->pause_quit = false;
             pause_show(rt, PAUSE_QUIT);
@@ -2940,6 +2960,7 @@ static void reset_scene(ft_runtime *rt, uint64_t now)
     if (rt->text)
         SDL_DestroyTexture(rt->text);
     rt->text = NULL;
+    rt->line = NULL;
     rt->text_visible = false;
     rt->clock_waiting = false;
     rt->wait_until_ms = rt->hold_until_ms = 0;
@@ -3291,8 +3312,18 @@ static void dbg_render(ft_runtime *rt)
         dbg_text(rt, 16, SCREEN_H - 26, d->status, ok);
 }
 
+/* Keys that may auto-repeat: moving a cursor or a slider. */
+static bool repeats(SDL_Keycode k)
+{
+    return k == SDLK_UP || k == SDLK_DOWN || k == SDLK_LEFT || k == SDLK_RIGHT || k == SDLK_TAB ||
+           k == SDLK_PAGEUP || k == SDLK_PAGEDOWN;
+}
+
 void ft_runtime_event(ft_runtime *rt, const SDL_Event *ev)
 {
+    /* a held Enter or Esc acts once: its repeats would pick through the next menu (the quit prompt) */
+    if (ev->type == SDL_EVENT_KEY_DOWN && ev->key.repeat && !repeats(ev->key.key))
+        return;
     if (ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat &&
         (ev->key.key == SDLK_F2 || ev->key.key == SDLK_PRINTSCREEN)) { /* not F12: Visual Studio's break key */
         rt->want_shot = true; /* taken at the next render, from anywhere */
