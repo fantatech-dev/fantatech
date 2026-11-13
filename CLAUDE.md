@@ -457,7 +457,7 @@ animation). Their UI text is `ft_ui_strings` (`i18n.c`), which `ftconv i18n-temp
   hidden and shows it after `ft_runtime_apply_display`, so it doesn't flash windowed; `--shot` runs
   stay a 1024×768 window. F11 toggles it from anywhere and saves at once; the settings panel has it
   under 画面.
-- **Screenshots:** F12 (or Print Screen) draws the frame off screen at 1024×768
+- **Screenshots:** F2 (or Print Screen) draws the frame off screen at 1024×768
   (`take_screenshot`) and saves `screenshots/fantatech_<date>_<time>.png` beside `save/`
   (`FT_SHOT_DIR` overrides).
 - **Translations** (`i18n/<lang>.txt`; format in `i18n/README.md` and `src/game/i18n.h`): keys are
@@ -476,4 +476,4 @@ animation). Their UI text is `ft_ui_strings` (`i18n.c`), which `ftconv i18n-temp
   `ava021b --label 同・屋上`), like the scene picker.
 
 Controls: Space, Enter or a click advances, Up/Down picks, Esc opens the menu, F11 toggles
-fullscreen, F12 takes a screenshot. With `--dev`: Ctrl fast-forwards and ` opens the dev overlay.
+fullscreen, F2 takes a screenshot. With `--dev`: Ctrl fast-forwards and ` opens the dev overlay.

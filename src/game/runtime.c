@@ -367,7 +367,7 @@ struct ft_runtime {
     /* save / load (see save_slot / load_slot) */
     ft_savepanel *panel;
     char save_dir[1024];
-    char shot_dir[1024];        /* F12 screenshots (FT_SHOT_DIR, else screenshots/ beside save/) */
+    char shot_dir[1024];        /* F2 screenshots (FT_SHOT_DIR, else screenshots/ beside save/) */
     bool want_shot;
     SDL_Texture *shot_notice;   /* "saved" / "failed", shown for a moment (not in the picture) */
     float shot_notice_w, shot_notice_h;
@@ -3294,7 +3294,7 @@ static void dbg_render(ft_runtime *rt)
 void ft_runtime_event(ft_runtime *rt, const SDL_Event *ev)
 {
     if (ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat &&
-        (ev->key.key == SDLK_F12 || ev->key.key == SDLK_PRINTSCREEN)) {
+        (ev->key.key == SDLK_F2 || ev->key.key == SDLK_PRINTSCREEN)) { /* not F12: Visual Studio's break key */
         rt->want_shot = true; /* taken at the next render, from anywhere */
         return;
     }
@@ -3633,7 +3633,7 @@ static void draw_frame(ft_runtime *rt)
 }
 
 /*
- * F12: the frame at the game's own 1024x768, whatever the window size, drawn off screen like the
+ * F2: the frame at the game's own 1024x768, whatever the window size, drawn off screen like the
  * save thumbnails, as screenshots/fantatech_<date>_<time>.png.
  */
 static void take_screenshot(ft_runtime *rt)
