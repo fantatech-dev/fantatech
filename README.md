@@ -33,7 +33,7 @@ Saves and settings are kept in your user folder:
 
 The game starts in fullscreen. F11 switches between fullscreen and a window, and so does the Fullscreen box in the settings; the choice is remembered.
 
-F2 saves a screenshot of the game (at its own 1024×768, without the window) as a PNG in `screenshots/`, next to the `save/` folder.
+S (or F2) saves a screenshot of the game (at its own 1024×768, without the window) as a PNG in `screenshots/`, next to the `save/` folder.
 
 ## Security
 

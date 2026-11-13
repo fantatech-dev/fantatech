@@ -368,7 +368,7 @@ struct ft_runtime {
     /* save / load (see save_slot / load_slot) */
     ft_savepanel *panel;
     char save_dir[1024];
-    char shot_dir[1024];        /* F2 screenshots (FT_SHOT_DIR, else screenshots/ beside save/) */
+    char shot_dir[1024];        /* S / F2 screenshots (FT_SHOT_DIR, else screenshots/ beside save/) */
     bool want_shot;
     SDL_Texture *shot_notice;   /* "saved" / "failed", shown for a moment (not in the picture) */
     float shot_notice_w, shot_notice_h;
@@ -3324,17 +3324,19 @@ void ft_runtime_event(ft_runtime *rt, const SDL_Event *ev)
     /* a held Enter or Esc acts once: its repeats would pick through the next menu (the quit prompt) */
     if (ev->type == SDL_EVENT_KEY_DOWN && ev->key.repeat && !repeats(ev->key.key))
         return;
-    if (ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat &&
-        (ev->key.key == SDLK_F2 || ev->key.key == SDLK_PRINTSCREEN)) { /* not F12: Visual Studio's break key */
-        rt->want_shot = true; /* taken at the next render, from anywhere */
-        return;
-    }
     if (ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat && ev->key.key == SDLK_F11) {
         toggle_fullscreen(rt);
         return;
     }
     if (rt->dev && ev->type == SDL_EVENT_KEY_DOWN && dbg_key(rt, ev->key.key))
         return;
+    /* S (F2 needs fn on a MacBook), F2 or Print Screen; not F12, Visual Studio's break key. The dev
+     * overlay, while open, takes S first for its scene picker. */
+    if (ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat &&
+        (ev->key.key == SDLK_S || ev->key.key == SDLK_F2 || ev->key.key == SDLK_PRINTSCREEN)) {
+        rt->want_shot = true; /* taken at the next render, from anywhere */
+        return;
+    }
     if (rt->movie && ((ev->type == SDL_EVENT_KEY_DOWN && !ev->key.repeat) || ev->type == SDL_EVENT_MOUSE_BUTTON_DOWN)) {
         movie_stop(rt); /* any key or click skips the movie */
         return;
@@ -3664,7 +3666,7 @@ static void draw_frame(ft_runtime *rt)
 }
 
 /*
- * F2: the frame at the game's own 1024x768, whatever the window size, drawn off screen like the
+ * S / F2: the frame at the game's own 1024x768, whatever the window size, drawn off screen like the
  * save thumbnails, as screenshots/fantatech_<date>_<time>.png.
  */
 static void take_screenshot(ft_runtime *rt)

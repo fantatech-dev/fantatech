@@ -104,7 +104,7 @@ Environment variables:
 | `FT_FONT` | font file for menus and translated text, instead of MS Gothic / Hiragino / IPA / Noto |
 | `FT_SAVE_DIR` | folder for saves, instead of the per-user data folder |
 | `FT_CONFIG` | settings file, instead of `settings.txt` in the per-user data folder |
-| `FT_SHOT_DIR` | folder for F2 screenshots |
+| `FT_SHOT_DIR` | folder for screenshots (S / F2) |
 | `FT_DEV=1` | same as `--dev` |
 | `FT_DEV_UI=1` / `2` | with `--dev`, open the dev overlay's info page / scene picker at start |
 | `FT_AUDIO_TRACE=1` | log every sound start and dialogue line against the script clock |
