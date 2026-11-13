@@ -121,6 +121,13 @@ add_executable(fantatech WIN32
   src/tools/png_write.c
 )
 target_link_libraries(fantatech PRIVATE ftcore SDL3_ttf::SDL3_ttf SDL3::SDL3)
+if(WIN32)
+  enable_language(RC)
+  target_sources(fantatech PRIVATE src/fantatech.rc)
+  if(MSVC)
+    target_link_options(fantatech PRIVATE /MANIFEST:NO)
+  endif()
+endif()
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   # HarfBuzz is C++: carry its runtime along, so the binary needs only glibc (SDL dlopens the rest)
   target_link_options(fantatech PRIVATE -static-libstdc++ -static-libgcc)

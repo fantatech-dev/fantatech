@@ -1,0 +1,3 @@
+// Windows resources for fantatech.exe: the application manifest (see fantatech.manifest).
+// 1 = CREATEPROCESS_MANIFEST_RESOURCE_ID, 24 = RT_MANIFEST (numbers, so no windows.h is needed).
+1 24 "fantatech.manifest"
