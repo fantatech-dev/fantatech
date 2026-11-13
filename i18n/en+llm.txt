@@ -1,0 +1,7464 @@
+# fantatech translation table (see src/game/i18n.h). One "key: text" per line; empty = not
+# translated. Dialogue keys are the script's $id, other keys hash the Japanese (FNV-1a).
+# \n breaks a line. Optional: @font: <path to .ttf/.ttc> for translated text, @name: <language>.
+@name: English (Machine Translation)
+
+## engine
+# engine  セーブ
+f5c1f6c3: Save
+# engine  ロード
+1cd13b69: Load
+# engine  空きスロット
+830264d2: Empty slot
+# engine  戻る
+fc144586: Back
+# engine  削除
+73645683: Delete
+# engine  はい
+a214f5c6: Yes
+# engine  いいえ
+fff3714f: No
+# engine  このスロットに上書きしますか？
+ae20c67a: Overwrite this slot?
+# engine  このデータを読み込みますか？
+57f2e8cb: Load this save?
+# engine  このデータを削除しますか？
+eae68c29: Delete this save?
+# engine  セーブしました
+be873e30: Saved
+# engine  削除しました
+c0c5bff0: Deleted
+# engine  セーブできませんでした
+c349ffb9: Could not save
+# engine  読み込めませんでした
+de26babb: Could not load
+# engine  前のセーブポイントでセーブしました
+449223cb: Saved at the last save point
+# engine  クリック・Enter：決定　Tab：セーブ／ロード切替　Del：削除　Esc：戻る
+326e27d8: Click / Enter: select    Tab: save / load    Del: delete    Esc: back
+# engine  クリック・Enter：読み込む　Del：削除　Esc：戻る
+8bf1f74e: Click / Enter: load    Del: delete    Esc: back
+# engine  設定
+e222959b: Settings
+# engine  システム設定
+ee5aaf37: Settings
+# engine  言語
+578f4241: Language
+# engine  音量
+b441cfe3: Volume
+# engine  マスター
+cda1e6c9: Master
+# engine  音楽
+a2094a36: Music
+# engine  音声
+762bcdca: Voice
+# engine  効果音
+50f708c8: Sound effects
+# engine  画面
+abc63d25: Display
+# engine  フルスクリーン
+573cdcb8: Fullscreen
+# engine  ↑↓：項目　Enter：決定　←→：音量　Esc：戻る
+3470cb56: Up / Down: item    Enter: select    Left / Right: volume    Esc: back
+# engine  スクリーンショットを保存しました
+5882bcb2: Screenshot saved
+# engine  スクリーンショットを保存できませんでした
+54eeb653: Could not save the screenshot
+
+## Ai00
+# Ai00:70
+c7300997: 
+# Ai00:71
+ed5876c2: 
+# Ai00:82
+2e03ad04: 
+# Ai00:83
+1cf811cb: 
+# Ai00:84
+3440d351: 
+# Ai00:85
+aee73382: 
+# Ai00:166
+12e03cd3: 
+# Ai00:218
+1bf79f73: 
+# Ai00:242
+9942dbc5: 
+# Ai00:243
+3af7dd68: 
+# Ai00:244
+c55b85e4: 
+# Ai00:272
+0653e43a: 
+# Ai00:273
+fa39b659: System
+# Ai00:312
+3f0452b8: 
+# Ai00:313
+f25de4eb: 
+# Ai00:314
+f545e407: 
+# Ai00:315
+b506d499: 
+
+## Ava011
+# Ava011:294
+a11001: Why...
+# Ava011:296
+a11002: Why haven't they declared a state of emergency?!
+# Ava011:298
+a11003: This country is so slow, honestly!
+# Ava011:300
+a11004: The enemy? A new Angel?
+# Ava011:302
+a11005: Ugh! Where are Shinji and Misato wandering around?
+# Ava011:306
+a11006: I'm right here!
+# Ava011:315
+a11007: Sorry...
+# Ava011:317
+a11008: Um, well...
+# Ava011:323
+a11009: Hid your head but left your behind showing... just kidding.
+# Ava011:386
+a11010: Vielen Dank!
+
+## Ava021
+# Ava021:43
+a21001: Guten Morgen!
+# Ava021:49
+a21002: You'll get yelled at by the cops if you go in there.
+# Ava021:54
+a21003: Der Wurfel ist gefallen.
+# Ava021:59
+a21004: With physical evidence this obvious, they still call it a "mysterious moving object"...
+# Ava021:62
+a21005: What is public safety coming to in this country?!
+# Ava021:69
+a21006: We'll be late. I'm going ahead.
+# Ava021:78
+a21007: Hey, Miss Honor Student! Where do you think you're going?
+# Ava021:84
+a21008: Hurry up, Asuka!
+# Ava021:86
+a21009: Let's go!
+# Ava021:93
+a21010: Hey, wait up, Shinji!
+# Ava021:116
+a21011: Rock-paper-scissors! Loser carries the bags to the next telephone pole.
+# Ava021:120
+a21012: Huh? No way...
+# Ava021:125
+a21013: Rock! Paper! Scissors!
+# Ava021:139
+a21014: Shoot!
+# Ava021:146
+a21015: I'm Number one!
+# Ava021:155
+a21016: That's not fair...
+# Ava021:158
+a21017: You know I'm terrible at rock-paper-scissors.
+# Ava021:170
+a21018: Ahh, this is the life~
+# Ava021:179
+a21019: I'm never walking to school with you again, Asuka!
+# Ava021:204
+a21020: I hear a transfer student's coming today.
+# Ava021:206
+a21021: Moving to a dangerous place like this...
+# Ava021:208
+a21022: They must be a real oddball.
+# Ava021:212
+a21023: It's got nothing to do with us.
+# Ava021:216
+a21024: You're scared, aren't you!
+# Ava021:218
+a21025: You're so bad at making friends, after all.
+# Ava021:222
+a21026: Not really...
+
+## ava021b
+# ava021b:36
+a21b001: Stand!
+# ava021b:39
+a21b002: Bow!
+# ava021b:41
+a21b003: Sit!
+# ava021b:55
+a21b004: I'm Kirishima... Mana.
+# ava021b:58
+a21b005: It's nice to meet you all.
+# ava021b:67
+a21b006: Nice ta meetcha!
+# ava021b:80
+a21b007: Yes, welcome.
+# ava021b:82
+a21b008: Your seat, Miss Kirishima, will be...
+# ava021b:84
+a21b009: Please sit next to Ikari.
+# ava021b:97
+a21b010: You're Ikari... right?
+# ava021b:102
+a21b011: Huh?
+# ava021b:107
+a21b012: You're cute~
+# ava021b:110
+a21b013: ...
+# ava021b:116
+a21b014: Nice to meet you, Ikari.
+# ava021b:127
+a21b015: Hmph!
+# ava021b:188
+a21b016: Our homeroom teacher seems so nice. What a relief.
+# ava021b:193
+a21b017: ...
+# ava021b:197
+a21b018: If you don't mind, tell me your first name, Ikari.
+# ava021b:201
+a21b019: ...
+# ava021b:207
+a21b019b: ...
+# ava021b:209
+a21b020: Shinji...
+# ava021b:211
+a21b021: Shinji Ikari.
+# ava021b:217
+a21b022: Shinji, then~
+# ava021b:221
+a21b023: ...
+# ava021b:225
+a21b024: Today, I, Mana Kirishima...
+# ava021b:228
+a21b025: got up at 6 a.m. just for you, Shinji,
+# ava021b:231
+a21b026: and came here wearing this uniform.
+# ava021b:235
+a21b027: Well? Does it suit me?~
+# ava021b:239
+a21b028: Yeah...
+# ava021b:243
+a21b029: Hey, can we go up on the roof at this school?
+# ava021b:247
+a21b030: Well, yeah...
+# ava021b:251
+a21b031: I'd love to look at the view with you, Shinji.
+# ava021b:255
+a21b032: Huh...
+# ava021b:278
+a21b033: Looks like any girl will do for you.
+# ava021b:294
+a21b034: What? Do you want something, Asuka?
+# ava021b:298
+a21b035: She just got here and she's already calling you by your first name? Are you childhood friends or something?
+# ava021b:302
+a21b036: We just happened to hit it off, that's all.
+# ava021b:306
+a21b037: Shinji, let's go to the roof.
+# ava021b:310
+a21b038: Okay.
+# ava021b:328
+a21b039: Hmph!
+# ava021b:384
+a21b040: It's beautiful.
+# ava021b:389
+a21b041: Tokyo-3. It's also called the anti-Angel fortress city.
+# ava021b:394
+a21b042: Not that.
+# ava021b:398
+a21b043: Huh?
+# ava021b:401
+a21b044: The mountains.
+# ava021b:404
+a21b045: The mountains?
+# ava021b:408
+a21b046: The mountains past the buildings. There's still green there.
+# ava021b:412
+a21b047: ...
+# ava021b:414
+a21b048: I've never really taken the time to look at the scenery.
+# ava021b:416
+a21b049: Ever since I moved here, it's been one hard thing after another.
+# ava021b:420
+a21b050: You're an Eva pilot, after all, Shinji...
+# ava021b:424
+a21b051: You know about that?
+# ava021b:428
+a21b052: Aren't you going to praise me?
+# ava021b:432
+a21b053: Uh... y-yeah, I guess.
+# ava021b:437
+a21b054: You know, I'm one of the ones who survived, and yet I can't do anything. It's frustrating.
+# ava021b:440
+a21b055: I envy you, Shinji...
+# ava021b:444
+a21b056: I see...
+# ava021b:448
+a21b057: Look.
+# ava021b:459
+a21b058: What's this pendant?
+# ava021b:462
+a21b059: I'm going to put it on you, Shinji.
+# ava021b:467
+a21b060: Huh, ah, um...
+# ava021b:472
+a21b061: Hold still. It might tickle, but bear with it...
+# ava021b:480
+a21b063: There, it's on.
+# ava021b:483
+a21b064: Thank you...
+# ava021b:514
+a21b065: Shinji!
+# ava021b:524
+a21b066: Here she comes again.
+# ava021b:539
+a21b067: We're going to NERV HQ!
+# ava021b:541
+a21b068: Huh, already?
+# ava021b:545
+a21b069: Miss Kirishima.
+# ava021b:549
+a21b070: Oh, yes...?
+# ava021b:554
+a21b071: Pardon me, but we happen to have important work to attend to.
+# ava021b:558
+a21b072: Asuka, could you wait outside?
+# ava021b:562
+a21b073: Well, excuuuse me for interrupting.
+# ava021b:581
+a21b074: Nyeh!
+# ava021b:591
+a21b075: Nyeh...?
+
+## Ava022
+# Ava022:77
+a22001: Getting all googly-eyed...
+# Ava022:79
+a22002: Must be nice being so popular.
+# Ava022:87
+a22003: Quit sitting there listening to your songs.
+# Ava022:89
+a22004: Listen when people talk to you!
+# Ava022:99
+a22005: Ah! My Walkman!
+# Ava022:104
+a22006: Stupid thing!
+# Ava022:110
+a22007: Aaaaah!
+# Ava022:112
+a22008: My Yuki Uchida!
+# Ava022:122
+a22009: Hmph!
+# Ava022:125
+a22010: That Kirishima girl is a nasty piece of work too.
+# Ava022:127
+a22011: She just got here and she's already making moves on the boys.
+# Ava022:140
+a22012: Hello.
+# Ava022:146
+a22013: ...
+# Ava022:154
+a22014: Kirishima.
+# Ava022:160
+a22015: I came after you.
+# Ava022:164
+a22016: But what about class?
+# Ava022:167
+a22017: School's boring.
+# Ava022:169
+a22018: Take me to NERV with you.
+# Ava022:180
+a22019: .....
+# Ava022:250
+a22020: I'll go on ahead.
+# Ava022:265
+a22021: Shall we go in?
+# Ava022:271
+a22022: Kirishima, you can't.
+# Ava022:273
+a22023: You can't get in here without an ID card.
+# Ava022:279
+a22024: Couldn't we get through like this?
+# Ava022:292
+a22025: See? Now we only count as one.
+# Ava022:303
+a22026: But anyone who isn't with NERV...
+# Ava022:308
+a22027: You're so sweet, Shinji.
+
+## ava022b
+# ava022b:36
+a22b001: Don't leave this room until I'm done, okay?
+# ava022b:42
+a22b002: Okay.
+# ava022b:51
+a22b003: Ah...
+# ava022b:53
+a22b004: Um...
+# ava022b:55
+a22b005: I'm going to change, so...
+# ava022b:57
+a22b006: Could you turn around?
+# ava022b:62
+a22b007: I don't mind.
+# ava022b:66
+a22b008: Well... I do.
+# ava022b:70
+a22b009: All right.
+# ava022b:72
+a22b010: There, I'm turned around.
+# ava022b:86
+a22b011: Your skin's so pale.
+# ava022b:96
+a22b012: Don't look!
+# ava022b:101
+a22b013: So you're a briefs guy, Shinji.
+# ava022b:106
+a22b014: Cut it out.
+# ava022b:119
+a22b015: You look so cool!
+# ava022b:125
+a22b016: Heh, you think so?
+# ava022b:207
+a22b017: Simulation plugs
+# ava022b:209
+a22b018: are now under MAGI control.
+# ava022b:215
+a22b019: That's strange.
+# ava022b:219
+a22b020: Ritsuko, what's wrong?
+# ava022b:248
+a22b021: Shinji's sync ratio is the only one that isn't rising.
+# ava022b:250
+a22b022: We can't get any data.
+# ava022b:255
+a22b023: Shinji,
+# ava022b:257
+a22b024: you're not dozing off in there, are you?
+# ava022b:264
+a22b025: I'm wide awake.
+# ava022b:271
+a22b026: You're fantasizing about that girl, aren't you?
+# ava022b:273
+a22b027: Pervert.
+# ava022b:295
+a22b028: I said I'm not!
+# ava022b:312
+a22b029: What, "love will save mankind"?
+# ava022b:318
+a22b030: Asuka, cut the chatter.
+# ava022b:320
+a22b031: This is an important test.
+# ava022b:325
+a22b032: Face it, Shinji's never going to be able to beat me anyway.
+# ava022b:332
+a22b033: That's going too far, Asuka.
+# ava022b:337
+a22b034: Hey, let's play rock-paper-scissors.
+# ava022b:341
+a22b035: Huh?
+# ava022b:360
+a22b036: If you win, I'll buy you one of those new double-deck Walkmans.
+# ava022b:366
+a22b037: Huh! Really?
+# ava022b:371
+a22b038: Here goes.
+# ava022b:374
+a22b039: Rock, paper...
+# ava022b:380
+a22b040: Wait, we can't do this now!
+# ava022b:385
+a22b041: Just one round.
+# ava022b:387
+a22b042: Think of it as part of the test.
+# ava022b:391
+a22b043: Whaaat?
+# ava022b:420
+a22b044: Something's wrong with the simulation body.
+# ava022b:426
+a22b045: A bug?
+# ava022b:428
+a22b046: The sync ratio is shooting up.
+# ava022b:432
+a22b047: Maybe he's finally motivated?
+# ava022b:464
+a22b048: Rock! Paper!
+# ava022b:470
+a22b049: Scissors!
+# ava022b:522
+a22b050: Shut off that alarm!
+# ava022b:525
+a22b051: Yes, ma'am.
+# ava022b:529
+a22b052: That idiot...
+# ava022b:545
+a22b053: Delete that data.
+# ava022b:549
+a22b054: Yes, but are you sure? It's valuable data...
+# ava022b:556
+a22b055: Just delete it!
+# ava022b:560
+a22b056: Yes, ma'am.
+# ava022b:582
+a22b057: Eva is not a toy!
+# ava022b:585
+a22b058: If an Angel shows up and the attack fails, that's the end of everything!
+# ava022b:588
+a22b059: Shinji, are you listening?
+# ava022b:593
+a22b060: ...Yes.
+# ava022b:600
+a22b061: Oh, come on. Everybody needs to blow off steam now and then.
+# ava022b:604
+a22b062: You're so irresponsible!
+# ava022b:608
+a22b063: Shinji isn't some machine part!
+# ava022b:612
+a22b064: No one knows Shinji's body better than I do!
+# ava022b:617
+a22b065: Ritsuko...
+# ava022b:623
+a22b066: Hey, Shin-chan grew up eating at my place,
+# ava022b:625
+a22b067: and he soaks in the same bathwater as me, you know.
+# ava022b:630
+a22b068: Misato...
+# ava022b:636
+a22b069: How sad Commander Ikari would be to hear that.
+# ava022b:641
+a22b070: You just want to make him happy.
+# ava022b:646
+a22b071: It's my duty!
+# ava022b:653
+a22b072: Ritsuko!
+# ava022b:656
+a22b073: I'm sorry...
+# ava022b:661
+a22b074: Hmph!
+# ava022b:668
+a22b075: Today's experiment is canceled.
+# ava022b:670
+a22b076: Everyone, make sure you're in good condition.
+# ava022b:674
+a22b077: Asuka, Rei, Shinji, get some good rest today.
+# ava022b:676
+a22b078: No staying up late.
+# ava022b:691
+a22b079: Commander Ikari.
+# ava022b:698
+a22b080: Father.
+# ava022b:712
+a22b081: What happened to the experiment?
+# ava022b:716
+a22b082: I don't recall ordering a break.
+# ava022b:723
+a22b083: It was canceled due to trouble with the Third Child.
+# ava022b:729
+a22b084: Ritsuko!
+# ava022b:734
+a22b085: It's the truth!
+# ava022b:740
+a22b086: The cause is Shinji's lovesickness.
+# ava022b:751
+a22b087: Lovesickness?
+# ava022b:764
+a22b088: Shinji.
+# ava022b:770
+a22b089: ...Yes.
+# ava022b:775
+a22b090: If you're unhappy piloting the Eva, then leave. You're an eyesore.
+# ava022b:793
+a22b091: Damn it!
+# ava022b:795
+a22b092: Damn it!
+# ava022b:797
+a22b093: Damn it!
+# ava022b:799
+a22b094: Damn iiit!
+# ava022b:816
+a22b095: Kirishima?
+# ava022b:818
+a22b096: Kirishima!...
+# ava022b:820
+a22b097: Where did she go?
+# ava022b:835
+a22b098: So Kirishima went home.
+
+## Ava023
+# Ava023:50
+a23001: If all we ever eat is stuff like this, we won't get any fiber,
+# Ava023:52
+a23002: or beta-carotene, or calcium,
+# Ava023:54
+a23003: or anything at all, will we?
+# Ava023:59
+a23004: Then why don't you cook, Asuka? Like boiled cabbage greens,
+# Ava023:61
+a23005: or cream of pumpkin soup,
+# Ava023:63
+a23006: or sardine dumplings...
+# Ava023:68
+a23007: Like I could ever make any of that.
+# Ava023:73
+a23008: Then nobody's going to marry you.
+# Ava023:78
+a23009: Someone will take me, thank you very much.
+# Ava023:83
+a23010: Who?
+# Ava023:92
+a23011: It's the Asuka Walks Down the Aisle Quiz!
+# Ava023:95
+a23012: Who will be my future husband?
+# Ava023:97
+a23013: Number one, Ryoji Kaji~
+# Ava023:99
+a23014: Number two, Shigeru Aoba~
+# Ava023:101
+a23015: Number three, Shinji Ikari~
+# Ava023:108
+33967b1f: Ryoji Kaji~
+# Ava023:109
+db4c57b6: Shigeru Aoba~
+# Ava023:110
+d739f420: Shinji Ikari~
+# Ava023:128
+a23016: You want to say Kaji, don't you?
+# Ava023:134
+a23017: Bzzt!
+# Ava023:138
+a23018: Huh?! Why?
+# Ava023:142
+a23019: It's fine...
+# Ava023:146
+a23020: What is?
+# Ava023:150
+a23021: Well...
+# Ava023:153
+a23022: I'm kidding.
+# Ava023:155
+a23023: Go ahead and laugh.
+# Ava023:159
+a23024: I can't laugh at that.
+# Ava023:163
+a23025: Okay, consolation prize.
+# Ava023:183
+a23026: No way. Aoba... he's one of Misato's subordinates,
+# Ava023:185
+a23027: the guy with the Kimutaku long hair (so last decade) who plays in a band.
+# Ava023:190
+a23028: Bzzt, bzz-bzz-bzzt, bzzzzzzt!
+# Ava023:195
+a23029: That's kind of mean to him.
+# Ava023:199
+a23030: Kaji's the only one for me~
+# Ava023:202
+a23031: Oh Kaji, please hold me tight in the elevator.
+# Ava023:206
+a23032: Ugh, give me a break.
+# Ava023:210
+a23033: That's a consolation prize!
+# Ava023:229
+a23034: Is it me~?
+# Ava023:234
+a23035: Ding-dong~ Correct!
+# Ava023:239
+a23036: Huh?!
+# Ava023:244
+a23037: Just kidding. That was a lie.
+# Ava023:249
+a23038: Tch!
+# Ava023:254
+a23039: ...
+# Ava023:259
+a23040: No, I didn't mean it like that.
+# Ava023:263
+a23041: Please don't get the wrong idea.
+# Ava023:268
+a23042: You win the Homey Award!
+# Ava023:273
+a23043: The Homey Award?
+# Ava023:291
+a23044: Here.
+# Ava023:300
+a23045: ?
+# Ava023:304
+a23046: Take it.
+# Ava023:308
+a23047: For me?
+# Ava023:312
+a23048: Open it.
+# Ava023:334
+a23049: ...Are you sure?
+# Ava023:338
+a23050: Well? I'm the best, right?
+# Ava023:342
+a23051: Thanks. I'll take good care of it.
+# Ava023:346
+a23052: It was expensive, you know.
+# Ava023:349
+a23053: And another thing...
+# Ava023:355
+a23054: Forget about that transfer student, Mana Kirishima.
+# Ava023:360
+a23055: Huh, why?
+# Ava023:382
+a23056: I'm home~
+# Ava023:385
+a23057: Ooh, something smells good.
+# Ava023:390
+a23058: Welcome back.
+# Ava023:395
+a23059: Welcome back. I'll make some for you too, Misato.
+# Ava023:400
+a23060: No, no, it's fine. I already ate on the way home.
+# Ava023:411
+a23061: Hey, how's it going?
+# Ava023:416
+a23062: Kaji~!
+# Ava023:421
+a23063: So when you said you ate, you were on a date with Kaji.
+# Ava023:425
+a23064: Hmph!
+# Ava023:431
+a23065: It's nothing like that.
+# Ava023:436
+a23066: I hear you two really raised hell today.
+# Ava023:440
+a23067: Kaji, it was Shinji's hand that hit the glass, not mine.
+# Ava023:444
+a23068: But you're the one who wanted to play rock-paper-scissors!
+# Ava023:450
+a23069: You, shut up!
+# Ava023:454
+a23070: Still, it's been a long time since I've seen Ritsuko that angry.
+# Ava023:460
+a23071: Well, just be more careful from now on.
+# Ava023:467
+a23072: It's not my fault...
+# Ava023:474
+a23073: Asuka?
+# Ava023:491
+a23074: That's the first time I've seen Asuka look like she was about to cry.
+# Ava023:521
+a23075: Shinji!
+# Ava023:526
+a23076: Misato, what are you doing here?
+# Ava023:531
+a23077: Just a little shopping.
+# Ava023:535
+a23078: Is she a friend of yours?
+# Ava023:540
+a23079: Nice to meet you. My name is Mana Kirishima.
+# Ava023:545
+a23080: Nice to meet you. I'm Misato Katsuragi.
+# Ava023:547
+a23081: Pleased to meet ya~
+# Ava023:552
+a23082: I'm living at Misato's place.
+# Ava023:557
+a23083: Come over and visit sometime if you like~
+# Ava023:562
+a23084: Okay.
+# Ava023:573
+a23085: Sorry to keep you waiting.
+# Ava023:578
+a23086: Kaji.
+# Ava023:583
+a23087: What are you going to do with all that?
+# Ava023:588
+a23088: The guys at command will eat it.
+# Ava023:593
+a23089: And what if potato chips get into the computers?
+# Ava023:598
+a23090: Even computers get hungry.
+# Ava023:601
+a23091: Hey, Shinji, she's a cute one.
+# Ava023:606
+a23092: Nice to meet you...
+# Ava023:611
+a23093: Don't talk to a man like this.
+# Ava023:615
+a23094: Hitting on eighth-graders now?! Come on, we're going!
+# Ava023:620
+a23095: What, I was just saying hi. I didn't even get her name.
+# Ava023:625
+a23096: We're in a hurry!
+
+## ava023b
+# ava023b:38
+a23b001: That's a pendant you got from a girl, isn't it?
+# ava023b:53
+a23b002: Who told you?
+# ava023b:59
+a23b003: When you've been a man for 30 years, you don't need to be told.
+# ava023b:67
+a23b004: Her name's Mana Kirishima.
+# ava023b:70
+a23b005: She just transferred here,
+# ava023b:73
+a23b006: and she's really nice to me.
+# ava023b:78
+a23b007: Mana?
+# ava023b:83
+a23b008: You know her?
+# ava023b:88
+a23b009: No, sorry. I was thinking of someone else.
+# ava023b:94
+a23b010: Please tell me. Now that she's given me this,
+# ava023b:97
+a23b011: what am I supposed to do?
+# ava023b:102
+a23b012: Do you like her?
+# ava023b:109
+a23b013: I kind of think she's nice...
+# ava023b:125
+a23b014: Shinji, if you want to be with her,
+# ava023b:127
+a23b015: first, watch carefully to see what she wants.
+# ava023b:139
+a23b016: Watch...
+# ava023b:144
+a23b017: And if you're planning to confess,
+# ava023b:146
+a23b018: don't push her for an answer right away.
+# ava023b:148
+a23b019: She needs time to think too.
+# ava023b:156
+a23b020: She needs time...
+# ava023b:161
+a23b021: Above all, take the initiative yourself.
+# ava023b:169
+a23b022: Take the initiative...
+# ava023b:174
+a23b023: And if it still doesn't work out, well...
+# ava023b:177
+a23b024: then you'll just have to give up.
+# ava023b:184
+a23b025: I feel like I've got a little courage now.
+# ava023b:189
+a23b026: Let's both do our best.
+
+## Ava024
+# Ava024:44
+a24001: Good morning.
+# Ava024:54
+a24002: Gyaaaaaah!
+# Ava024:59
+a24003: You, get over here!
+# Ava024:64
+a24004: Misato, ah!
+# Ava024:68
+a24005: (Glub glub glub glub)
+# Ava024:103
+a24006: Wow, Shinji, you're a good cook.
+# Ava024:107
+a24007: I always do the cooking at home.
+# Ava024:109
+a24008: Want me to help with yours?
+# Ava024:113
+a24009: No, it's okay. I'll never get better if I don't do it myself.
+# Ava024:117
+a24010: If you ever need help with anything, just ask.
+# Ava024:119
+a24011: I'd do my best for you, Kirishima.
+# Ava024:123
+a24012: Really?
+# Ava024:126
+a24013: Actually...
+# Ava024:129
+a24014: I'd like you to tell me about the Evas.
+# Ava024:133
+a24015: About the Evas?
+# Ava024:138
+a24016: Yo, Shinji, you and Kirishima are gettin' real cozy, huh?
+# Ava024:142
+a24017: Toji...
+# Ava024:145
+a24018: Keep it up, man.
+# Ava024:147
+a24019: Asuka's gettin' jealous. Serves her right.
+# Ava024:173
+a24020: Ow! You lunatic!
+# Ava024:179
+a24021: Who do you think is keeping the world safe for you?!
+# Ava024:185
+a24022: You're just sore 'cause somebody stole Shinji from ya!
+# Ava024:189
+a24023: You think I'd be interested in a little kid like him?!
+# Ava024:196
+a24024: Little kid? You're the same age as me, Asuka!
+# Ava024:202
+a24025: You're an Eva pilot too, so
+# Ava024:204
+a24026: no getting all lovey-dovey with girls.
+# Ava024:208
+a24027: What do you mean, no...
+# Ava024:214
+a24028: That's right, Shinji! No first base, second base, or third base!
+# Ava024:219
+a24029: Though I bet they've already kissed, at least.
+# Ava024:224
+a24030: Stop it! It's not like that!
+# Ava024:227
+a24031: Then why are you always all over Shinji?!
+# Ava024:233
+a24032: I'm going home!
+# Ava024:242
+a24033: Kirishima!
+# Ava024:245
+a24034: She's mad...
+# Ava024:250
+a24035: This is all your fault, Toji!
+# Ava024:253
+a24036: Geez, what's with her?
+
+## ava024b
+# ava024b:20
+a24b001: Don't worry about what Asuka said.
+# ava024b:23
+a24b002: She's been on edge from all the experiments and training, so she snaps easily.
+# ava024b:28
+a24b003: Experiments?
+# ava024b:33
+a24b004: An Eva is something a person gets inside and pilots, but it's, like...
+# ava024b:36
+a24b005: as if it were your own arms and legs attached to you.
+# ava024b:39
+a24b006: The experiments are for tuning that.
+# ava024b:44
+a24b007: There's no control stick or pedals?
+# ava024b:49
+a24b008: You think "walk" in your mind,
+# ava024b:52
+a24b009: and the Eva starts walking. That's how it works.
+# ava024b:56
+a24b010: So how far along are the experiments?
+# ava024b:61
+a24b011: You're interested in this kind of thing?
+# ava024b:66
+a24b012: I want to know everything about you, Shinji.
+# ava024b:72
+a24b013: Who's there?
+# ava024b:86
+a24b014: Shinji, aren't you not supposed to tell people Eva secrets?
+# ava024b:89
+a24b015: Kensuke...
+# ava024b:91
+a24b016: Kirishima, come on back to the classroom too.
+# ava024b:93
+a24b017: Nobody's trying to leave you out.
+# ava024b:100
+a24b018: It's all right.
+# ava024b:106
+a24b019: Right. She doesn't have to force herself to fit in.
+# ava024b:109
+a24b020: Come on, Shinji.
+# ava024b:116
+a24b021: Shinji.
+# ava024b:122
+a24b022: This is all your fault in the first place, Asuka!
+# ava024b:126
+a24b023: I need to talk to you when we get home. That's all.
+# ava024b:129
+a24b024: Kensuke, let's go.
+# ava024b:135
+a24b025: Yeah...
+# ava024b:146
+a24b026: Kirishima, don't let it bother you.
+# ava024b:150
+a24b027: So you live in the same house as Asuka, Shinji.
+# ava024b:155
+a24b028: Huh...
+# ava024b:182
+a24b029: Asuka and I have separate rooms,
+# ava024b:185
+a24b030: and living together was Misato's idea.
+# ava024b:188
+a24b031: She said pilots have to be in sync with each other.
+# ava024b:193
+a24b032: Maybe me being around you, Shinji,
+# ava024b:196
+a24b033: is just causing trouble.
+# ava024b:202
+a24b034: That's not true. I'm free to be with whoever I want.
+# ava024b:207
+a24b035: Free, huh...
+# ava024b:213
+a24b036: Being free sounds nice.
+# ava024b:234
+a24b037: ...I'm not bothered about Asuka.
+# ava024b:239
+a24b038: Where did that come from?
+# ava024b:244
+a24b039: Pilots have to get along with each other, after all.
+# ava024b:254
+a24b041: Come on...
+# ava024b:259
+a24b042: You're going home to Asuka, Shinji,
+# ava024b:263
+a24b043: so I need to draw the line...
+# ava024b:267
+a24b044: I guess this is as far as my freedom goes...
+# ava024b:273
+a24b045: ...
+# ava024b:332
+a24b046: Mana Kirishima is a spy!
+# ava024b:338
+a24b047: That's a lie!
+# ava024b:344
+a24b048: This Kirishima girl is Shin-chan's "special someone," right?
+# ava024b:349
+a24b049: It's not like she's my girlfriend yet...
+# ava024b:354
+a24b050: I hear she's a transfer student.
+# ava024b:360
+a24b051: That's the thing.
+# ava024b:363
+a24b052: She transferred in the day after that mysterious moving object went on its rampage.
+# ava024b:366
+a24b053: She approached frustrated Shinji saying, "Make me your woman~"
+# ava024b:370
+a24b054: or something like that, and made contact.
+# ava024b:374
+a24b055: Then from Shinji, the pilot of Eva Unit-01,
+# ava024b:377
+a24b056: she relentlessly tried to pry out information on how Evas are piloted.
+# ava024b:383
+a24b057: That's not true!
+# ava024b:388
+a24b058: Sounds interesting. Bring her over sometime.
+# ava024b:391
+a24b059: Big sis will check her out for you.
+# ava024b:396
+a24b060: That's not what I meant...
+# ava024b:401
+a24b061: Aww, Shin-chan's embarrassed~
+# ava024b:413
+a24b062: You're too soft!
+# ava024b:416
+a24b063: The day that woman breaks through our absolute defense line
+# ava024b:419
+a24b064: will be the last day on Earth!
+# ava024b:424
+a24b065: Asuka, you're...
+# ava024b:427
+a24b066: I hate you...
+# ava024b:431
+a24b067: ...
+# ava024b:438
+a24b068: Ikari,
+# ava024b:441
+a24b069: Asuka is very worried about you.
+# ava024b:446
+a24b070: About me?
+# ava024b:453
+a24b071: As if! Who'd ever worry about him!
+# ava024b:464
+a24b072: Hmph! Nyeh!
+# ava024b:482
+a24b073: ...
+# ava024b:505
+a24b074: Shinji, you trust Kirishima, don't you?
+# ava024b:510
+a24b075: Yes...
+# ava024b:515
+a24b076: Then I'll leave it to your judgment.
+# ava024b:517
+a24b077: Our job isn't to go around suspecting people.
+# ava024b:519
+a24b078: Think hard about what really matters, and then act.
+# ava024b:524
+a24b079: Act...
+# ava024b:539
+a24b080: Easy to say "act,"
+# ava024b:541
+a24b081: but Asuka's bound to get in the way...
+# ava024b:549
+a24b083: But she did replace my Walkman,
+# ava024b:551
+a24b084: so she does have her good side.
+# ava024b:559
+a24b086: Is she really worried about me...?
+# ava024b:567
+a24b088: What do you think, Ayanami?
+# ava024b:571
+a24b089: I don't know...
+# ava024b:577
+a24b090: That's cold...
+# ava024b:582
+a24b091: You are forgetting something important.
+# ava024b:587
+a24b092: What?
+# ava024b:592
+a24b093: Your duty to carry out the mission your father gave you.
+# ava024b:597
+a24b094: My father?
+# ava024b:633
+a24b095: What's wrong, Shinji?
+# ava024b:636
+a24b096: Keep piloting.
+# ava024b:644
+a24b097: No!
+# ava024b:651
+a24b098: Then go home.
+# ava024b:672
+a24b099: Whenever Father talks to me, it's always an order...
+# ava024b:676
+a24b100: The troubles in the heart
+# ava024b:678
+a24b101: of Eva pilot Shinji Ikari don't matter to him.
+# ava024b:680
+a24b102: Even a father like that
+# ava024b:682
+a24b103: was young once, with Mother...
+# ava024b:695
+a24b104: Shinji, that's an order.
+# ava024b:697
+a24b105: Get in the Eva.
+# ava024b:708
+a24b106: If even Father could do it,
+# ava024b:710
+a24b107: then so can I...
+
+## Ava025
+# Ava025:43
+a25001: Lake Ashi is bigger than I thought.
+# Ava025:48
+a25002: It's a natural lake, six kilometers long, with mountains on every side.
+# Ava025:58
+a25003: I'd like to see the lake.
+# Ava025:63
+a25004: It's about twenty minutes by bus.
+# Ava025:68
+a25005: But going alone wouldn't be much fun...
+# Ava025:74
+a25007: I, um, like lakes.
+# Ava025:80
+a25009: They say it's going to be sunny this Sunday.
+# Ava025:86
+a25011: Sundays are good for going out somewhere, huh?
+# Ava025:91
+a25013: Maybe I'll go out somewhere too...
+# Ava025:99
+a25015: Want to go together?
+# Ava025:103
+a25016: Really?! Yay!
+# Ava025:107
+a25017: Then I'll look up the bus times and where to meet.
+# Ava025:111
+a25018: And I'll make lunch for the two of us!
+# Ava025:114
+a25019: All right!
+# Ava025:124
+a25020: Ikari. NERV HQ is calling for you.
+# Ava025:128
+a25021: For me?
+# Ava025:131
+a25022: ...
+# Ava025:162
+a25023: Looks like the unidentified moving object escaped into the lake.
+# Ava025:167
+a25024: Should I go in after it?
+# Ava025:173
+a25025: No need.
+# Ava025:175
+a25026: From here on it's the Japanese government's jurisdiction,
+# Ava025:177
+a25027: so it's got nothing to do with us at NERV.
+# Ava025:182
+a25028: Understood.
+# Ava025:195
+a25029: Huh? That's Kirishima. Did she follow me here?
+# Ava025:198
+a25030: That kind of spoils the fun of our outing...
+# Ava025:204
+a25031: She's a spy, Misato!
+# Ava025:208
+a25032: What?!
+# Ava025:212
+a25033: Report the situation.
+# Ava025:216
+a25034: There's a reconnaissance plane at ten thousand meters.
+# Ava025:220
+a25035: No time to hang around, then.
+# Ava025:222
+a25036: Good work, Shinji. We're heading back.
+# Ava025:227
+a25037: ...Okay.
+# Ava025:275
+a25038: So, Shinji, are things going well with your girlfriend?
+# Ava025:280
+a25039: ...If, like Asuka says,
+# Ava025:283
+a25040: Kirishima really is a spy,
+# Ava025:287
+a25041: then I shouldn't see her anymore, right...?
+# Ava025:292
+a25042: Oh, come on. I'm disappointed.
+# Ava025:297
+a25043: But...
+# Ava025:300
+a25044: Isn't that what NERV is like?!
+# Ava025:305
+a25045: ...Do you like Kirishima?
+# Ava025:311
+a25046: ...I think maybe I do.
+# Ava025:316
+a25047: Then you've got no choice but to trust her, right?
+# Ava025:321
+a25048: ...
+# Ava025:341
+a25049: I've got somewhere to stop by.
+# Ava025:346
+a25050: I'll go to the bookstore and take the bus home after.
+# Ava025:351
+a25051: Shinji.
+# Ava025:356
+a25052: Yes...?
+# Ava025:361
+a25053: I'm on your side, you know.
+# Ava025:366
+a25054: Misato...?
+# Ava025:371
+a25055: See you...
+
+## ava025b
+# ava025b:27
+a25b001: Kirishima is...
+# ava025b:29
+a25b002: talking with a boy...
+# ava025b:110
+a25b004: No way...
+# ava025b:112
+a25b005: So she got fed up with me and found someone new...
+# ava025b:114
+a25b006: No, that's not it.
+# ava025b:116
+a25b007: Maybe he's a boyfriend she's been seeing all along...
+# ava025b:118
+a25b008: But then, what am I...?
+# ava025b:141
+a25b009: Oh, right. Maybe he's her brother.
+# ava025b:145
+a25b010: But why go out of her way to meet him this late...?
+# ava025b:157
+a25b012: Hey. Find the magazine you were after?
+# ava025b:162
+a25b013: Kaji.
+# ava025b:167
+a25b014: Seeing you like this, you really are just an ordinary eighth grader.
+# ava025b:172
+a25b015: Ritsuko, I'm sorry about the other day.
+# ava025b:177
+a25b016: It's all right.
+# ava025b:195
+a25b017: So, a date at Lake Ashi on Sunday, huh?
+# ava025b:200
+a25b018: How lovely.
+# ava025b:205
+a25b019: But... I don't know if Kirishima will enjoy it...
+# ava025b:210
+a25b020: Don't be so uptight, Shinji.
+# ava025b:213
+a25b021: It's just a date.
+# ava025b:216
+a25b022: Look, we just happen to have a map of Lake Ashi here.
+# ava025b:219
+a25b023: Let's work out a battle plan.
+# ava025b:247
+a25b024: First stop...
+# ava025b:252
+d5d6b7a6: First, Mt. Komagatake Summit
+# ava025b:253
+482f80bb: First, the Fairyland Pirate Ship
+# ava025b:254
+2a249061: First, Yumoto Hot Spring Town
+# ava025b:259
+a25b025: Start somewhere with a nice view, and next...
+# ava025b:262
+8dfbcbea: Fairyland Pirate Ship
+# ava025b:263
+c4a76578: Yumoto Hot Spring Town
+# ava025b:268
+a25b026: Start by touring Lake Ashi on the pirate ship, and next...
+# ava025b:271
+c93ab1c3: Mt. Komagatake Summit
+# ava025b:277
+a25b027: Start with a walk around the hot spring town to loosen up, and then...
+# ava025b:289
+5b3e3e0a: Pirate Ship, and finally...
+# ava025b:298
+08211c20: Yumoto Hot Springs, so finally...
+# ava025b:307
+06221602: Komagatake Summit, and finally...
+# ava025b:316
+924c8370: After Yumoto Hot Springs, finally...
+# ava025b:344
+a25b028: Last, the summit of Mt. Komagatake.
+# ava025b:346
+a25b029: Kirishima might love the mountains glowing in the sunset.
+# ava025b:355
+a25b030: When you think of Lake Ashi, you think of the Fairyland Pirate Ship.
+# ava025b:357
+a25b031: Gotta save the best for last.
+# ava025b:367
+a25b032: It's on the other side from Lake Ashi, so the hot spring town goes last.
+# ava025b:369
+a25b033: There are lots of shops, too. Maybe I should bring a towel...
+# ava025b:381
+a25b034: Look at the time. I have to get back and do some more work.
+# ava025b:385
+a25b035: Shinji, she said yes to a date with you.
+# ava025b:387
+a25b036: Treat her feelings with care.
+# ava025b:391
+a25b037: ...I will.
+# ava025b:436
+a25b038: Hello, Kirishima speaking.
+# ava025b:439
+a25b039: It's Ikari.
+# ava025b:441
+a25b040: Shinji?
+# ava025b:443
+a25b041: I've been thinking about where we'll go on Sunday.
+# ava025b:445
+a25b042: Tell me!
+# ava025b:462
+a25b043: First we go up Mt. Komagatake, then ride the pirate ship around Lake Ashi,
+# ava025b:464
+a25b044: and finish with some window shopping in Yumoto's hot spring town.
+# ava025b:471
+a25b045: We ride the pirate ship around Lake Ashi, then go up Mt. Komagatake,
+# ava025b:473
+a25b046: and finish with some window shopping in Yumoto's hot spring town.
+# ava025b:485
+a25b047: We go to the Yumoto hot spring town, then Mt. Komagatake,
+# ava025b:487
+a25b048: and I thought we'd finish by riding the pirate ship around Lake Ashi.
+# ava025b:494
+a25b049: First we go up Mt. Komagatake, then the Yumoto hot spring town,
+# ava025b:496
+a25b050: and I thought we'd finish by riding the pirate ship around Lake Ashi.
+# ava025b:508
+a25b051: We ride the pirate ship around Lake Ashi, then the Yumoto hot spring town,
+# ava025b:510
+a25b052: and last we take the ropeway up Mt. Komagatake to watch the sunset.
+# ava025b:517
+a25b053: First we go to the Yumoto hot spring town, then ride the pirate ship around Lake Ashi,
+# ava025b:519
+a25b054: and last we take the ropeway up Mt. Komagatake to watch the sunset.
+# ava025b:529
+a25b055: Hello? Are you listening?
+# ava025b:532
+a25b056: I'm so happy.
+# ava025b:534
+a25b057: Let's meet at the Silver Bell in Tokyo-3 Station at 10 a.m.
+# ava025b:536
+a25b058: Is that okay?
+# ava025b:539
+a25b059: Yeah! I can't wait.
+# ava025b:548
+a25b060: This is our little secret, okay?
+# ava025b:550
+a25b061: ...Okay, got it. See you at school tomorrow, then.
+# ava025b:552
+a25b062: Good night, Shinji.
+# ava025b:569
+a25b063: Aren't you the playboy now.
+# ava025b:571
+a25b064: Ten million Shinji fans across the country must be bawling their eyes out.
+# ava025b:575
+a25b065: It's not like that.
+# ava025b:578
+a25b066: Want me to help you practice kissing?
+# ava025b:581
+a25b067: Huh...?
+# ava025b:592
+a25b068: I'm ho-ome!
+# ava025b:596
+a25b069: Welcome home.
+# ava025b:599
+a25b070: Good night.
+# ava025b:604
+a25b071: Night.
+# ava025b:618
+a25b072: I'm starving.
+# ava025b:650
+a25b073: Shinji, I hear you've got a date lined up?
+# ava025b:654
+a25b074: Yeah...
+# ava025b:658
+a25b075: Congrats.
+# ava025b:662
+a25b076: Thanks...
+# ava025b:673
+a25b077: Hello, Katsuragi speaking.
+# ava025b:675
+a25b078: Hyuga?
+# ava025b:678
+a25b079: Got it... I'll be right there.
+# ava025b:682
+a25b080: Shinji, you can have my convenience store bento.
+# ava025b:684
+a25b081: I have to run over to NERV.
+# ava025b:688
+a25b082: Take care...
+# ava025b:707
+a25b083: Me, going off on a date with a girl, while everyone else...
+# ava025b:709
+a25b084: I kind of feel like this isn't the time for that.
+# ava025b:714
+b741da56: When I think about Misato and Asuka...
+# ava025b:715
+a7755aa6: No, I have to think about Kirishima's feelings too
+# ava025b:723
+a25b085: Anyway, I'll at least keep my promise for this date.
+# ava025b:725
+a25b086: After that... Misato and Asuka are working so hard,
+# ava025b:727
+a25b087: so I'll focus on my duty too.
+# ava025b:729
+a25b088: Once it's all over... I can think about it again.
+# ava025b:741
+a25b089: Kaji said it too. I have to take Kirishima's feelings seriously.
+# ava025b:743
+a25b090: Even Misato is rooting for me.
+# ava025b:745
+a25b091: I have to stand by what I want.
+
+## Ava026
+# Ava026:51
+a26001: Today's finally the day of the date.
+# Ava026:53
+a26002: I washed my hair last night, I've got a handkerchief and tissues,
+# Ava026:55
+a26003: and I'm wearing the pendant Kirishima gave me.
+# Ava026:57
+a26004: Man, I'm nervous.
+# Ava026:68
+a26005: Oh, right. We might go in a hot spring at the end, so I'll bring a towel.
+# Ava026:74
+a26006: (Hot spring...?)
+# Ava026:78
+a26007: Pen Pen!
+# Ava026:81
+a26008: (Going to the hot spring!)
+# Ava026:84
+a26009: Get Misato to make your breakfast, okay?
+# Ava026:86
+a26010: (Hot spring! Hot spring! Hot spriiing!)
+# Ava026:89
+a26011: Aw, what am I supposed to do now?
+# Ava026:99
+a26012: Misato and Asuka are still asleep.
+# Ava026:101
+a26013: I'll sneak out quietly so I don't wake them.
+# Ava026:159
+a26014: Morning, Shinji! Did you wait long?
+# Ava026:163
+a26015: No, I just got here.
+# Ava026:167
+a26016: Shall we go, then?
+# Ava026:171
+a26017: Yeah.
+# Ava026:187
+a26018: (Come on, let's go already.)
+# Ava026:191
+a26019: Oh~ How cute! What's his name?
+# Ava026:194
+a26020: That's Pen Pen. He's a hot spring penguin.
+# Ava026:199
+a26021: (Hot spring! Hot spring!)
+# Ava026:203
+a26022: Pen Pen, you're so cute!
+# Ava026:207
+a26023: (Blush, blush...)
+# Ava026:211
+a26024: ...
+# Ava026:299
+a26025: The lake's beautiful, isn't it?
+# Ava026:304
+a26026: Hey, call me Mana.
+# Ava026:308
+a26027: Huh?
+# Ava026:311
+a26028: That's kind of... embarrassing...
+# Ava026:315
+a26029: If you don't, no lunch for you.
+# Ava026:320
+a26030: That kind of thing just isn't me.
+# Ava026:324
+a26031: Oh, fine. Then maybe I'll just take the lunch home.
+# Ava026:329
+a26032: Wait! Let me get ready for it.
+# Ava026:334
+a26033: Okay!
+# Ava026:340
+a26034: ...
+# Ava026:342
+a26035: Mana.
+# Ava026:347
+a26036: Yes, Shinji?
+# Ava026:352
+a26037: (Heh... *scratch scratch*)...
+# Ava026:355
+a26038: Mana.
+# Ava026:360
+a26039: Shinji...
+# Ava026:365
+a26040: Mana...
+# Ava026:378
+a26041: I love you, Shinji...
+# Ava026:390
+a26042: (Gimme some of that lunch too.)
+# Ava026:394
+a26043: I forgot about Pen Pen.
+# Ava026:398
+a26044: Pen Pen, you're so cute!
+# Ava026:402
+a26045: (Blush, blush...)
+# Ava026:477
+a26046: You know, I thought you might turn me down.
+# Ava026:482
+a26047: Why?
+# Ava026:487
+a26048: I just did...
+# Ava026:492
+a26049: Because I'm with NERV?
+# Ava026:499
+a26050: ...What would you do if I were your enemy?
+# Ava026:504
+a26051: ...That's ridiculous. There's no way that's true.
+# Ava026:509
+a26052: Shinji...
+# Ava026:514
+a26053: That's a mean thing to say...
+# Ava026:519
+a26054: I'm sorry...
+# Ava026:530
+a26056: But even if I were your enemy,
+# Ava026:532
+a26057: would you still love me, Shinji?
+# Ava026:537
+a26058: ...
+# Ava026:566
+a26059: (Hot spring, hot spring! Yay, yay!)
+# Ava026:570
+a26060: I think Pen Pen's planning to take a dip in the hot spring.
+# Ava026:574
+a26061: A penguin who likes hot springs, huh?
+# Ava026:584
+a26062: Huh? Shinji?
+# Ava026:588
+a26063: And Kirishima's with you?
+# Ava026:593
+a26064: Yes.
+# Ava026:597
+a26065: Bringing your girl all the way out here, Shinji? You sly dog.
+# Ava026:601
+a26066: It's not like that.
+# Ava026:605
+a26067: (Hot spring! Hot spring!)
+# Ava026:610
+a26068: Toji, let's not get in their way. Come on.
+# Ava026:614
+a26069: Fine, fine. See ya!
+# Ava026:624
+a26070: Should we head home?
+# Ava026:629
+a26071: Let's stay a little longer.
+# Ava026:634
+a26072: Are you sure?
+# Ava026:641
+a26073: Okay?
+# Ava026:646
+a26074: Okay.
+# Ava026:700
+a26075: That's the pendant I gave you.
+# Ava026:704
+a26076: Yeah...
+# Ava026:709
+a26077: Your hands are rough, Shinji.
+# Ava026:711
+a26078: A pilot's hands.
+# Ava026:715
+a26079: Yours are soft, Mana.
+# Ava026:719
+a26080: I had fun today.
+# Ava026:728
+a26081: Mana is not a spy.
+
+## Ava027
+# Ava027:37
+a27004: Confirming directly with JSSDF command now.
+# Ava027:42
+a27005: Check for radiation and hazardous materials immediately, please.
+# Ava027:47
+a27006: Target A crushed the rock under its own weight, lost its balance, and slammed into the granite.
+# Ava027:59
+a27007: We believe the unidentified moving object is a new type of humanoid weapon.
+# Ava027:67
+a27008: It appears it broke through the cliff edge while moving at high speed and crashed straight into the bedrock.
+# Ava027:71
+a27009: Are there any survivors?
+# Ava027:75
+a27010: There's something like a hatch in the middle of the torso, big enough for a person.
+# Ava027:90
+a27011: We have permission.
+# Ava027:100
+a27012: Would you look inside the hatch?
+# Ava027:103
+a27013: Yes, sir. Will do.
+# Ava027:112
+a27014: Pointless. We have no time to waste on that thing.
+# Ava027:116
+a27015: We can't just ignore it, can we?
+# Ava027:118
+a27016: It won't take long.
+# Ava027:126
+a27017: Shinji.
+# Ava027:137
+a27018: Shinji, are you there?
+# Ava027:141
+a27019: Yes.
+# Ava027:145
+a27020: You no longer need to stand by.
+# Ava027:147
+a27021: Go to the test wing and continue the tests.
+# Ava027:151
+a27022: But I have to wait for Misato... I mean, Major Katsuragi's orders.
+# Ava027:155
+a27023: That's an order.
+# Ava027:159
+a27024: ...Yes, sir.
+# Ava027:184
+a27025: Father always does whatever he wants.
+
+## ava027b
+# ava027b:26
+a27b001: Good morning...
+# ava027b:30
+a27b002: So, how was the date?
+# ava027b:33
+a27b003: It was really fun.
+# ava027b:35
+a27b004: The best time of your life.
+# ava027b:39
+a27b005: Ritsuko, are you always alone in this room?
+# ava027b:42
+a27b006: It just ended up that way.
+# ava027b:45
+a27b007: When I'm thinking, other people just get in the way.
+# ava027b:49
+a27b008: You're really smart.
+# ava027b:52
+a27b009: Calling someone smart isn't a compliment, you know.
+# ava027b:55
+a27b010: Did you know that?
+# ava027b:59
+a27b011: Oh, sorry...
+# ava027b:68
+a27b012: Well, then...
+# ava027b:76
+a27b013: Ritsuko, what about the experiment?
+# ava027b:80
+a27b014: Change of plans. I'm heading out right away. They've recovered a pilot from inside that humanoid weapon.
+# ava027b:84
+a27b015: A pilot?
+# ava027b:86
+a27b016: Apparently a boy about your age, Shinji. Junior high.
+# ava027b:88
+a27b017: A junior high kid, like me...
+# ava027b:90
+a27b018: I can hardly wait.
+# ava027b:93
+a27b019: I'm off. Say hi to your girlfriend for me.
+# ava027b:103
+a27b020: ...Sometimes Ritsuko seems really scary.
+
+## ava027c
+# ava027c:26
+a27c001: He's the one behind that whole moving-object mess?
+# ava027c:30
+a27c002: Probably.
+# ava027c:32
+a27c003: A whole load of precision missiles, a cannon at least 100 millimeters,
+# ava027c:34
+a27c004: and even hands that can grab things.
+# ava027c:37
+a27c005: He's an enemy of NERV.
+# ava027c:41
+a27c006: An enemy?
+# ava027c:43
+a27c007: I don't get why anyone would attack NERV.
+# ava027c:47
+a27c008: Idiot. Because of the Evas, obviously.
+# ava027c:51
+a27c009: Why?
+# ava027c:55
+a27c010: That's just how it is with Evas.
+# ava027c:59
+a27c011: How what is?
+# ava027c:63
+a27c012: If I say that's how it is, that's how it is!
+# ava027c:67
+a27c013: You don't really know, do you?
+# ava027c:71
+a27c014: That boy tried to take out the Evas,
+# ava027c:73
+a27c015: and that's all there is to it!
+# ava027c:86
+a27c016: That can't be true.
+# ava027c:92
+a27c017: Mana!
+# ava027c:94
+a27c018: What are you doing here?
+# ava027c:99
+a27c019: The person lying there is my friend.
+# ava027c:104
+a27c020: Aha~ I see.
+# ava027c:106
+a27c021: So that's why you got close to Shinji, Kirishima.
+# ava027c:109
+a27c022: You're planning to lure us into a trap.
+# ava027c:114
+a27c023: Huh?
+# ava027c:119
+a27c024: I only came to visit him.
+# ava027c:123
+a27c025: The boy you came to visit is the one who tried to wreck the Evas.
+# ava027c:126
+a27c026: Just what is he to you?
+# ava027c:132
+a27c027: That's...
+# ava027c:137
+a27c028: And you're an idiot too, Shinji.
+# ava027c:139
+a27c029: A girl who just transferred in doesn't go on a date with you out of nowhere for no reason!
+# ava027c:145
+a27c030: ...
+# ava027c:147
+a27c031: Is that true?
+# ava027c:151
+a27c032: No, it isn't.
+# ava027c:157
+a27c033: Stupid Shinji! Don't come crying to me if you get killed!
+# ava027c:159
+a27c034: I'm going home.
+# ava027c:169
+a27c035: You believe me, don't you, Shinji?
+# ava027c:177
+a27c037: Anyway, it's bad for you to be here.
+# ava027c:179
+a27c038: If someone's watching, they'll treat you like a suspect.
+
+## ava027d
+# ava027d:24
+a27d001: Who is he?
+# ava027d:29
+a27d002: A friend...
+# ava027d:34
+a27d003: So you had other guy friends besides me.
+# ava027d:39
+a27d004: His name is Keita. He was my classmate at my old school.
+# ava027d:43
+a27d005: You don't have to explain...
+# ava027d:47
+a27d006: ...Why would you say that?
+# ava027d:51
+a27d007: I don't want to know
+# ava027d:53
+a27d008: about your boyfriend.
+# ava027d:57
+a27d009: Keita is just a friend. It's nothing like what you're thinking, Shinji.
+# ava027d:63
+a27d010: ...
+# ava027d:75
+a27d011: Who's there?!
+# ava027d:83
+a27d012: Did I interrupt a nice moment?
+# ava027d:88
+a27d013: Kaji.
+# ava027d:93
+a27d014: Sorry for startling you.
+# ava027d:95
+a27d015: I got called in about the boy from that robot business.
+# ava027d:97
+a27d016: Since it's a robot built by humans, things get messy.
+# ava027d:102
+a27d017: That boy is Mana's friend.
+# ava027d:107
+a27d018: I see. That doesn't look good.
+# ava027d:113
+a27d019: I'm sorry...
+# ava027d:118
+a27d020: Mana?
+# ava027d:122
+a27d021: It might all be my fault...
+# ava027d:126
+a27d022: Hey! What do you mean?
+# ava027d:131
+a27d023: Calm down, and listen carefully to what I'm about to say.
+# ava027d:133
+a27d024: First, don't tell me anything more.
+# ava027d:135
+a27d025: Next, get out of this hospital, fast.
+# ava027d:137
+a27d026: After that, just go on living like normal.
+# ava027d:139
+a27d027: But you can't come to the hospital again.
+# ava027d:145
+a27d028: ...Okay.
+# ava027d:149
+a27d029: Shinji, you protect her.
+# ava027d:153
+a27d030: But...
+# ava027d:157
+a27d031: Don't say anything. Get her outside, quick.
+# ava027d:173
+a27d032: I want to know your secret, Mana.
+# ava027d:178
+a27d033: It has nothing to do with you, Shinji.
+# ava027d:183
+a27d034: I don't think it has nothing to do with me...
+# ava027d:188
+a27d035: You mustn't know...
+# ava027d:193
+a27d036: Why?
+# ava027d:198
+a27d037: If you found out,
+# ava027d:201
+a27d038: we could never see each other again.
+# ava027d:208
+a27d039: I promise I won't tell anyone.
+# ava027d:213
+a27d040: ...
+# ava027d:223
+a27d042: Okay. I won't ask anymore.
+# ava027d:226
+a27d043: You've got your own secrets, Mana.
+# ava027d:231
+a27d044: I'm sorry for being such a selfish girl...
+# ava027d:236
+a27d045: ...
+# ava027d:250
+a27d046: As long as I don't know the secret, it's fine.
+# ava027d:255
+a27d047: But if that secret is something serious for NERV or the Evas, then...
+# ava027d:261
+a27d048: Misato...
+# ava027d:267
+a27d049: Asuka...
+# ava027d:273
+a27d050: Rei...
+# ava027d:279
+a27d051: Ritsuko...
+# ava027d:285
+a27d052: I'd be betraying all of them.
+# ava027d:303
+a27d053: Seeing you work so hard, Shinji,
+# ava027d:306
+a27d054: makes us want to try harder too.
+# ava027d:313
+a27d055: NERV's got its spark back thanks to you, Shinji.
+# ava027d:319
+a27d056: You're doing great, Shinji. Keep it up.
+# ava027d:325
+a27d057: Shinji, your father is proud that you came here.
+# ava027d:334
+a27d058: Father?
+# ava027d:342
+a27d059: Shinji.
+# ava027d:354
+a27d060: Shinji, is it?
+# ava027d:356
+a27d061: Don't call me over something so trivial.
+# ava027d:372
+a27d062: Father doesn't understand how I feel.
+# ava027d:380
+a27d063: If Mother were here...
+
+## Ava028
+# Ava028:45
+a28001: Any bites?
+# Ava028:49
+a28002: None.
+# Ava028:63
+a28003: Two robots were sighted, and we've found one of them, at least.
+# Ava028:67
+a28004: And the other one's in Lake Ashi?
+# Ava028:71
+a28005: It should be. Maybe it doesn't like the bait.
+# Ava028:76
+a28006: The robot incident has nothing to do with NERV, so why are we investigating?
+# Ava028:81
+a28007: A woman's pride.
+# Ava028:84
+a28008: Commander Ikari is hiding something.
+# Ava028:86
+a28009: So I'm needling him.
+# Ava028:88
+a28010: Don't you want to know the truth?
+# Ava028:92
+a28011: So you're being left out too, Misato?
+# Ava028:98
+a28012: ...
+# Ava028:102
+a28013: Ouch. That stings.
+# Ava028:110
+a28014: Oh? A call.
+# Ava028:113
+a28015: Yes, Katsuragi here.
+# Ava028:132
+a28016: Commander Ikari. What is the meaning of this?
+# Ava028:137
+a28017: Both of you, sit down.
+# Ava028:143
+a28018: Major Katsuragi.
+# Ava028:145
+a28019: You're the one acting as his guardian. Get a grip.
+# Ava028:149
+a28020: That's why I'm asking
+# Ava028:151
+a28021: what Shinji was called in for!
+# Ava028:157
+a28022: I'm the one who reported Kirishima.
+# Ava028:160
+a28023: Because she's a spy.
+# Ava028:165
+a28024: Asuka!
+# Ava028:170
+a28025: What?!
+# Ava028:175
+a28026: Both of you, calm down.
+# Ava028:177
+a28027: Shinji, have you received anything from this Kirishima girl?
+# Ava028:179
+a28028: Something you'd wear, for example.
+# Ava028:183
+a28029: ...
+# Ava028:187
+a28030: The pendant.
+# Ava028:191
+a28031: No!
+# Ava028:197
+a28032: Hand it over, Shinji.
+# Ava028:202
+a28033: What right do you have to tell me that, Father?!
+# Ava028:207
+a28034: Shinji! Watch your mouth!
+# Ava028:210
+a28035: You're about to betray everyone at NERV.
+# Ava028:216
+a28036: Ritsuko...
+# Ava028:220
+a28037: You were happy for me about her, weren't you?
+# Ava028:225
+a28038: Give me the pendant.
+# Ava028:227
+a28039: Once we examine it, she'll be cleared of suspicion.
+# Ava028:232
+a28040: Shinji...
+# Ava028:238
+a28041: All right.
+# Ava028:250
+a28042: Hurry the analysis. There's no need to spend time on it.
+# Ava028:274
+a28044: Misato...
+# Ava028:276
+a28045: I'm so ashamed...
+# Ava028:278
+a28046: I couldn't do anything in front of Father,
+# Ava028:280
+a28047: and he thinks I'm just fooling around...
+# Ava028:284
+a28048: It's okay. You did fine, Shinji.
+# Ava028:286
+a28049: You don't have to blame yourself.
+# Ava028:288
+a28050: You can just go see Kirishima again.
+# Ava028:302
+a28051: You hate me now, don't you?
+# Ava028:304
+a28052: Go ahead, hate me even more.
+# Ava028:306
+a28053: But you know what?
+# Ava028:308
+a28054: I won't lose.
+# Ava028:310
+a28055: I'll never lose to anyone.
+# Ava028:312
+a28056: I can't lose!
+# Ava028:368
+a28059: Kirishima and Asuka are both out today, huh?
+# Ava028:372
+a28060: I guess...
+# Ava028:377
+a28061: Never mind Asuka,
+# Ava028:380
+a28062: but you're lonely without Kirishima around, right?
+# Ava028:384
+a28063: Leave me alone.
+# Ava028:389
+a28064: Man, Shinji's got it good, though. Landing a girlfriend that cute.
+# Ava028:391
+a28065: He goes home to the gorgeous Misato,
+# Ava028:393
+a28066: and he's a proud Eva pilot on top of it.
+# Ava028:399
+a28067: Argh! That ticks me off!
+# Ava028:401
+a28068: What's the fun in pumping up Shinji's ego?!
+# Ava028:405
+a28069: Hey, Shinji,
+# Ava028:408
+a28070: I heard someone found a real dirty picture book in the library.
+# Ava028:410
+a28071: Rumor is it shows everything. Wanna go check it out?
+# Ava028:415
+a28072: I'll pass.
+# Ava028:420
+a28073: Don't tell me you've already seen it.
+# Ava028:424
+a28074: I get it! You got on your knees and begged your girlfriend to show you!
+# Ava028:428
+a28075: Aaargh! Seriouslyyy?!
+# Ava028:431
+a28076: I wanna see too!
+# Ava028:436
+a28077: ...
+# Ava028:442
+a28078: Knock it off, Toji. He really seems down.
+# Ava028:447
+a28079: Can't he see I'm tryin' to cheer him up? That's true friendship!
+# Ava028:450
+a28080: Let's just leave him be.
+# Ava028:452
+a28081: Fine. Guess it's just the two of us, then.
+# Ava028:463
+a28082: ...
+# Ava028:502
+a28083: Excuse me...
+# Ava028:507
+a28084: Yes! What can I get you?
+# Ava028:512
+a28085: Some water, please...
+# Ava028:517
+a28086: Coming right up!
+# Ava028:532
+a28087: Welcome!
+# Ava028:537
+a28088: Shinji, is today's lunch special any good?
+# Ava028:542
+a28089: Misato, how did you know I was here?
+# Ava028:547
+a28090: I know everything about you, Shinji.
+# Ava028:563
+a28091: Kirishima's pendant...
+# Ava028:568
+a28092: They say it's a genuine, perfectly ordinary pendant.
+# Ava028:571
+a28093: Isn't that great? Now it's proven she's innocent.
+# Ava028:577
+a28094: But nobody's happy about me going out with Mana, are they?
+# Ava028:582
+a28095: Oh, Shinji~ So lovey-dovey~ Just kidding.
+# Ava028:584
+a28096: A beer and a seafood pizza, please!
+# Ava028:591
+a28097: Coming up!
+# Ava028:601
+a28098: Hey, bring her over to our place tomorrow.
+# Ava028:603
+a28099: I'll knock off work early and make dinner.
+# Ava028:608
+a28100: We're going to eat dinner...?
+# Ava028:610
+a28101: ...Your dinner, Misato?
+# Ava028:651
+a28102: Misato is with NERV, isn't she?
+# Ava028:656
+a28103: She's like a kind big sister, and she's on our side.
+# Ava028:661
+a28104: But...
+# Ava028:666
+a28105: I'll take you to our place.
+# Ava028:671
+a28106: I...
+# Ava028:676
+a28107: Besides, if Misato approves of you, we won't have to worry about NERV.
+# Ava028:681
+a28108: Okay...
+# Ava028:686
+a28109: Promise you'll come.
+# Ava028:691
+a28110: I promise.
+# Ava028:696
+a28111: I hope it's a fun dinner.
+# Ava028:705
+a28112: Yeah. Thank you.
+# Ava028:707
+a28113: Good night.
+# Ava028:714
+a28114: Night.
+# Ava028:732
+a28115: So she's coming.
+# Ava028:737
+a28116: Don't pick a fight with her.
+# Ava028:742
+a28117: If you don't want a fight, then don't bring her.
+# Ava028:747
+a28118: Come on...
+# Ava028:752
+a28119: Good ni-ight.
+# Ava028:827
+a28120: Going to a stranger's house...
+# Ava028:831
+a28121: is kind of scary.
+# Ava028:927
+a28131: Misato's taking forever. What is she doing?
+# Ava028:932
+a28132: (Yeah, yeah!)
+# Ava028:937
+a28133: Oh, uh, Asuka, how have you been lately?
+# Ava028:942
+a28134: My, why so formal all of a sudden?
+# Ava028:945
+a28135: We're so close, you and me~
+# Ava028:950
+a28136: ...
+# Ava028:959
+a28137: Don't say weird stuff. Mana will get the wrong idea.
+# Ava028:963
+a28138: But it's true~
+# Ava028:966
+a28139: We take baths together~
+# Ava028:970
+a28140: and we sleep together too~
+# Ava028:975
+a28141: No we don't! We bathe and sleep separately!
+# Ava028:980
+a28142: The other day, a pair of my panties went missing, you know.
+# Ava028:983
+a28143: Could you give them back?
+# Ava028:989
+a28144: Mana, don't take her seriously!
+# Ava028:992
+a28145: It's all lies!
+# Ava028:997
+a28146: Shut up, Shinji!
+# Ava028:1001
+a28147: Kirishima~
+# Ava028:1007
+a28148: Yes?
+# Ava028:1012
+a28149: Isn't it lovely? Visiting the home of the boy you like,
+# Ava028:1014
+a28150: and meeting his family. Honestly, I'm jealous.
+# Ava028:1020
+a28151: His family...?
+# Ava028:1024
+a28152: We're not a real family, but Misato decided we are.
+# Ava028:1026
+a28153: Though Shinji's the one she really loves.
+# Ava028:1038
+a28154: I love you too, Asuka, not just Shinji.
+# Ava028:1043
+a28155: Misato! Thank goodness, the food's ready.
+# Ava028:1048
+a28156: Leave it to me!
+# Ava028:1053
+a28157: Kirishima, you can relax a little more, too.
+# Ava028:1057
+a28158: Okay.
+# Ava028:1062
+a28159: And now for today's main event: it's poison-tasting time!
+# Ava028:1069
+a28160: I remade it three times, you know.
+# Ava028:1073
+a28161: Third time's the charm, then.
+# Ava028:1077
+a28162: Or what happens twice happens a third time.
+# Ava028:1098
+a28163: Well, let's dig in.
+# Ava028:1104
+a28164: Let's eat!
+# Ava028:1117
+a28165: ...
+# Ava028:1124
+a28166: Our guest of honor first, please.
+# Ava028:1128
+a28167: I'll taste it first.
+# Ava028:1132
+a28168: No way!
+# Ava028:1136
+a28169: Kirishima, please, help yourself.
+# Ava028:1140
+a28170: Okay...
+# Ava028:1149
+a28171: How is it?
+# Ava028:1156
+a28172: ...
+# Ava028:1162
+a28173: It's delicious.
+# Ava028:1166
+a28174: ...
+# Ava028:1168
+a28175: Really?
+# Ava028:1178
+a28176: (Hmph!)
+# Ava028:1182
+a28177: I'm so glad.
+# Ava028:1184
+a28178: Go on, everyone, try some.
+# Ava028:1198
+a28179: So, Kirishima, what is it you like about Shinji?
+# Ava028:1205
+a28180: ...His eyes, I guess.
+# Ava028:1210
+a28181: His eyes?
+# Ava028:1215
+a28182: There's something shining deep inside them...
+# Ava028:1219
+a28183: Shinji has beautiful eyes, doesn't he?
+# Ava028:1225
+a28184: You don't know a thing about Shinji.
+# Ava028:1234
+a28185: ...
+# Ava028:1236
+a28186: ...
+# Ava028:1243
+a28187: Now, now, let's all enjoy our meal together.
+# Ava028:1249
+a28188: Kirishima,
+# Ava028:1252
+a28189: what are you really after?
+# Ava028:1258
+a28190: Asuka! Why would you say that?
+# Ava028:1267
+a28191: Because you won't just come out and ask!
+# Ava028:1271
+a28192: Come on, you two, no fighting!
+# Ava028:1275
+a28193: Don't mind them, Kirishima. They're always like this.
+# Ava028:1280
+a28194: Asuka,
+# Ava028:1283
+a28195: I...
+# Ava028:1286
+a28196: love Shinji.
+# Ava028:1294
+a28197: Love and romance! Don't throw those words around so lightly!
+# Ava028:1298
+a28198: More people end up crying over them than not!
+# Ava028:1305
+a28199: Asuka!
+# Ava028:1323
+a28200: ...
+# Ava028:1343
+a28201: I'm sorry, after you came all this way.
+# Ava028:1346
+a28202: Honestly, that Asuka...
+# Ava028:1349
+a28203: Please try to get along with her at school.
+# Ava028:1354
+a28204: Sure...
+# Ava028:1358
+a28205: Mana, I'm sorry...
+# Ava028:1362
+a28206: It's okay.
+# Ava028:1365
+a28207: Saying what I wanted to say felt good.
+# Ava028:1370
+a28208: I'll walk you part of the way.
+# Ava028:1376
+a28210: Stay here.
+# Ava028:1379
+a28211: We'll see each other at school.
+# Ava028:1382
+a28212: Thank you for dinner tonight.
+# Ava028:1386
+a28213: Sure. Come back anytime.
+# Ava028:1428
+a28215: Mana didn't come to school,
+# Ava028:1430
+a28216: nor the day after that...
+
+## ava031
+# ava031:44
+a31001: All vehicles, as soon as the moving target enters range,
+# ava031:47
+a31002: switch to hold mode and use up every last round!
+# ava031:57
+a31003: Target sighted! It's coming from the direction of the Kintetsu department store!
+# ava031:62
+a31004: I-It's huge...
+# ava031:67
+a31005: It's within range!
+# ava031:72
+a31006: Fire!
+# ava031:82
+a31007: Captain! We can't even scratch it!
+# ava031:87
+a31008: Aaargh!
+# ava031:116
+a31009: The moving object that emerged from Lake Ashi passed along Route 75,
+# ava031:118
+a31010: engaged the army's tank unit, destroyed a monorail station,
+# ava031:120
+a31011: and appears to be still on the move.
+# ava031:131
+a31012: Let them do as they please.
+# ava031:136
+a31013: But it'll be a nuisance if they damage the Eva facilities.
+# ava031:138
+a31014: Our repair costs just keep piling up.
+# ava031:140
+a31015: Their operations always wreck everything in sight.
+# ava031:145
+a31016: It's the perfect chance to crush their pride.
+# ava031:147
+a31017: Mistakes are best learned the hard way.
+# ava031:163
+a31018: Why aren't you sending out the Evas? We could stop that robot in no time.
+# ava031:168
+a31019: Because we haven't received a deployment request from above.
+# ava031:173
+a31020: The Evas were built first and foremost to defend against the Angels' attacks, remember?
+# ava031:185
+a31021: The Angels. Visitors from space who bring us nothing but destruction.
+# ava031:194
+a31022: And the Evas exist to stop their attacks.
+# ava031:206
+a31023: But the robot is different.
+# ava031:208
+a31024: It was made by our fellow humans,
+# ava031:210
+a31025: so it's none of NERV's business.
+# ava031:214
+a31026: An attack from other humans?
+# ava031:225
+a31027: They don't tell me anything.
+# ava031:228
+a31028: Call it a hidden truth.
+# ava031:232
+a31029: A single bullet could even start a war between nations.
+# ava031:239
+a31030: A war?
+# ava031:259
+a31031: Do you think there's a junior high kid like me piloting that robot too?
+# ava031:263
+a31032: Let's not think about that. Even if we knew, there'd be no way to help them.
+# ava031:267
+a31033: Isn't it wrong to not think about it just because we can't help?
+# ava031:272
+a31034: Shinji,
+# ava031:275
+a31035: you have someone you need to protect,
+# ava031:278
+a31036: Kirishima, don't you?
+# ava031:283
+a31037: She's been absent from school for a while. I haven't seen her.
+# ava031:288
+a31038: I see...
+# ava031:292
+a31039: The pilot of the last robot was Kirishima's friend.
+# ava031:295
+a31040: Misato, we have to save the pilot.
+# ava031:300
+a31041: There's no need!
+# ava031:303
+a31042: The very existence of that robot pisses me off.
+# ava031:306
+a31043: With the whole planet in crisis, it's like it's saying the Evas aren't even needed!
+# ava031:311
+a31044: ...
+# ava031:341
+a31045: Shinji...
+# ava031:346
+a31046: Mana, where have you been?! You've been out of school all this time.
+# ava031:351
+a31047: He's not there.
+# ava031:356
+a31048: Who?
+# ava031:361
+a31049: Keita. He was in intensive care.
+# ava031:366
+a31050: But Kaji said you shouldn't go to the hospital...
+# ava031:371
+a31051: But he's just not there!
+# ava031:376
+a31052: Maybe he was moved to a regular ward?
+# ava031:381
+a31053: I asked at reception, and they said nobody by that name was admitted.
+# ava031:386
+a31054: Let's search properly.
+# ava031:389
+a31055: Maybe he was admitted under a different name.
+# ava031:396
+a31056: Hold it right there.
+# ava031:401
+a31057: Asuka!
+# ava031:403
+a31058: No fighting, okay?
+# ava031:409
+a31059: I'm coming too.
+# ava031:411
+a31060: Who knows what'll happen to Shinji if he goes alone.
+# ava031:416
+a31061: But...
+# ava031:423
+a31062: It's fine.
+# ava031:426
+a31063: I'll feel a lot better if you come with us.
+# ava031:434
+a31064: We're bringing Wonder Girl along too.
+# ava031:439
+a31065: Only for a little while.
+# ava031:444
+a31066: All right...
+# ava031:447
+a31067: Then let's all four go to the JSSDF hospital.
+
+## ava032
+# ava032:39
+a32001: See? He's not here.
+# ava032:42
+a32002: I searched the wards too.
+# ava032:47
+a32003: He was badly hurt, so...
+# ava032:51
+a32004: maybe he was moved to another hospital,
+# ava032:55
+a32005: or maybe he didn't make it...
+# ava032:60
+a32006: He's alive!
+# ava032:66
+a32007: Sorry.
+# ava032:71
+a32008: You haven't heard anything about NERV taking him away?
+# ava032:76
+a32009: Making us sound like the bad guys...
+# ava032:81
+a32010: Maybe it has something to do with that robot?
+# ava032:86
+a32011: Could it be...
+# ava032:91
+a32012: ?
+# ava032:96
+a32013: Maybe they dragged him back...
+# ava032:100
+a32014: Those people...
+# ava032:105
+a32015: What people?
+# ava032:108
+a32016: Behind you!
+# ava032:116
+a32017: !
+# ava032:119
+a32018: Shinji!
+# ava032:147
+a32019: Damn it!
+# ava032:151
+a32020: Run!
+# ava032:184
+a32021: This is the girls' room!
+# ava032:188
+a32022: If I don't hide, they'll catch me.
+# ava032:194
+a32023: I'll go out to them.
+# ava032:197
+a32024: I can't drag all of you into this.
+# ava032:210
+a32025: Anyone over there?!
+# ava032:215
+a32026: Can't find them!
+# ava032:227
+a32027: If you go out there, they'll kill you!
+# ava032:233
+a32028: So the boy in intensive care was killed by them too.
+# ava032:236
+a32029: That's it, isn't it, Kirishima?
+# ava032:246
+a32030: No...
+# ava032:250
+a32031: Asuka, do you have your cell phone?
+# ava032:252
+a32032: We need to call Misato.
+# ava032:256
+a32033: Right. This is an emergency, so I'll use emergency contact mode.
+# ava032:276
+a32034: This is the place...
+# ava032:293
+a32035: Come along, Grandpa,
+# ava032:295
+a32036: walk a little faster, will you?
+# ava032:301
+a32037: Now, Grandma,
+# ava032:304
+a32038: if we hurry any more, they'll get suspicious.
+# ava032:310
+a32039: Something's fishy here.
+# ava032:315
+a32040: There's a NERV car parked out front!
+# ava032:320
+a32041: What?!
+# ava032:325
+a32042: Run!
+# ava032:330
+a32043: Get them!
+# ava032:341
+a32044: Hurry, everyone!
+# ava032:428
+a32045: They're following us.
+# ava032:499
+a32048: Why are they chasing us?!
+# ava032:588
+a32049: Why are they shooting at us?!
+# ava032:593
+a32050: Why are we being chased?!
+# ava032:598
+a32051: It's my fault!
+# ava032:603
+a32052: I already know that!
+# ava032:608
+a32053: But why?!
+# ava032:613
+a32054: Because I'm a traitor!
+# ava032:616
+a32055: I'm one of them!
+# ava032:621
+a32056: What?!
+# ava032:626
+a32057: Explanations later! Hold on tight, everyone, I'm flooring it.
+# ava032:861
+a32058: The black car is gone.
+
+## ava033
+# ava033:48
+a33001: Mana...
+# ava033:51
+a33002: you were one of them.
+# ava033:56
+a33003: ...
+# ava033:61
+a33004: The day you transferred,
+# ava033:64
+a33005: when you came up and talked to me... that was all a lie.
+# ava033:69
+a33006: That's not true!
+# ava033:74
+a33007: But you were trying to trick me and Misato, weren't you?!
+# ava033:79
+a33008: I had no choice!
+# ava033:84
+a33009: Mana, are you a spy?
+# ava033:89
+a33010: ...
+# ava033:93
+a33011: Are you?
+# ava033:100
+a33012: Yes, Shinji.
+# ava033:103
+a33013: I'm a child soldier sent by the military to watch the daily life of Shinji Ikari, the pilot of Eva Unit-01.
+# ava033:108
+a33014: But I really do like you, Shinji.
+# ava033:111
+a33015: That part isn't a lie.
+# ava033:114
+a33016: Do you hate me now, Shinji?
+# ava033:123
+a33017: That's so selfish...
+# ava033:128
+a33018: ...
+# ava033:133
+a33019: Shinji, that's enough.
+# ava033:138
+a33020: But...
+# ava033:143
+a33021: You two, there's no point arguing at a time like this.
+# ava033:148
+a33022: Anyway, let's get somewhere safe. I'll contact NERV HQ from there.
+# ava033:153
+a33023: What's going to happen to Mana?
+# ava033:158
+a33024: Either she goes to the police or NERV takes her into custody, I suppose.
+# ava033:163
+a33025: No way!
+# ava033:168
+a33026: But think about it. What do you think would happen if we just sent Mana back now?
+# ava033:173
+a33027: ...
+# ava033:192
+a33028: Ritsuko, are you listening?
+# ava033:194
+a33029: It's about a classmate of Shinji's.
+# ava033:196
+a33030: She's a child soldier who ran away from the military, and she's asking for help.
+# ava033:198
+a33031: Isn't there something we can do for her?
+# ava033:200
+a33032: What? Not our problem?
+# ava033:202
+a33033: She's a spy, you see...
+# ava033:204
+a33034: What? Out of the question?
+# ava033:206
+a33035: No, that's not what I mean!
+# ava033:208
+a33036: Ah!
+# ava033:224
+a33037: Kirishima, what good does spying on someone like Shinji even do?
+# ava033:229
+a33038: The information I gather goes to the robot weapon design department.
+# ava033:232
+a33039: They use it to improve the cockpit.
+# ava033:237
+a33040: Then, the reason the robot pilots are junior high kids...
+# ava033:240
+a33041: is it because they copied the Eva?
+# ava033:245
+a33042: It's not that.
+# ava033:248
+a33043: The pilots are fourteen
+# ava033:251
+a33044: because they're training us for a war they expect six years from now...
+# ava033:256
+a33045: Six years from now?
+# ava033:261
+a33046: So in six years the pilots will be twenty.
+# ava033:267
+a33047: At first we were thrilled that we'd get to pilot a brand-new machine.
+# ava033:287
+a33048: My teammates were Musashi and Keita.
+# ava033:289
+a33049: We had fun training together and became close.
+# ava033:291
+a33050: But piloting the robot was hard,
+# ava033:304
+a33051: and in less than a month, the violent shaking
+# ava033:306
+a33052: wrecked my insides.
+# ava033:308
+a33053: Then one day, Keita said he didn't want to be tied down for six years,
+# ava033:310
+a33054: and apparently he tried to climb over the fence.
+# ava033:325
+a33055: But that would have ruined the whole robot weapon project.
+# ava033:327
+a33056: The adults forced us back behind the fence.
+# ava033:343
+a33057: Everyone gradually got more and more frustrated,
+# ava033:345
+a33058: and whenever the adults weren't looking, they started bullying Keita.
+# ava033:347
+a33059: Musashi and I tried to stop them, but it was no use.
+# ava033:349
+a33060: Everyone just watched and laughed.
+# ava033:365
+a33061: The three of us, Musashi, Keita and me, used to joke about escaping someday in the robot weapon,
+# ava033:367
+a33062: but I never thought they'd really do it.
+
+## ava033b
+# ava033b:41
+a33063: I'm an accomplice too, so of course they're after me.
+# ava033b:46
+a33064: If it comes to that, you can hide in my room.
+# ava033b:51
+a33065: Then NERV Intelligence won't just sit back and watch.
+# ava033b:56
+a33066: If I ask my father, maybe he'll help.
+# ava033b:61
+a33067: That's impossible. Your father would never help an enemy.
+# ava033b:66
+a33068: Mana isn't an enemy!
+# ava033b:70
+a33069: She's not...
+# ava033b:75
+a33070: Listen, everyone. NERV is discussing whether to take Kirishima into protective custody.
+# ava033b:78
+a33071: Let's wait until they reach a decision.
+# ava033b:94
+a33072: So your teammates are all boys, Kirishima.
+# ava033b:99
+a33073: Yes.
+# ava033b:104
+a33074: Who do you like better, them or Shinji?
+# ava033b:109
+a33075: ...
+# ava033b:114
+a33076: I can't compare them.
+# ava033b:118
+a33077: They're just different.
+# ava033b:123
+a33078: Looks like you two are already headed for a breakup.
+# ava033b:128
+a33079: I...!
+# ava033b:132
+a33080: I'm really glad I met you, Shinji...
+# ava033b:137
+a33081: Yeah...
+# ava033b:142
+a33082: Misato's waving at us.
+# ava033b:147
+a33083: Mana, if you want to contact your family, I can do it for you.
+# ava033b:152
+a33084: It's okay.
+# ava033b:155
+a33085: My dad would just nag,
+# ava033b:159
+a33086: and my mom would worry herself sick.
+# ava033b:164
+a33087: I see...
+# ava033b:192
+a33088: We're heading for NERV. We'll force our way through.
+# ava033b:197
+a33089: What happened?
+# ava033b:202
+a33090: They say the meeting's dragging on.
+# ava033b:205
+a33091: They're probably all sitting around eating pizza.
+# ava033b:211
+a33092: They won't lock Mana up in some kind of cage, will they?
+# ava033b:217
+a33093: How can you say that right in front of Kirishima?
+# ava033b:222
+a33094: I'm fine.
+# ava033b:227
+a33095: Mana, I'll ask my father to get you set free right away,
+# ava033b:230
+a33096: so just hang in there until then.
+# ava033b:235
+a33097: Okay. Thank you.
+# ava033b:259
+a33098: I'm Major Katsuragi of NERV! Let us through!
+# ava033b:267
+a33099: What are you doing?
+# ava033b:271
+a33100: Commander Ikari...
+# ava033b:275
+a33101: I asked what you are doing.
+# ava033b:279
+a33102: ...
+# ava033b:287
+a33103: Father, please help Kirishima!
+# ava033b:292
+a33104: Shinji, what about school?
+# ava033b:297
+a33105: ...
+# ava033b:304
+a33106: Forget school.
+# ava033b:306
+a33107: Go to Dr. Akagi and continue the experiment.
+# ava033b:318
+a33108: Shinji! Help me! They're taking me away!
+# ava033b:323
+a33109: Father! They'll kill her!
+# ava033b:326
+a33110: Can't we just take her to NERV?!
+# ava033b:331
+a33111: Major Katsuragi.
+# ava033b:336
+a33112: Sir.
+# ava033b:341
+a33113: Report to Conference Room 12 later.
+# ava033b:346
+a33114: Yes, sir...
+# ava033b:352
+a33115: Misato!
+# ava033b:356
+a33116: Father, please!
+# ava033b:370
+a33118: Shinjiii!
+# ava033b:381
+a33119: Father!
+# ava033b:387
+a33120: This is too cruel!
+
+## Ava034
+# Ava034:33
+a34001: ...
+# Ava034:52
+a34002: I'm letting myself in.
+# Ava034:57
+a34003: Kaji...
+# Ava034:62
+a34004: ...
+# Ava034:68
+a34005: Katsuragi, how could this happen with you right there?
+# Ava034:73
+a34006: You just let a junior high kid go to her death!
+# Ava034:81
+a34007: It's got nothing to do with us.
+# Ava034:84
+a34008: It was Commander Ikari's decision. What could I do?
+# Ava034:89
+a34009: What do you think a life is worth? This is why women are...!
+# Ava034:98
+a34010: Who are you to lecture me like that?!
+# Ava034:103
+a34011: I'm saying you could at least save one girl!
+# Ava034:108
+a34012: Get out!
+# Ava034:113
+a34013: Wake up, Katsuragi.
+# Ava034:119
+a34014: Kaji.
+# Ava034:122
+a34015: This is my home.
+# Ava034:125
+a34016: Don't just barge in here, or I'll call for help.
+# Ava034:147
+a34017: I'm home! I brought treats~
+# Ava034:150
+a34018: Cream puffs from Cozy Corner.
+# Ava034:155
+a34019: I'll pass...
+# Ava034:159
+a34020: Say "ahh."
+# Ava034:162
+a34021: I said I'll pass...
+# Ava034:165
+a34022: Come on, Shinji, open wide.
+# Ava034:170
+a34023: Cut it out!
+# Ava034:174
+a34024: I'm not in the mood...
+# Ava034:179
+a34025: Some man you are, moping around forever!
+# Ava034:182
+a34026: It's because you're like this that Kirishima got caught!
+# Ava034:187
+a34027: You're the one who told my father and the others about Mana, Asuka!
+# Ava034:192
+a34028: I'm obligated to report! It's my job!
+# Ava034:195
+a34029: That girl was the enemy, wasn't she?!
+# Ava034:200
+a34030: When Mana and I went out to Lake Ashi,
+# Ava034:203
+a34031: she was so happy.
+# Ava034:206
+a34032: I love her.
+# Ava034:217
+a34033: Idiot...
+# Ava034:238
+a34034: Just like this...
+# Ava034:240
+a34035: giving up without doing anything...
+# Ava034:267
+a34036: ...
+# Ava034:271
+a34037: ...
+# Ava034:278
+a34038: ...
+
+## Ava035
+# Ava035:34
+a35001: Hurry up and go.
+# Ava035:38
+a35002: Easy for you to say.
+# Ava035:42
+a35003: This mud is awful~
+# Ava035:46
+a35004: Hey, Shinji, you've never been to your girlfriend's place even once?
+# Ava035:50
+a35005: It's Ikari we're talking about. No way he could.
+# Ava035:54
+a35006: You're gonna go that far?
+# Ava035:59
+a35007: Still, I did hear a rumor that she went to Ikari's place.
+# Ava035:64
+a35008: What, seriously?!
+# Ava035:67
+a35009: Hey, Shinji! Confess!
+# Ava035:72
+a35010: Just once.
+# Ava035:77
+a35011: What?! Damn it!
+# Ava035:80
+a35012: Why does Shinji get all the luck?!
+# Ava035:85
+a35013: Be quiet for a second, it's hard enough to walk here.
+# Ava035:90
+a35014: We got told off.
+# Ava035:95
+a35015: The class rep's throwin' a fit.
+# Ava035:100
+a35016: Honestly! Why does it take this many people to drop off some handouts?!
+# Ava035:104
+a35017: Then maybe I'll just head home.
+# Ava035:109
+a35018: You don't have to go home right here...
+# Ava035:114
+a35019: Oh? Sounds like someone wants you to stay~
+# Ava035:119
+a35020: Ya think so, huh~
+# Ava035:124
+a35021: Geez!
+# Ava035:129
+a35022: Hey, are you sure this is the right address?
+# Ava035:134
+a35023: It's the address the teacher gave me...
+# Ava035:138
+a35024: That's it!
+# Ava035:156
+a35025: Oh, this is it, this is it.
+# Ava035:161
+a35026: Hey! Kirishima!
+# Ava035:167
+a35027: Suzuhara, stop that!
+# Ava035:172
+a35028: Who brought this guy along?!
+# Ava035:177
+a35029: What'd you say?!
+# Ava035:182
+a35030: Now, now, now. Today's star is Shinji, after all.
+# Ava035:187
+a35031: Yeah, yeah.
+# Ava035:201
+a35034: After you, Master Ikari!
+# Ava035:211
+a35035: These guys have no idea what the situation is.
+# Ava035:221
+a35036: Excuse me, is anyone home?
+# Ava035:226
+a35037: It's open.
+# Ava035:231
+a35038: All right! Let's go in.
+# Ava035:236
+a35039: No! Shinji and I will go in. You wait here.
+# Ava035:240
+a35040: Leavin' us out, huh?
+# Ava035:245
+a35041: Just wait with me.
+# Ava035:250
+a35042: There might be a bomb planted in there, after all.
+# Ava035:260
+a35043: What?!
+# Ava035:285
+a35044: Is there anything here that could help us find Mana?
+# Ava035:292
+a35045: I can see why Kirishima liked it here.
+# Ava035:296
+a35046: Living on a lake is so romantic.
+# Ava035:301
+a35047: But...
+# Ava035:305
+a35048: I didn't expect it. A house on the lake...
+# Ava035:310
+a35049: You seem unhappy about it.
+# Ava035:315
+a35050: On our date, she said she was looking forward to seeing the lake...
+# Ava035:320
+a35051: Ugh, honestly...
+# Ava035:323
+a35052: That's why you're such a kid.
+# Ava035:328
+a35053: I'm not a kid.
+# Ava035:334
+a35054: You don't understand a girl's feelings at all.
+# Ava035:339
+a35055: I know.
+# Ava035:343
+a35056: You mean she kept quiet out of consideration for me, right?
+# Ava035:352
+a35057: Then,
+# Ava035:355
+a35058: do you know what I'm thinking right now?
+# Ava035:361
+a35059: Kirishima is in danger even as we speak.
+# Ava035:364
+a35060: Help me look for clues too, Asuka.
+# Ava035:369
+a35061: Hey, what if we moved out of Misato's apartment
+# Ava035:372
+a35062: and lived together, just the two of us?
+# Ava035:377
+a35063: Huh?
+# Ava035:382
+a35064: Without Misato around,
+# Ava035:384
+a35065: we could do anything we want.
+# Ava035:389
+a35066: ...
+# Ava035:394
+a35067: Out here, no one would hear me scream,
+# Ava035:398
+a35068: even if you jumped me.
+# Ava035:403
+a35069: Asuka, stop it.
+# Ava035:408
+a35070: Just kidding~ I was only saying it.
+# Ava035:412
+a35071: Ew, don't get your hopes up.
+# Ava035:420
+a35072: Shinji! Come here!
+# Ava035:444
+a35073: Robot footprints.
+# Ava035:449
+a35074: Huh, they ain't from an Eva?
+# Ava035:454
+a35075: Awesome! Robot footprints!
+# Ava035:456
+a35076: It's still walking around!
+# Ava035:461
+a35077: What about the footprints in front of those?
+# Ava035:466
+a35078: Those are Kensuke's, right?
+# Ava035:471
+a35079: I didn't walk over there.
+# Ava035:476
+a35080: They're the pilot's footprints.
+# Ava035:481
+a35081: What, the bad guy's?
+# Ava035:486
+a35082: It's Mana.
+# Ava035:492
+a35083: Kirishima is the robot's pilot?
+# Ava035:497
+a35084: No! The pilot is looking for Mana.
+# Ava035:502
+a35085: It's one of her two friends.
+# Ava035:507
+a35086: One of them was captured in the hospital,
+# Ava035:510
+a35087: and the other is on the run in the robot.
+# Ava035:554
+e6ef5696: Look
+# Ava035:554
+07076ba5: Map on the Desk: Look
+# Ava035:555
+142ce44f: Talk
+# Ava035:555
+c30adfb5: Map on the Desk: Think
+# Ava035:556
+184b0014: Move
+# Ava035:556
+be534790: Map on the Desk: Move
+# Ava035:557
+491e0a9c: System
+# Ava035:595
+a35088: The first robot crashed at Shiraito Falls.
+# Ava035:613
+a35089: That's right on the opposite side of Mt. Fuji's south face from Lake Ashi.
+# Ava035:615
+a35090: They say there's a military training ground in Gotemba,
+# Ava035:617
+a35091: so the two robots probably broke loose from there.
+# Ava035:635
+a35092: One went into Lake Ashi, and the other went to the far side of Mt. Fuji.
+# Ava035:651
+a35093: An Eva couldn't cover a distance this long.
+# Ava035:655
+a35094: Its internal battery only lasts five minutes before it runs out.
+# Ava035:657
+a35095: If we get a deployment request and really have to fight,
+# Ava035:659
+a35096: I'll have to finish it with a single blow...
+
+## Ava036
+# Ava036:48
+a36001: ?
+# Ava036:56
+a36002: Look out the window!
+# Ava036:61
+a36003: What's that?
+# Ava036:66
+a36004: It's a military trailer.
+# Ava036:71
+a36005: Isn't that a person on the back?
+# Ava036:76
+a36006: !
+# Ava036:92
+a36007: Mana!
+# Ava036:106
+a36008: Mana!
+# Ava036:110
+a36009: This is bad!
+# Ava036:114
+a36010: That's a human rights violation!
+# Ava036:129
+a36011: Mana!
+# Ava036:134
+a36012: Shinji!
+# Ava036:139
+a36013: Why are you in a cage?!
+# Ava036:144
+a36014: Shinji, look out!
+# Ava036:149
+a36015: You kids there, step back.
+# Ava036:154
+a36016: Shinji! What're we supposed to do?!
+# Ava036:159
+a36017: We have to get Mana out!
+# Ava036:164
+a36018: We can't without tools!
+# Ava036:169
+a36019: Hey! You brats! I said get out of the way!
+# Ava036:174
+a36020: This is bad! Toji!
+# Ava036:179
+a36021: Got it!
+# Ava036:186
+a36022: What are you doing?!
+# Ava036:191
+a36023: Knock it off, Shinji! Keep this up and we'll get nowhere!
+# Ava036:196
+a36024: Mana!
+# Ava036:201
+a36025: Shinji!
+# Ava036:209
+a36026: Mana...
+# Ava036:214
+a36027: Anyway, we gotta regroup.
+# Ava036:219
+a36028: I know a good way to follow the trailer.
+# Ava036:340
+a36029: How about it? Nice binoculars, huh? German-made.
+# Ava036:347
+a36030: Japanese ones are obviously better!
+# Ava036:352
+a36031: You just don't get it.
+# Ava036:374
+a36032: It's the lenses. More depth to the image, more beautiful colors,
+# Ava036:380
+a36033: because these are Carl Zeiss, the pride of Germany.
+# Ava036:393
+a36034: Carl Lewis? What's that supposed to mean?
+# Ava036:404
+a36035: Mana!
+# Ava036:415
+a36036: Lemme see too.
+# Ava036:424
+a36037: They're mine, so I go first.
+# Ava036:433
+a36038: Shinji, hand 'em over.
+# Ava036:442
+a36039: Stop it.
+# Ava036:454
+a36040: Oh, there she is, there she is.
+# Ava036:463
+a36041: That's just nasty, what they're doin'.
+# Ava036:470
+a36042: Come on, let me see too.
+# Ava036:475
+a36043: Oh, it's true. Poor thing, stuck out there in the wind off the lake.
+# Ava036:490
+a36044: I'm going to Mana!
+# Ava036:497
+a36045: Hey, Shinji!
+# Ava036:504
+a36046: What? Let go of me.
+# Ava036:508
+a36047: You can't do it on your own.
+# Ava036:511
+a36048: Let us help you.
+# Ava036:516
+a36049: Thanks,
+# Ava036:519
+a36050: but if we all go, they'll spot us.
+# Ava036:539
+a36051: Damn, it's hot,
+# Ava036:541
+a36052: hey!
+# Ava036:543
+a36053: Is the air conditioning even on?
+# Ava036:547
+a36054: It's on full blast, sir!
+# Ava036:551
+a36055: Tanks just aren't meant to be driven in Japan.
+# Ava036:553
+a36056: This muggy heat is unbearable.
+# Ava036:557
+a36057: Captain, there's smoke rising from the far shore.
+# Ava036:569
+a36058: So there is!
+# Ava036:572
+a36059: All vehicles, target the base of the smoke on the far shore!
+# Ava036:575
+a36060: I'm sweating so much I can barely see.
+# Ava036:580
+a36061: Shall we send a recon team?
+# Ava036:585
+a36062: Does a bear live in the woods?
+# Ava036:588
+a36063: That smoke looks mighty suspicious.
+# Ava036:607
+a36064: Wonder if Shinji's pullin' it off.
+# Ava036:611
+a36065: Of course he is. We're helping him.
+# Ava036:615
+a36066: Can I look through those binoculars again?
+# Ava036:619
+a36067: No, they'll spot us!
+# Ava036:646
+a36068: Mana.
+# Ava036:651
+a36069: Shinji!
+# Ava036:658
+a36070: Mana, I brought you some food.
+# Ava036:663
+a36071: You came for me. I'm so happy.
+# Ava036:668
+a36072: I'll get this open.
+# Ava036:675
+a36073: It's no use without the key.
+# Ava036:678
+a36074: I'm the bait to lure the robot out of the lake.
+# Ava036:683
+a36075: Bait?
+# Ava036:688
+a36076: The pilot's name is Musashi.
+# Ava036:690
+a36077: He's my best friend.
+# Ava036:693
+a36078: If I lure him here, even the UN forces shouldn't do anything reckless.
+# Ava036:698
+a36079: It's dangerous, Mana.
+# Ava036:701
+a36080: Shell fragments are as sharp as box cutters.
+# Ava036:704
+a36081: If one of them hit you...
+# Ava036:709
+a36082: I want to save Musashi.
+# Ava036:714
+a36083: ...
+# Ava036:718
+a36084: So you're protecting him...
+# Ava036:723
+a36085: You're a pilot too, Shinji.
+# Ava036:726
+a36086: Can you really just ignore him like that?
+# Ava036:729
+a36087: Don't you want to save him?
+# Ava036:735
+a36088: ...
+# Ava036:793
+a36089: That water spout! Is it the robot?!
+# Ava036:797
+a36090: Video camera! Video camera!
+# Ava036:821
+a36091: Captain! It's the robot!
+# Ava036:826
+a36092: I know! Prepare for battle!
+# Ava036:873
+a36093: Run, Shinji! I'll be okay.
+# Ava036:876
+a36094: If I can just get this cage open, I can get you out!
+# Ava036:878
+a36095: No! You'll get caught in it!
+# Ava036:960
+a36096: Why are they shooting when there are people here?!
+# Ava036:973
+a36097: Shinji!
+# Ava036:977
+a36098: Misato!
+# Ava036:980
+a36099: We're activating Unit-01!
+# Ava036:984
+a36100: Really?
+# Ava036:987
+a36101: We can't have them wrecking any more of our facilities, after all.
+# Ava036:993
+a36102: Mana! I'll definitely come back to save you!
+# Ava036:998
+a36103: Shinji!
+# Ava036:1035
+a36104: Where are those idiots in the tanks even aiming?! Honestly!
+# Ava036:1040
+a36105: How did you know where I was?
+# Ava036:1045
+a36106: The military reported that you were near their bait.
+# Ava036:1050
+a36107: The military?
+# Ava036:1055
+a36108: A runaway robot weapon was never supposed to happen in the first place.
+# Ava036:1058
+a36109: The weapons development department panicked and used Kirishima as bait.
+# Ava036:1061
+a36110: To lure out the robot's pilot.
+# Ava036:1064
+a36111: But seeing the runaway robot up close must have scared them.
+# Ava036:1067
+a36112: They came to NERV asking for help.
+# Ava036:1070
+a36113: If it crossed the sea and charged into another country,
+# Ava036:1073
+a36114: that would be a real catastrophe.
+
+## Ava037
+# Ava037:84
+a37001: This is a rescue operation.
+# Ava037:97
+a37002: You'll all work together to contain the rampaging robot and shut it down.
+# Ava037:109
+a37003: If we fail, the military will drop an N2 depth charge right on top of it.
+# Ava037:112
+a37004: And the boy inside will be vaporized along with it.
+# Ava037:115
+a37005: In other words, whether his life can be saved is up to you.
+# Ava037:120
+a37006: But if the robot gets out past the outer crater rim,
+# Ava037:122
+a37007: we can't chase it in the Evas.
+# Ava037:133
+a37008: Then disconnect your umbilical cables and go after it at full speed.
+# Ava037:136
+a37009: I don't care if your internal power runs out.
+# Ava037:150
+a37010: If the power runs out, we're done for!
+# Ava037:154
+a37011: All units, get to the launch pads, now.
+# Ava037:399
+a37012: Musashi...
+# Ava037:503
+a37013b: Kyaaaaaah!
+
+## ava037b
+# ava037b:27
+a37014: Shinji!
+# ava037b:44
+a37015: Mana!
+# ava037b:49
+a37016: What's wrong, Shinji?
+# ava037b:52
+a37017: Hurry up and pin that robot down!
+# ava037b:57
+a37018: But Mana's...!
+# ava037b:62
+a37019: Never mind that, just ram it!
+# ava037b:67
+a37020: But...
+# ava037b:70
+a37021: Mana will be crushed!
+# ava037b:75
+a37022: If it gets away, they'll bomb it and she'll die anyway!
+# ava037b:78
+a37023: Hurry!
+# ava037b:83
+a37024: I can't right now!
+# ava037b:102
+a37025: Shinji certainly can't do it.
+# ava037b:105
+a37026: If the girl in that cage falls from that height, she won't survive.
+# ava037b:110
+a37027: I know that.
+# ava037b:115
+a37028: Unit-01's sync ratio is down 5%. It's highly unstable.
+# ava037b:120
+a37029: Message from Atsugi Base. The heavy bombers carrying N2 depth charges are ready to launch.
+# ava037b:123
+a37030: They're asking for continuous status updates.
+# ava037b:128
+a37031: The Japanese government and military command are cutting into our line.
+# ava037b:131
+a37032: What should we do?
+# ava037b:136
+a37033: Cancel all of them.
+# ava037b:152
+a37034: Asuka, are you listening?
+# ava037b:164
+a37035: I figured you'd be calling me.
+# ava037b:169
+a37036: OK! On my signal, slam into the robot's flank.
+# ava037b:174
+a37037: Shinji's girlfriend is gonna get badly hurt. You're fine with that?
+# ava037b:179
+a37038: There's no other way. I'm counting on you.
+# ava037b:184
+a37039: Leave it to me.
+# ava037b:190
+a37040: I'm gonna hit it with everything I've got.
+# ava037b:202
+a37041: Rei.
+# ava037b:215
+a37042: The robot might try to escape over Nagao Pass.
+# ava037b:218
+a37043: If it does, you can wreck it if you have to, but stop it no matter what.
+# ava037b:223
+a37044: I understand.
+# ava037b:255
+a37045: Major Katsuragi.
+# ava037b:262
+a37046: Yes, sir.
+# ava037b:271
+a37047: Do not let Unit-01 be damaged...
+# ava037b:278
+a37048: But collisions are unavoidable in combat.
+# ava037b:285
+a37049: Order Unit-01 to withdraw.
+# ava037b:292
+a37050: The rescue comes first!
+# ava037b:309
+a37051: It's pointless...
+# ava037b:314
+a37052: It'll be over in ten minutes!
+# ava037b:319
+a37053: Don't drag us into your heroics.
+# ava037b:322
+a37054: Give Atsugi's bloodthirsty bombers the order to sortie.
+# ava037b:333
+a37055: Understood...
+# ava037b:336
+a37056: Aoba, keep Atsugi Base updated on the situation.
+# ava037b:341
+a37057: Yes, ma'am.
+# ava037b:346
+a37058: Please wait!
+# ava037b:351
+a37059: Shinji, you've been ordered to withdraw. Get away from there.
+# ava037b:356
+a37060: No!
+# ava037b:359
+a37061: If I catch it, she'll be saved!
+# ava037b:362
+a37062: You're going to burn her to death with bombs?!
+# ava037b:365
+a37063: Father!
+# ava037b:370
+a37064: Operations Director, what about the operation?
+# ava037b:375
+a37065: Asuka, start the ramming run.
+# ava037b:380
+a37066: Here I go! Hyaaah!
+
+## ava037c
+# ava037c:47
+a37067: Haaaaaah!
+# ava037c:65
+a37068: Damn it! I won't let you!
+# ava037c:161
+a37069: Shinji!
+# ava037c:173
+a37070: Shinji, you're in the way!
+# ava037c:246
+a37071: The robot's getting away!
+# ava037c:254
+a37072: Mana!
+# ava037c:268
+a37073: Shinji!
+# ava037c:325
+a37074: Target robot is on the move.
+# ava037c:330
+a37075: Unit-01 and Unit-02 are in pursuit.
+# ava037c:337
+a37076: Bombers carrying N2 depth charges have taken off from Atsugi Base.
+# ava037c:342
+a37077: ETA is five minutes.
+# ava037c:470
+a37078: Unit-01 has cut its umbilical cable, five minutes remaining! Unit-02 has cut its cable too!
+# ava037c:556
+a37079: Rei, the target is headed your way!
+# ava037c:558
+a37080: Please!
+# ava037c:564
+a37081: Roger.
+
+## ava037c2
+# ava037c2:64
+a37082: Target has made contact with Unit-00!
+# ava037c2:71
+a37083: Unit-00 has taken a heavy impact.
+# ava037c2:91
+a37084: It's no good! The target is crossing the outer rim.
+# ava037c2:109
+a37085: Message from the Gotemba weather station.
+# ava037c2:113
+a37086: They have visual confirmation of the robot.
+# ava037c2:117
+a37087: An emergency evacuation advisory has been issued for Gotemba City.
+# ava037c2:177
+a37088: Unit-00 has cut its umbilical cable!
+# ava037c2:182
+a37089: All units are pursuing the target!
+# ava037c2:207
+a37090: Shinji!
+# ava037c2:213
+a37091: It's too fast!
+# ava037c2:218
+a37092: Target has passed through Gotemba and is heading toward Mount Ashitaka!
+# ava037c2:223
+a37093: Message from the military's central air defense control!
+# ava037c2:226
+a37094: They're telling us to get the Evas out of the way.
+# ava037c2:231
+a37095: Unit-01 is falling behind the target.
+# ava037c2:236
+a37096: The bombers have begun targeting!
+# ava037c2:239
+a37097: Bomb bay doors are opening.
+# ava037c2:395
+a37098: Unit-01 is under one minute!
+# ava037c2:401
+a37099: Continuing the pursuit is too dangerous.
+# ava037c2:409
+a37100: Message from the Gotemba observation post.
+# ava037c2:415
+a37101: We're losing the target!
+# ava037c2:423
+a37102: Control is telling us again to stop the Evas!
+# ava037c2:431
+a37103: Unit-01! Stop!
+# ava037c2:439
+a37104: I can still make it!
+# ava037c2:448
+a37105: Ritsuko!
+# ava037c2:456
+a37106: Send a stop signal to Unit-01!
+# ava037c2:464
+a37107: Stop signal sent! It's not responding!
+# ava037c2:470
+a37108: Unit-01 has gone berserk.
+# ava037c2:478
+a37109: Rei! Asuka! Change of target! Catch Shinji!
+# ava037c2:500
+a37110: Shinji!
+# ava037c2:559
+a37111: Unit-01 has shut down!
+
+## ava037d
+# ava037d:97
+a37114: Mana.
+# ava037d:166
+a37115: Bombers confirmed in the airspace above Unit-01.
+# ava037d:171
+a37116: Ten seconds until the N2 depth charge drop.
+# ava037d:176
+a37117: This is bad! Unit-01's entry plug has been ejected.
+# ava037d:181
+a37118: Call off the bombing! Tell them now!
+# ava037d:206
+a37121: No! This is bad!
+# ava037d:219
+a37122: Rei! Carry Unit-01 and get out of there.
+# ava037d:223
+a37123: Roger.
+# ava037d:236
+a37124: Asuka! Can you hear me? Asuka!
+# ava037d:241
+a37125: Unit-02's entry plug has been ejected too!
+# ava037d:246
+a37126: We can't call it off in time!
+# ava037d:249
+a37127: The N2 depth charge has been dropped!
+# ava037d:265
+a37128: Good grief...
+
+## ava037e
+# ava037e:32
+a37129: I loved you, Shinji.
+# ava037e:34
+a37130: Our date was so much fun.
+# ava037e:36
+a37131: Dinner at Misato's place...
+# ava037e:38
+a37132: Eating together with everyone is the best.
+# ava037e:40
+a37133: But I'm going to end it now.
+# ava037e:42
+a37134: I'll set you free.
+# ava037e:44
+a37135: I'm sorry.
+# ava037e:46
+a37136: Goodbye,
+# ava037e:48
+a37137: Shinji.
+
+## Ava038
+# Ava038:36
+a38001: ...
+# Ava038:41
+a38002: Don't do anything reckless.
+# Ava038:46
+a38003: She's alive, right...?
+# Ava038:51
+a38004: Give it up.
+# Ava038:56
+a38005: She's alive...
+# Ava038:62
+a38006: If it's okay with you, Shinji,
+# Ava038:65
+a38007: I wouldn't mind taking Kirishima's place.
+# Ava038:70
+a38008: I don't want that.
+# Ava038:75
+a38009: Don't get the wrong idea. It'd be strictly for NERV's sake.
+# Ava038:80
+a38010: !
+# Ava038:85
+a38011: ...
+# Ava038:167
+a38012: Mana...
+# Ava038:172
+a38013: There's nothing left...
+# Ava038:176
+a38014: Aah! My Unit-02 is totally wrecked!
+# Ava038:182
+a38015: Mana.
+# Ava038:187
+a38016: If you're there, answer me...
+# Ava038:192
+a38017: Let's look for her later.
+# Ava038:197
+a38018: No, if she's buried somewhere, we have to dig her out...
+# Ava038:228
+a38019: No way...
+# Ava038:234
+a38020: Mana...
+# Ava038:239
+a38021: It's the robot, melted by the heat...
+# Ava038:246
+a38022: No...
+# Ava038:249
+a38023: This isn't the robot.
+# Ava038:252
+a38024: I'm sure they got away...
+# Ava038:259
+a38025: They're far away by now...
+# Ava038:266
+a38026: Somewhere no one can bother them,
+# Ava038:269
+a38027: far away...
+# Ava038:278
+a38028: Message from military control: "The operation was a success."
+# Ava038:281
+a38029: They're asking about NERV's damage status.
+# Ava038:286
+a38030: No damage.
+# Ava038:289
+a38031: Check for survivors on the robot's side.
+# Ava038:294
+a38032: Survivors on the robot's side...
+# Ava038:297
+a38033: Zero...
+# Ava038:300
+a38034: All they found at ground zero was a lump of melted metal...
+# Ava038:303
+a38035: ...is what they say.
+# Ava038:327
+a38036: I think Mana is alive.
+# Ava038:332
+a38037: I see...
+# Ava038:337
+a38038: Can you be certain?
+# Ava038:344
+a38039: Cut it out.
+# Ava038:350
+a38040: I can.
+# Ava038:356
+a38041: That pilot boy held on to Mana because he was sure he could save her.
+# Ava038:359
+a38042: They're somewhere right now, waiting to be rescued.
+# Ava038:364
+a38043: Maybe you're right...
+# Ava038:371
+a38044: How do you explain that lump of metal?
+# Ava038:376
+a38045: That's...
+# Ava038:379
+a38046: That might be what's left of the robot, but...
+# Ava038:382
+a38047: there must have been some kind of escape pod, and it's buried somewhere.
+# Ava038:385
+a38048: We have to get them out, fast.
+# Ava038:390
+a38049: ...
+# Ava038:395
+a38050: We can't do that.
+# Ava038:398
+a38051: NERV's part in this ends here.
+# Ava038:422
+a38052: Why did you ignore the order to withdraw?
+# Ava038:427
+a38053: ...
+# Ava038:432
+a38054: If you ever damage the Eva again, you'll be removed from Unit-01.
+# Ava038:437
+a38055: It's your Eva, isn't it?
+# Ava038:440
+a38056: Then do whatever you want with it!
+# Ava038:443
+a38057: Take me off it right now, then!
+# Ava038:449
+a38058: Shinji...
+# Ava038:452
+a38059: Get some rest.
+# Ava038:460
+a38060: ...
+
+## Ava039
+# Ava039:142
+a39001: A souvenir photo?
+# Ava039:160
+a39002: Mana asked someone passing by to take it for us.
+# Ava039:165
+a39003: Lucky. I wanna go on a date like that. How'd you ask her out?
+# Ava039:173
+a39004: How? Well...
+# Ava039:178
+a39005: Don't ask Shinji that kind of thing right now.
+# Ava039:183
+a39006: Tch. He had us help look for that capsule. I get to crack one joke, don't I?
+# Ava039:189
+a39007: ...Sorry for dragging you out here all night.
+# Ava039:191
+a39008: There's no escape pod after all.
+# Ava039:193
+a39009: I'm starting to get it now.
+# Ava039:195
+a39010: I was an idiot...
+# Ava039:200
+a39011: That again? During the day you were all fired up about finding Kirishima,
+# Ava039:202
+a39012: and now it's night and you're a little tired,
+# Ava039:205
+a39013: and that's the conclusion you come up with?
+# Ava039:207
+a39014: You really are a half-assed guy.
+# Ava039:212
+a39015: Toji, knock it off.
+# Ava039:217
+a39016: Kirishima's gone, and you just give up that easy!
+# Ava039:222
+a39017: ...
+# Ava039:227
+a39018: I know what's goin' on!
+# Ava039:229
+a39019: Shinji!
+# Ava039:232
+a39020: Now you're gonna hook up with Asuka, aren't you!
+# Ava039:237
+a39021: Asuka has nothing to do with this!
+# Ava039:242
+a39022: You and her both, doing whatever you want without a thought for anyone else!
+# Ava039:246
+a39023: You're a disgrace!
+# Ava039:251
+a39024: Don't talk about Asuka like that!
+# Ava039:256
+a39025: You wanna fight me?!
+# Ava039:285
+a39026: Shinji, you okay?
+# Ava039:289
+a39027: Toji! You didn't have to hit him.
+# Ava039:296
+a39028: I'm goin' home! I can't take the side of a guy like this!
+# Ava039:312
+a39029: He left, walking home in the dark like this.
+# Ava039:315
+a39030: Let me see your face. I'll disinfect it.
+# Ava039:320
+a39031: I'm just a half-assed guy anyway!
+# Ava039:325
+a39032: Don't beat yourself up.
+# Ava039:328
+a39033: He was just a little jealous. You pilot an Eva, Misato and Asuka worry about you,
+# Ava039:330
+a39034: and that date with Kirishima, that's a great memory.
+# Ava039:332
+a39035: Must be nice. We don't have anything like that.
+# Ava039:338
+a39036: ...The Eva belongs to my father,
+# Ava039:340
+a39037: and I'm just being used.
+# Ava039:342
+a39038: Even if Misato and Asuka worry about me,
+# Ava039:344
+a39039: I can't give them anything back.
+# Ava039:346
+a39040: Mana...
+# Ava039:348
+a39041: disappeared somewhere...
+# Ava039:350
+a39042: Memories only hurt...
+# Ava039:352
+a39043: I don't want them...
+# Ava039:358
+a39044: You know, Asuka...
+# Ava039:368
+a39046: Asuka keeps looking at you during class.
+# Ava039:373
+a39047: ...
+# Ava039:378
+a39048: If you got together with Asuka, I'd think less of you...
+# Ava039:380
+a39049: But nobody could stop it, I guess...
+# Ava039:387
+a39050: ...
+
+## ava039b
+# ava039b:35
+a39051: I'm home...
+# ava039b:48
+a39052: The pendant Mana gave me...
+# ava039b:50
+a39053: What should I do with it...
+# ava039b:52
+a39054: Giving it back to her parents would probably be best, but...
+# ava039b:57
+a39055: Shinji?
+# ava039b:66
+a39056: So you're back.
+# ava039b:71
+a39057: Did I wake you?
+# ava039b:76
+a39058: I can't sleep.
+# ava039b:78
+a39059: Did you find Kirishima?
+# ava039b:85
+a39060: No luck...
+# ava039b:90
+a39061: I see...
+# ava039b:95
+a39062: Hey, Asuka...
+# ava039b:100
+a39063: What...?
+# ava039b:105
+a39064: Aren't you hungry?
+# ava039b:110
+a39065: I can't cook anything, you know.
+# ava039b:115
+a39066: I'll make something.
+# ava039b:117
+a39067: So, um...
+# ava039b:122
+a39068: I'll get fat. I'll pass.
+# ava039b:143
+a39069: Where's Misato?
+# ava039b:148
+a39070: Working late, I guess.
+# ava039b:153
+a39071: Oh.
+# ava039b:162
+a39073: ...
+# ava039b:174
+a39075: You're acting weird. You must be tired from searching all over the mountains.
+# ava039b:180
+a39076: Y-you think so?
+# ava039b:185
+a39077: I'm going to bed. Good night.
+# ava039b:190
+a39078: Wait a second.
+# ava039b:197
+a39079: What?
+# ava039b:204
+a39080: Sorry... about everything.
+# ava039b:209
+a39081: Whatever...
+# ava039b:215
+a39081b: I just...
+# ava039b:217
+a39081c: I'm hopeless, aren't I...
+# ava039b:222
+a39081d: Stop whining.
+# ava039b:226
+a39081e: I'm going to bed.
+# ava039b:230
+a39081f: Good night...
+# ava039b:250
+a39083: ...
+# ava039b:282
+a39084: Alrighty! We've had our grilled horse mackerel, so is everybody awake now?
+# ava039b:287
+a39085: ...
+# ava039b:289
+a39086: ...
+# ava039b:295
+a39087: Oh, come on! Cheer up!
+# ava039b:298
+a39088: Okay, arm and leg stretches!
+# ava039b:305
+a39090: One,
+# ava039b:308
+a39091: two,
+# ava039b:311
+a39092: three,
+# ava039b:314
+a39093: four!
+# ava039b:317
+a39094: Two,
+# ava039b:320
+a39095: two,
+# ava039b:323
+a39096: three,
+# ava039b:326
+a39097: four!
+# ava039b:329
+a39098: Come on, Shin-chan, you do it too.
+# ava039b:334
+a39099: ...One, two, three, four... two, two, three, four.
+# ava039b:339
+a39100: More like this! Stretch your arms, fingertips like this!
+# ava039b:344
+a39101: Ow, ow, ow...
+# ava039b:349
+a39102: You too, Asuka, come on. It'll perk you up.
+# ava039b:354
+a39103: Thanks for breakfast...
+# ava039b:359
+a39104: Leaving already?
+# ava039b:367
+a39105: Good morniiing!
+# ava039b:369
+a39106: Good morniiing!
+# ava039b:375
+a39107: I'm going on ahead.
+# ava039b:380
+a39108: Asuka.
+# ava039b:385
+a39109: What?
+# ava039b:390
+a39110: About last night... I'm sorry.
+# ava039b:395
+a39111: It's fine.
+# ava039b:403
+a39112: I'm off!
+# ava039b:411
+a39113: What, what?
+# ava039b:416
+a39114: Just something.
+# ava039b:421
+a39115: What's "just something"?
+# ava039b:424
+a39116: Come on, you can tell me~
+# ava039b:429
+a39117: It's nothing.
+# ava039b:431
+a39118: I'll wash the dishes.
+# ava039b:439
+a39119: Kirishima not being saved...
+# ava039b:442
+a39120: that was my failure, wasn't it.
+# ava039b:447
+a39121: Misato...
+# ava039b:450
+a39122: That's... no, that's not true.
+# ava039b:455
+a39123: Oops, can't be moping around on such a nice day, right?
+# ava039b:457
+a39124: Well, time to give it my all again today.
+# ava039b:484
+a39126: What should I do now?
+# ava039b:491
+8125f7d3: I Care About Asuka
+# ava039b:492
+d6d07c2b: About Mana...
+# ava039b:493
+7e5b826c: Maybe Talk to Kaji...
+# ava039b:495
+994c2f06: I Can't Go On...
+# ava039b:509
+a39127: I should think about Asuka a little, too.
+# ava039b:512
+a39128: I don't care if everyone thinks I'm half-assed.
+# ava039b:530
+a39129: If I keep agonizing over Mana, I'll fall apart...
+# ava039b:532
+a39130: I've searched the mountains, so next it's the sea...
+# ava039b:550
+a39131: That's it. Kaji should be able to tell me straight what happened to Mana.
+# ava039b:552
+a39132: I need to sort out my feelings.
+# ava039b:554
+a39133: So I don't have to lean on anyone...
+# ava039b:574
+jc0100: It's my fault Mana is gone...
+# ava039b:576
+jc0101: I loved her so much... So why did she have to disappear?
+
+## Ava041
+# Ava041:45
+enda001: Forgetting what happened to Mana...
+# Ava041:48
+enda002: feels cruel.
+# Ava041:56
+enda003: But she chose that pilot boy.
+# Ava041:59
+enda004: It's not like she was thinking of me.
+# Ava041:62
+enda005: I'll forget her...
+# Ava041:80
+enda006: It's hard to throw away a photo with someone in it.
+# Ava041:87
+enda007: What are you looking at?
+# Ava041:92
+enda008: Asuka.
+# Ava041:97
+enda009: Hmm...
+# Ava041:100
+enda010: Shinji, fourteen and already a man with a dark past, huh?
+# Ava041:105
+enda011: I'm throwing this photo away.
+# Ava041:110
+enda012: Tear it up and toss it off the roof, and the teacher will yell at you.
+# Ava041:123
+enda014: Wouldn't it be better to burn it?
+# Ava041:128
+enda015: Do you have matches or a lighter?
+# Ava041:133
+enda016: How rude! I don't smoke!
+# Ava041:138
+enda017: ...
+# Ava041:142
+enda018: Mana loved the lake.
+# Ava041:145
+enda019: Let's burn it at Lake Ashi.
+# Ava041:167
+enda020: It's empty. Like we've got the place to ourselves.
+# Ava041:174
+enda021: Asuka, don't you despise me?
+# Ava041:180
+enda022: You tried to throw the photo away because I showed up, right?
+# Ava041:188
+enda023: I want to put it behind me properly...
+# Ava041:193
+enda024: What's past is past. Just forget it.
+# Ava041:199
+enda025: You make it sound so easy...
+# Ava041:205
+enda026: About Kirishima...
+# Ava041:207
+enda027: I don't feel sorry for her at all.
+# Ava041:210
+enda028: Even if the Eva caused it, I don't feel it's my fault.
+# Ava041:213
+enda029: My heart is cold, you know.
+# Ava041:248
+enda031: Mana is...
+# Ava041:251
+enda032: fading away...
+# Ava041:258
+enda033: What about the pendant?
+# Ava041:263
+enda034: Huh...
+# Ava041:270
+enda035: You can't burn that, so will you sink it in the lake?
+# Ava041:276
+enda036: It's something to remember her by. I should send it to Mana's parents.
+# Ava041:281
+enda037: You don't even know their address.
+# Ava041:286
+enda038: But throwing it away...
+# Ava041:291
+enda039: You're not throwing it away, you're sinking it.
+# Ava041:294
+enda040: You're not moving on at all.
+# Ava041:297
+enda041: Do you really want to forget her?
+# Ava041:302
+enda042: You're hopeless.
+# Ava041:305
+enda043: I'm going home. Bye.
+# Ava041:310
+enda044: Wait! This thing is expensive,
+# Ava041:313
+enda045: and it's a keepsake, so it should go back to her family. It's important.
+# Ava041:318
+enda046: Goodbye.
+# Ava041:325
+enda047: Asuka, you're so stubborn!
+# Ava041:344
+enda048: The next bus isn't for over an hour.
+# Ava041:349
+enda049: So you're telling me to walk home?
+# Ava041:355
+enda050: Why are you angry?
+# Ava041:368
+enda052: If you hate the pendant, I'll throw it away.
+# Ava041:373
+enda053: It's too late now.
+# Ava041:386
+enda054: There, I threw it away.
+# Ava041:391
+enda055: Pick it up!
+# Ava041:396
+enda056: Why?
+# Ava041:401
+enda057: Just pick it up!
+# Ava041:407
+enda058: First you say throw it away, then pick it up...
+# Ava041:410
+enda059: There, I picked it up.
+# Ava041:416
+enda060: ...
+# Ava041:426
+enda061: You'll get wet.
+# Ava041:429
+enda062: Let's get out of the rain.
+# Ava041:434
+enda063: No...
+# Ava041:442
+enda064: Come on.
+# Ava041:472
+enda066: What's wrong...?
+# Ava041:477
+enda067: I'm keeping you warm so you don't catch a cold.
+# Ava041:482
+enda068: We'll dry off soon.
+# Ava041:487
+enda069: Be quiet...
+# Ava041:523
+enda070: That pirate ship floating on this lake...
+# Ava041:526
+enda071: it'll never get to sail through a stormy sea, will it?
+# Ava041:531
+enda072: You feel sorry for the ship?
+# Ava041:536
+enda073: Serves it right.
+# Ava041:547
+enda074: Shall we head home?
+# Ava041:552
+enda075: Yeah.
+
+## Ava042
+# Ava042:40
+endb001: I've never ridden this train before.
+# Ava042:42
+endb002: My heart's kind of racing.
+# Ava042:44
+endb003: Unfamiliar scenery, unfamiliar station names, my first stand-up soba...
+# Ava042:46
+endb004: On the express train, everyone looks like a traveler.
+# Ava042:54
+endb005: You're Shinji Ikari, aren't you?
+# Ava042:60
+endb006: ...You've got the wrong person.
+# Ava042:65
+endb007: I'm from NERV HQ.
+# Ava042:70
+endb008: I don't know you. Goodbye.
+# Ava042:77
+endb009: Hey, wait!
+# Ava042:98
+endb010: Excuse me.
+# Ava042:105
+endb011: Excuse me!
+# Ava042:110
+endb012: What is it, kid?
+# Ava042:115
+endb013: Are you a fisherman?
+# Ava042:120
+endb014: That's right. What, you want to be one?
+# Ava042:122
+endb015: Men of the sea don't need part-timers, though.
+# Ava042:127
+endb016: No, um, you catch fish with nets, right?
+# Ava042:132
+endb017: Come on, spit it out!
+# Ava042:137
+endb018: Um, did an escape capsule get caught in your nets?!
+# Ava042:142
+endb019: Oh, the one with the girl inside?
+# Ava042:147
+endb020: You found it?!
+# Ava042:152
+endb021: At first we thought it was a bomb and there was a big fuss,
+# Ava042:154
+endb022: but when we opened it, there was a girl. She's in the hospital over there now.
+# Ava042:175
+endb023: Mana...
+# Ava042:180
+endb024: Shinji!
+# Ava042:188
+endb025: I missed you.
+# Ava042:193
+endb026: You came for me. Thank you.
+# Ava042:198
+endb027: What about him?
+# Ava042:204
+endb028: He didn't make it...
+# Ava042:210
+endb029: Mana, hang in there.
+# Ava042:215
+endb030: Shinji, you can't stay here. Scary people will be here soon.
+# Ava042:221
+endb031: Mana, let's get out of here!
+# Ava042:226
+endb032: You'll get in trouble.
+# Ava042:231
+endb033: I want to save you, Mana.
+# Ava042:236
+endb034: Shinji...
+# Ava042:256
+endb035: I want to save Mana.
+# Ava042:261
+endb036: So she's alive.
+# Ava042:266
+endb037: I snatched her from the hospital.
+# Ava042:271
+endb038: Not bad! Bring her home. I'll help.
+# Ava042:276
+endb039: Please keep it secret from my father.
+# Ava042:281
+endb040: That's the plan.
+# Ava042:308
+endb041: Nobody's home yet.
+# Ava042:320
+endb042: Shinji, can I use the shower?
+# Ava042:325
+endb043: Huh? Oh, sure.
+# Ava042:330
+endb044: Does this dryer work fast?
+# Ava042:335
+endb045: You're doing laundry?
+# Ava042:340
+endb046: My clothes are dirty. I want to wash everything.
+# Ava042:345
+endb047: Sure.
+# Ava042:350
+endb048: Lend me your bath towel, Shinji.
+# Ava042:355
+endb049: Hang on a sec.
+# Ava042:366
+endb050: Don't look over here.
+# Ava042:371
+endb051: O-okay.
+# Ava042:376
+endb052: I can't figure out this washing machine.
+# Ava042:381
+endb053: Just put everything in and I'll do it.
+# Ava042:388
+endb054: It's dirty, so don't look inside.
+# Ava042:393
+endb055: I won't.
+# Ava042:398
+endb056: Promise.
+# Ava042:403
+endb057: I promise I won't look.
+# Ava042:430
+endb059: Ta-da!
+# Ava042:436
+endb060: ...How was the shower?
+# Ava042:441
+endb061: It makes me feel like being alive is wonderful.
+# Ava042:448
+endb062: You've got your color back...
+# Ava042:453
+endb063: Yep, I'm freshly boiled.
+# Ava042:458
+endb064: Your towel's about to fall off.
+# Ava042:463
+endb065: Want to see?
+# Ava042:468
+endb066: Huh...
+# Ava042:473
+endb067: Heh heh heh heh...
+# Ava042:478
+endb068: ...
+# Ava042:483
+endb069: ...
+# Ava042:488
+endb070: Um...
+# Ava042:490
+endb071: I'm glad you weren't hurt.
+# Ava042:495
+endb072: Want to check for yourself?
+# Ava042:536
+e75118b4: Shinji, Mana, Misato and Asuka are here.
+# Ava042:548
+endb074: Coming back alive from that explosion... it's a miracle.
+# Ava042:553
+endb075: I'm sorry for all the trouble I've caused everyone.
+# Ava042:558
+endb076: Kirishima being here is top secret, everyone. Don't tell anyone.
+# Ava042:563
+endb077: I'm thinking of talking to Kaji about what to do next.
+# Ava042:568
+endb078: Him, huh?
+# Ava042:573
+endb079: I feel like he'd be on our side...
+# Ava042:578
+endb080: What? You make it sound like we're not on your side.
+# Ava042:583
+endb081: Now, now. Kaji looks like he has time on his hands, so why not?
+# Ava042:602
+endb082: I'm not free, but I am bored, let's say.
+# Ava042:607
+endb083: Kaji~!
+# Ava042:622
+endb084: If I may be blunt, sneaking out of the hospital is a problem.
+# Ava042:627
+endb085: If I hadn't taken her out, she might have been eliminated.
+# Ava042:632
+endb086: From their point of view, you're something like an assassin, Shinji.
+# Ava042:637
+endb087: Then what do I have to do to save Mana?!
+# Ava042:642
+endb088: Kill Mana Kirishima.
+# Ava042:647
+endb089: That's Kaji for you~! So extreme!
+# Ava042:652
+endb090: Quit joking!
+# Ava042:657
+endb091: Kill her...?
+# Ava042:662
+endb092: She changes her name and lives as someone else.
+# Ava042:664
+endb093: We erase the name "Mana Kirishima" from the military roster and the government's family registry.
+# Ava042:668
+endb094: It's all on computers, so it takes less than a second.
+# Ava042:673
+endb095: What about my mom and dad?
+# Ava042:678
+endb096: I'm sorry, but they'll be strangers to you.
+# Ava042:680
+endb097: It's the only way to survive without hiding in an attic.
+# Ava042:685
+endb098: So Mana will be safe.
+# Ava042:690
+endb099: But this will be the last time you see her.
+# Ava042:692
+endb100: Someone who's vanished can't be wandering around this city, right?
+# Ava042:697
+endb101: Shinji...
+# Ava042:703
+endb102: ...
+# Ava042:717
+endb103: A faraway town where nobody knows me...
+# Ava042:722
+endb104: Every place in Japan is on the map, you know.
+# Ava042:727
+endb105: You know, I'll live on my own.
+# Ava042:732
+endb106: ...
+# Ava042:737
+endb107: I cried my heart out at the hospital, and now I feel better.
+# Ava042:742
+endb108: Um, you cried... for him, didn't you?
+# Ava042:747
+endb109: ...Maybe.
+# Ava042:752
+endb110: Mana.
+# Ava042:757
+endb111: Hm?
+# Ava042:762
+endb112: You're not the only one who's alone.
+# Ava042:767
+endb113: Shinji...
+# Ava042:772
+endb114: Besides, being alone isn't so bad.
+# Ava042:774
+endb115: Because I was alone, I got to be together with you.
+# Ava042:776
+endb116: Good things happen too.
+# Ava042:781
+endb117: Thank you,
+# Ava042:783
+endb118: Shinji...
+# Ava042:818
+endb119: Goodbye.
+# Ava042:823
+endb120: ...
+
+## Ava043
+# Ava043:51
+endc001: Yes, Kaji speaking.
+# Ava043:56
+endc002: ...
+# Ava043:61
+endc003: Hello?
+# Ava043:64
+endc004: Katsuragi?
+# Ava043:69
+endc005: It's Ikari. Sorry.
+# Ava043:74
+endc006: Oh, it's you, Shinji.
+# Ava043:77
+endc007: What's up? Something on your mind?
+# Ava043:84
+endc008: Kaji...
+# Ava043:87
+endc009: I can't take it anymore.
+# Ava043:114
+endc010: ...
+# Ava043:123
+endc011: Shinji.
+# Ava043:128
+endc012: Kaji, I'm sorry.
+# Ava043:131
+endc013: For calling you out of the blue...
+# Ava043:137
+endc014: Hm? It's fine, I've got time.
+# Ava043:140
+endc015: I always wanted to visit your school.
+# Ava043:143
+endc016: School's great. I'd love to do it all over again.
+# Ava043:148
+endc017: Studying is boring.
+# Ava043:153
+endc018: With this many friends around, you can't get bored, right?
+# Ava043:158
+endc019: I'm always on my own,
+# Ava043:161
+endc020: so there's nothing to do...
+# Ava043:166
+endc021: I'll listen to your troubles.
+# Ava043:169
+endc022: Go on, tell me.
+# Ava043:177
+endc023: It's about Kirishima.
+# Ava043:182
+endc024: Her, huh...
+# Ava043:187
+endc025: I want to sort out my feelings.
+# Ava043:191
+endc026: I want to accept what happened to her,
+# Ava043:194
+endc027: and if I hear about Mana from you, I think I can let her go.
+# Ava043:199
+endc028: I see...
+# Ava043:202
+endc029: What do you want to do, Shinji?
+# Ava043:207
+endc030: You don't mean...
+# Ava043:211
+endc031: She's alive.
+# Ava043:216
+endc032: Really?!
+# Ava043:221
+endc033: A fishing boat picked her up floating at sea in an escape capsule.
+# Ava043:224
+endc034: But only a few people know about it.
+# Ava043:227
+endc035: She's going to live a different life in a different town.
+# Ava043:232
+endc036: Can I see her?
+# Ava043:237
+endc037: Do you want to?
+# Ava043:242
+endc038: I do.
+# Ava043:247
+endc039: It's a one-time chance. Can you leave school early?
+# Ava043:252
+endc040: I will.
+# Ava043:257
+endc041: Good. Not a word of this to anyone.
+# Ava043:278
+endc042: Sir, I need to leave early.
+# Ava043:283
+endc043: I see. Always working hard for the peace of the world.
+# Ava043:286
+endc044: What is it today?
+# Ava043:291
+endc045: Saving someone's life.
+# Ava043:296
+endc046: I see. Human life is precious.
+# Ava043:299
+endc047: Off you go.
+# Ava043:304
+endc048: Yes, sir.
+# Ava043:330
+endc049: He's such a nice teacher, it kind of hurts.
+# Ava043:335
+endc050: Is there anything in this world more important than seeing the one you love?
+# Ava043:340
+endc051: A lie is still a lie...
+# Ava043:345
+endc052: You're a kind one, Shinji.
+# Ava043:348
+endc053: A good man.
+# Ava043:361
+endc055: Stupid Shinji!
+# Ava043:366
+endc056: Asuka!
+# Ava043:420
+endc057: If you go see that girl, we're through!
+# Ava043:434
+endc058: I'm going to see Mana! But I don't want to be through with you either!
+# Ava043:441
+endc059: Even though you like me!
+# Ava043:448
+endc060: I don't know about that!
+# Ava043:455
+endc061: Idiot! Pervert! Enemy of women!
+# Ava043:480
+endc062: Yes, Kaji speaking.
+# Ava043:485
+endc063: You! Stop dragging Shinji into this!
+# Ava043:490
+endc064: I'm not doing anything.
+# Ava043:511
+endc065: You're taking him to see that girl, aren't you? It's dangerous, stop!
+# Ava043:516
+endc066: You know how messy it gets once the military's involved!
+# Ava043:524
+endc067: No idea what you're talking about. I'm hanging up.
+# Ava043:535
+endc068: I'll run his car right into the cliff.
+# Ava043:553
+endc069: Like I'd let her scratch it.
+# Ava043:684
+endc070: She ignores me when I ask her out, but at times like this she chases me down.
+# Ava043:691
+endc071: Everything you do always gets on my nerves.
+# Ava043:724
+endc072: It'll be over soon. Can't you just watch quietly?
+# Ava043:729
+endc073: Kaji,
+# Ava043:732
+endc074: playing the lone wolf may feel good to you,
+# Ava043:735
+endc075: but don't force that way of life on Shinji.
+# Ava043:740
+endc076: Katsuragi, if you're going to get in the way, take Asuka and go home now.
+# Ava043:745
+endc077: I'm with NERV. I'm taking Shinji too.
+# Ava043:759
+endc078: This way, it's all on me.
+# Ava043:765
+endc079: You're always like this.
+# Ava043:768
+endc080: Selfish! Pushy!
+# Ava043:771
+endc081: That's how you take everything away from me.
+# Ava043:775
+endc082: Give Shinji back!
+# Ava043:778
+endc083: Go ahead and shoot me with that gun.
+# Ava043:787
+endc084: How about a drink on the way back?
+# Ava043:790
+endc085: I know an Italian place that serves huge piles of pasta.
+# Ava043:795
+endc086: Don't change the subject...
+# Ava043:800
+endc087: It's time.
+# Ava043:808
+endc088: Someone's coming this way.
+# Ava043:830
+endc089: Mana.
+# Ava043:835
+endc090: Shinji,
+# Ava043:838
+endc091: you're safe.
+# Ava043:845
+endc092: I'm so glad.
+# Ava043:852
+endc093: Kaji.
+# Ava043:857
+endc094: Hm?
+# Ava043:862
+endc095: Thank you so much.
+# Ava043:867
+endc096: Sure.
+# Ava043:874
+endc097: Misato.
+# Ava043:879
+endc098: ...
+# Ava043:884
+endc099: I'm sorry.
+# Ava043:889
+endc100: It's fine now.
+# Ava043:894
+endc101: I'm sorry.
+# Ava043:899
+endc102: Never mind thanking me. Go enjoy the view somewhere nice.
+# Ava043:902
+endc103: You don't have much time, right?
+# Ava043:907
+endc104: Asuka.
+# Ava043:914
+endc105: Long time no see.
+# Ava043:919
+endc106: I'm borrowing Shinji for a bit.
+# Ava043:925
+endc107: You can take him home with you, for all I care.
+# Ava043:973
+endc108: When she saw you,
+# Ava043:976
+endc109: the one most relieved might have been Misato.
+# Ava043:981
+endc110: She's like a good big sister.
+# Ava043:986
+endc111: I'm always causing her trouble.
+# Ava043:992
+endc112: I...
+# Ava043:995
+endc113: feel responsible.
+# Ava043:1001
+endc114: I didn't mean it like that.
+# Ava043:1007
+endc115: It's okay.
+# Ava043:1010
+endc116: An apology won't fix this.
+# Ava043:1013
+endc117: I intend to make amends.
+# Ava043:1016
+endc118: Mana Kirishima will vanish from this world...
+# Ava043:1022
+endc119: You know,
+# Ava043:1026
+endc120: I'll get a new name, live in a new room, and go to a new school.
+# Ava043:1029
+endc121: In a town far away, where nobody knows me.
+# Ava043:1038
+endc122: So we really won't see each other again.
+# Ava043:1045
+endc123: Someday...
+# Ava043:1054
+endc124: Someday, I'll come see you.
+# Ava043:1070
+endc125: I'll be waiting.
+
+## debug
+# debug:29
+2f178395: 
+# debug:30
+932fc183: 
+# debug:31
+495d6d98: 
+# debug:33
+f10e17af: 
+# debug:34
+0306cdbb: 
+# debug:35
+ef71d3b4: 
+# debug:36
+c013bc79: 
+# debug:97
+e80be909: 
+# debug:98
+7d29814e: 
+# debug:99
+703b5f5b: 
+# debug:100
+f3c90a10: 
+# debug:101
+23687c5a: 
+
+## game01
+# game01:117
+g01001: Hey, Shinji, did you see that explosion last night?
+# game01:120
+g01002: It was awesome, wasn't it!
+# game01:128
+604a2e4a: Look
+# game01:129
+99323a90: Talk
+# game01:130
+d708f51a: Hallway
+# game01:131
+5c843aa2: Behind the Tennis Courts
+# game01:140
+g01003: The shoe lockers smell kind of musty.
+# game01:146
+g01004: Why are girls' indoor shoes always so small?
+# game01:152
+g01005: I'd better get to class, or I'll be late.
+# game01:162
+g01006: Vrooooom!
+# game01:164
+g01007: Ratatatatat!
+# game01:166
+g01008: Kyaaaaaan!
+# game01:168
+g01009: Ka-boom!
+# game01:171
+g01010: Gwoooooooooh!
+# game01:188
+75dda2f2: Look
+# game01:189
+e262a598: Talk
+# game01:190
+463b5954: Classroom
+# game01:191
+a3a49df8: Library
+# game01:192
+b51e4dc8: Home Ec Room
+# game01:193
+50b8c52a: Rooftop
+# game01:194
+2acf1cc2: Shoe Lockers
+# game01:203
+g01011: If I don't hurry, I'll be late.
+# game01:209
+g01012: The teachers yell at you for running in the halls, so I don't run in the halls.
+# game01:215
+g01013: I should get to class.
+# game01:236
+6c710baa: Look
+# game01:237
+527d8eb0: Talk
+# game01:247
+g01014: I don't like sports.
+# game01:253
+g01015: But I like the tennis courts in the morning. It feels nice here.
+# game01:259
+g01016: Maybe if I joined the tennis club, I'd be a little cooler.
+# game01:265
+g01017: I should get to class, or I'll be late.
+# game01:288
+g01018: I'm checking the spinach for tomorrow's class.
+# game01:290
+g01019: The commotion last night?
+# game01:293
+g01020: It was so scary it gave me a stomachache.
+# game01:302
+be5c384c: Look
+# game01:303
+125e15ea: Talk
+# game01:313
+g01021: It's just an ordinary home ec room.
+# game01:319
+g01022: For some reason, walking into an empty classroom makes me nervous.
+# game01:325
+g01023: I wonder if the fridge really is full of spinach.
+# game01:342
+g01025: A new transfer student is joining our class today.
+# game01:344
+g01026: Let's all be nice to them.
+# game01:364
+g01027: Whaaat? A transfer student?
+# game01:366
+g01028: Well then, we gotta give 'em a proper welcome.
+# game01:374
+de778842: Look
+# game01:375
+c5165068: Talk
+# game01:385
+g01029: I came to this city because my father called for me.
+# game01:391
+g01030: But he only called me to be an Evangelion pilot.
+# game01:397
+g01031: It wasn't much of a reunion between father and son.
+# game01:403
+g01032: I should get to class.
+# game01:414
+g01033: Hey, Shinji...
+# game01:416
+g01034: Why d'ya think the sky's blue...?
+# game01:437
+g01035: Ah, it's you two.
+# game01:439
+g01036: Do you like books?
+# game01:448
+b30c7ffc: Look
+# game01:449
+ff8e66da: Talk
+# game01:459
+g01037: There are old books here that survived Second Impact.
+# game01:465
+g01038: Before I was born, there was a huge disaster called Second Impact.
+# game01:471
+g01039: I heard only half of humanity survived it.
+# game01:477
+g01040: If I don't get to class soon, I'll be late.
+# game01:487
+g01041: Hurry along to class now.
+# game01:489
+g01042: Some happy news is waiting for you.
+# game01:526
+g01044: Stupid Shinji! You're late!
+# game01:549
+g01045: Get to class.
+# game01:572
+g01046: I said, get to class!
+# game01:598
+g01047: Ikari, you're late...
+# game01:621
+g01048: Classroom...
+# game01:644
+g01049: Ikari. Classroom...
+
+## game02
+# game02:141
+2689fbd4: Look
+# game02:142
+1ad87492: Talk
+# game02:143
+2b50b094: Corridor A-1
+# game02:144
+b9a054c1: Corridor B-1
+# game02:153
+g02001: Only people with a NERV ID are allowed in, but...
+# game02:159
+g02002: Well, I guess one person won't hurt.
+# game02:178
+c67a08bb: Look
+# game02:179
+c9972665: Talk
+# game02:180
+9d056de0: GeoFront Gate
+# game02:181
+51e36150: Corridor B-2
+# game02:190
+g02003: Is this the right way?
+# game02:196
+g02004: Having Kirishima with me makes me nervous.
+# game02:215
+258f4b44: Look
+# game02:216
+3dc90d82: Talk
+# game02:218
+a64e8691: Block D-5
+# game02:227
+g02005: Huh? Which way was it?
+# game02:233
+g02006: Ugh, this is such a pain.
+# game02:252
+5951794b: Look
+# game02:253
+d5d405f5: Talk
+# game02:263
+g02007: Oops, this is the big bath.
+# game02:269
+g02008: It's like a maze.
+# game02:275
+g02009: Give me a break...
+# game02:294
+19d5feb8: Look
+# game02:295
+e12cc5de: Talk
+# game02:296
+64006f9b: Escalator E-1 (Down)
+# game02:306
+g02010: It's a long way from here.
+# game02:312
+g02011: Let's go before somebody sees us.
+# game02:330
+fca40221: Look
+# game02:331
+a3754b63: Talk
+# game02:332
+f386c9b8: Corridor C-1 (Outbound)
+# game02:343
+g10017: An escalator running through the open atrium.
+# game02:349
+g02013: Kirishima keeps looking all around.
+# game02:367
+5dd85b36: Look
+# game02:368
+70ffc744: Talk
+# game02:398
+604abbbc: Look
+# game02:399
+7a31a59a: Talk
+# game02:400
+c047e85a: Elevator Hall L-1
+# game02:407
+g02015: Still, all these names like A-1 and C-1...
+# game02:408
+g02016: They're just codes. I can never keep them straight.
+# game02:428
+f0e9742b: Look
+# game02:429
+ef042a15: Talk
+# game02:430
+630093ce: Escalator E-1 (Up)
+# game02:437
+g02017: A moving walkway through the open atrium.
+# game02:459
+5e32e032: Look
+# game02:460
+cabb08d8: Talk
+# game02:461
+dc82e706: Elevator V-1
+# game02:462
+aafd88f1: Corridor C-1 (Return)
+# game02:469
+g02018: The elevator down to the underground facilities.
+# game02:500
+6a44255e: Look
+# game02:501
+8a45592c: Talk
+# game02:503
+fe9d85f1: Elevator Hall L-2
+# game02:504
+8fe6f9ec: Elevator Hall L-3
+# game02:505
+234b9693: Elevator Hall L-4
+# game02:512
+g02019: The boys' locker room is, um...
+# game02:532
+77869b2b: Look
+# game02:533
+75a15115: Talk
+# game02:534
+0ed4bca0: Vending Machines
+# game02:542
+g02020: The locker room is past the vending machines.
+# game02:561
+3f6e7494: Look
+# game02:562
+d26a0952: Talk
+# game02:564
+8b1963fe: Boys' Locker Room
+# game02:571
+g02021: That juice looks good.
+# game02:591
+81516c20: Look
+# game02:592
+5e4fac06: Talk
+# game02:593
+c147d762: Central Command Room
+# game02:594
+e9303b15: Corridor G-4 (Outbound)
+# game02:604
+g02022: This is the Central Command Room level.
+# game02:610
+g02023: There's also a corridor leading to the lab wing.
+# game02:629
+ec59476a: Look
+# game02:630
+71147970: Talk
+# game02:640
+g02024: This is the nerve center of NERV HQ.
+# game02:646
+g02025: Nerve center means... basically, the middle of everything.
+# game02:647
+g02026: I pilot Unit-01 exactly the way the people here tell me to.
+# game02:653
+g02027: That's why I don't really like this place.
+# game02:659
+g02028: Besides, having my face up on that giant screen...
+# game02:660
+g02029: It's kind of embarrassing.
+# game02:682
+853d6b5f: Look
+# game02:683
+5bb4db31: Talk
+# game02:684
+1202d069: Dr. Akagi's Lab
+# game02:691
+g02029b: Ritsuko's lab is down this way.
+# game02:713
+cbc6dda0: Look
+# game02:714
+4b4f0386: Talk
+# game02:722
+g02030: The corridor connecting the lab wing to command.
+# game02:742
+2f9c2173: Look
+# game02:743
+13063efd: Talk
+# game02:744
+2c43fd6c: Corridor G-4 (Return)
+# game02:753
+g02031: Dr. Akagi's lab. I mean, Ritsuko's.
+# game02:759
+g02032: Doesn't she get lonely, shut up in here all by herself?
+# game02:765
+g02033: Looks like she's not here right now.
+# game02:785
+3df367e9: Look
+# game02:786
+aa1a9e4b: Talk
+# game02:787
+745c0736: Unit-00 Cage
+# game02:788
+751499d0: Unit-01 Cage
+# game02:789
+7cd51ae9: Unit-02 Cage
+# game02:790
+3b9f58ba: Standby Room
+# game02:798
+g02034: This is where the Eva cages are.
+# game02:818
+e0cbc80e: Look
+# game02:819
+10e9de5c: Talk
+# game02:832
+g02035: Unit-00, the one Ayanami pilots.
+# game02:838
+g02036: The first unit of the Evangelion series.
+# game02:844
+g02037: Rumor has it, it once went berserk during a test.
+# game02:865
+ad291fc4: Look
+# game02:866
+f7f92602: Talk
+# game02:879
+g02038: Unit-01, the one I pilot.
+# game02:885
+g02039: I still remember how lost I felt the first time I got in.
+# game02:891
+g02040: It seems Unit-01 is really important to my father.
+# game02:910
+05aa25f3: Look
+# game02:911
+5dffdd7d: Talk
+# game02:924
+g02041: Unit-02, the one Asuka pilots.
+# game02:930
+g02042: According to Asuka, it's the best one there is.
+# game02:936
+g02043: But I don't care which unit is the best.
+# game02:955
+c5f2eb92: Look
+# game02:956
+8a4d0278: Talk
+# game02:969
+g02044: A private room where pilots stand by.
+# game02:975
+g02045: Standby? Nobody ever gets to stand by around here.
+# game02:981
+g02046: So it hardly ever gets used.
+# game02:1187
+g02048: We made it to the locker room.
+
+## game04
+# game04:144
+g04001: Maybe I'll grab a juice and take a break...
+# game04:165
+g04003: Unit-01, the one I pilot.
+# game04:171
+g04004: I still remember how lost I felt the first time I got in.
+# game04:177
+g04005: It seems Unit-01 is really important to my father.
+# game04:183
+g04006: Where were the vending machines again?
+# game04:209
+g04007: I'm still on duty.
+# game04:238
+g04008: Is this the right way?
+# game04:269
+g04009: Huh? Which way was it?
+# game04:275
+g04010: Ugh, this is such a pain.
+# game04:297
+g04011: Shinji. Stop wandering around.
+# game04:317
+g04014: Give me a break...
+# game04:323
+g04013: It's like a maze.
+# game04:329
+g04012: Oops, this is the big bath.
+# game04:359
+g04015: It's a long way from here.
+# game04:381
+g04016: Shinjiii!
+# game04:383
+g04017: For the vending machines, take the elevator!
+# game04:385
+g04018: And get off at L-2!
+# game04:402
+g04019: An escalator running through the open atrium.
+# game04:423
+g04020: Yoo-hoo! Shinji! We keep running into each other!
+# game04:440
+g04021: The escalator up to the surface.
+# game04:469
+g04022: Still, all these names like A-1 and C-1...
+# game04:470
+g04023: They're just codes. I can never keep them straight.
+# game04:499
+g04024: A moving walkway through the open atrium.
+# game04:526
+g04025: Have you seen Misato anywhere?
+# game04:544
+g04026: The elevator down to the underground facilities.
+# game04:576
+ade1668a: Elevator Hall L-1
+# game04:577
+9fec27a7: Elevator Hall L-2
+# game04:578
+c3ba56bc: Elevator Hall L-3
+# game04:579
+9397b249: Elevator Hall L-4
+# game04:586
+g04027: The floor with the vending machines was, um...
+# game04:613
+g04028: Shinji!
+# game04:615
+g04029: You scared me, showing up out of nowhere.
+# game04:617
+g04030: Juice?
+# game04:619
+g04031: I'd rather have a beer myself.
+# game04:622
+g04032: See ya~
+# game04:640
+g04033: I think it's this floor.
+# game04:667
+g04034: The vending machines, you say?
+# game04:669
+g04035: I believe they're at the back of L-2.
+# game04:690
+g04036: This is the Central Command Room level.
+# game04:696
+g04037: There's also a corridor leading to the lab wing.
+# game04:719
+g04038: Juice?
+# game04:721
+g04039: Make do with water, Shinji.
+# game04:740
+g04040: This is the nerve center of NERV HQ.
+# game04:746
+g04041: Nerve center means... basically, the middle of everything.
+# game04:747
+g04042: I pilot Unit-01 exactly the way the people here tell me to.
+# game04:753
+g04043: That's why I don't really like this place.
+# game04:759
+g04044: Besides, having my face up on that giant screen...
+# game04:760
+g04045: It's kind of embarrassing.
+# game04:790
+g04050: The corridor connecting the lab wing to command.
+# game04:843
+g04046: Vending machines?
+# game04:845
+g04047: No idea.
+# game04:847
+g04048: Anyway, have something cold to drink and get some rest.
+# game04:849
+g04049: I don't want it affecting the next test.
+# game04:868
+g04051: Dr. Akagi's lab. I mean, Ritsuko's.
+# game04:874
+g04052: Ritsuko sure seemed mad.
+# game04:880
+g04053: Doesn't she get lonely, shut up in here all by herself?
+# game04:907
+g04054: Good work on the test.
+# game04:909
+g04055: The vending machines?
+# game04:911
+g04056: Oh, Shinji, they're right before the boys' locker room!
+# game04:932
+g04057: This is where the Eva cages are.
+# game04:955
+g04058: Vending machines...
+# game04:957
+g04059: I don't know...
+# game04:979
+g04060: Unit-00, the one Ayanami pilots.
+# game04:985
+g04061: The first unit of the Evangelion series.
+# game04:991
+g04062: Rumor has it, it once went berserk during a test.
+# game04:1014
+g04063: Oh, taking a break already?
+# game04:1016
+g04064: Popular guys sure are something else.
+# game04:1018
+g04065: And don't bother getting one for me.
+# game04:1040
+g04066: Unit-02, the one Asuka pilots.
+# game04:1046
+g04067: According to Asuka, it's the best one there is.
+# game04:1052
+g04068: But I don't care which unit is the best.
+# game04:1088
+g04069: A private room where pilots stand by.
+# game04:1094
+g04070: Standby? Nobody ever gets to stand by around here.
+# game04:1100
+g04071: So it hardly ever gets used.
+# game04:1321
+g04073: I made it to the vending machines.
+
+## game06
+# game06:71
+g06001: She might have gone back to the home ec room.
+# game06:80
+g06002: I have to go look for Kirishima.
+# game06:88
+7cc7ca5b: Think
+# game06:88
+7b8be3ca: Think
+# game06:98
+g06003: Kirishima's half-made spinach and bacon stir-fry.
+# game06:104
+g06004: Kirishima...
+# game06:112
+g06005: Toji teases girls way too much.
+# game06:118
+g06006: And I think Asuka made a bit too much of a fuss, too.
+# game06:124
+g06007: That's right. A time like this is exactly when I need to act on my own.
+# game06:130
+g06008: But I'm a little worried about what everyone will think...
+# game06:136
+g06009: This is no time to be embarrassed!
+# game06:142
+g06010: I'm going to go find Kirishima.
+# game06:153
+g06011: I went out into the hallway.
+# game06:161
+g06013: I headed into the school building.
+# game06:165
+g06014: I went down the stairs.
+# game06:180
+d8df170c: Think
+# game06:192
+g06016: Where could Kirishima have gone?
+# game06:200
+g06017: Kaji told me to think about what she wants.
+# game06:206
+g06018: I need to find Kirishima and talk to her.
+# game06:212
+g06019: Toji's one thing, but Asuka's been acting weird lately.
+# game06:222
+g06020: I headed for the classroom.
+# game06:232
+9acfb878: Look
+# game06:233
+afc15496: Think
+# game06:241
+g06021: She hasn't come back to the classroom.
+# game06:247
+g06022: Still, running out in the middle of class... She's got guts.
+# game06:257
+g06023: Did she really go home?
+# game06:268
+71e9e9b4: Think
+# game06:277
+g06024: There's nobody around... Of course there isn't.
+# game06:283
+g06025: Maybe I should just go and look for her outside.
+# game06:293
+g06026: Did she go up to the roof?
+# game06:304
+5061823c: Think
+# game06:312
+g06027: She's not here...
+# game06:318
+g06028: I was sure she'd be on the roof.
+# game06:328
+g06029: Maybe she's in the library.
+# game06:339
+g06030: Happy books, sad books, heartbreaking books, books that tell the truth, books that help dreams come true... We're lucky to be able to read them all.
+# game06:348
+ca30fcda: Think
+# game06:358
+g06031: Maybe she's in here reading some difficult book.
+# game06:364
+g06032: She's not here either.
+# game06:372
+g06033: Kirishima seems quiet, but maybe she's actually pretty bold.
+# game06:378
+g06034: I mean, she just vanished somewhere.
+# game06:417
+g06036: I'll try behind the tennis courts.
+
+## game07
+# game07:108
+g07001: I arranged to meet up with Kirishima.
+# game07:110
+g07002: Um, where did we say we'd meet again?
+# game07:112
+g07003: Just kidding...
+# game07:123
+g07004: I went out into the hallway.
+# game07:131
+g07006: I'd better hurry to where we're meeting.
+# game07:170
+g07008: It's so peaceful. Everyone looks happy.
+# game07:176
+g07009: After all... I've got a date to meet someone...
+# game07:190
+g07010: Meeting up with Kirishima...
+# game07:196
+g07011: It makes all my worries from last night just blow away.
+# game07:211
+g07012: The classroom, maybe?
+# game07:242
+g07013: Kirishima isn't here.
+# game07:248
+g07014: She's waiting for me, after all.
+# game07:254
+g07015: But where?
+# game07:267
+g07016: If I'm late, Kirishima will get fed up with me.
+# game07:273
+g07017: I'd better hurry.
+# game07:319
+g07019: Is the gas main shut off?
+# game07:325
+g07020: Looks like it's fine.
+# game07:331
+g07021: Being here reminds me of the commotion in home ec.
+# game07:345
+g07022: That was the home ec class where Kirishima and Asuka clashed.
+# game07:351
+g07023: I guess girls don't always get along just because they're both girls...
+# game07:365
+g07024: I'll try the shoe lockers.
+# game07:369
+g07025: I went back into the school building.
+# game07:402
+g07026: The empty ones belong to students who transferred away.
+# game07:408
+g07027: Right, this is no time to be staring at shoe lockers.
+# game07:422
+g07028: Girls' indoor shoes sure are small.
+# game07:428
+g07029: I bet some of them squeeze into them anyway.
+# game07:442
+g07030: Maybe I'll go up to the roof and check the weather...
+# game07:473
+g07031: Nice weather. It feels great.
+# game07:479
+g07032: Blue sky.
+# game07:485
+g07033: What was Mil Mascaras's entrance theme again?
+# game07:491
+g07034: Well, whatever.
+# game07:504
+g07035: Asuka calling Kirishima a spy...
+# game07:510
+g07036: Considering NERV's mission, maybe it's understandable.
+# game07:516
+g07037: But Asuka was a transfer student once too.
+# game07:522
+g07038: We should be nice to transfer students.
+# game07:536
+g07039: Behind the tennis courts, maybe?
+# game07:550
+g07040: Stay away from me! You make me sick...
+# game07:561
+51f103d4: Think
+# game07:576
+g07041: Asuka was gone before I could even say anything.
+# game07:582
+g07042: That kick Asuka gave me the other day really hurt.
+# game07:588
+g07043: This is a lonely place...
+# game07:601
+g07044: Does Asuka hate me?
+# game07:607
+g07045: She didn't have to get that angry.
+# game07:613
+g07046: Oh right, I'm supposed to meet Kirishima.
+# game07:635
+g07047: Whoa, Shinji,
+# game07:637
+g07048: poppin' out all of a sudden like one of them ticket-gate flaps at the station.
+# game07:639
+g07049: Are ya an idiot or what?
+# game07:641
+g07050: Ah-ha, I get it. Your head's all fuzzy over a girl.
+# game07:653
+g07051: Morning, Ikari~
+# game07:656
+g07052: Shinji, how far'd ya get with Kirishima?
+# game07:658
+g07053: C'mon, tell me.
+# game07:661
+g07054: Stop it. Can't you see he doesn't like it?
+# game07:663
+g07055: Doesn't like it?
+# game07:665
+g07056: The great Eva pilot
+# game07:667
+g07057: gettin' pity from a girl? That's the end of the line,
+# game07:669
+g07058: Shinjiii~
+# game07:672
+g07059: Suzuhara!
+# game07:684
+g07060: Shinji, you mad?
+# game07:686
+g07061: I kinda feel bad about that whole Kirishima thing the other day.
+# game07:688
+g07062: C'mon, don't sweat it. Don't be so petty.
+# game07:700
+g07063: Asuka was totally furious out in the schoolyard.
+# game07:702
+g07064: What happened, Shinji?
+# game07:705
+g07065: It's a girl! That's what it is!
+# game07:709
+g07066: (Toji just won't let it go!)
+# game07:721
+g07067: Shinjiii!
+# game07:723
+g07068: Hey, Shinji!
+# game07:725
+g07069: Don't be mad, Shinjiii!
+# game07:727
+g07070: Go ahead, hit me till you feel better!
+# game07:744
+g07071: Where ya goin', Shinji?
+# game07:756
+g07072: Cheer up already, Shinji.
+# game07:768
+g07073: Heeey! Shinjiii!
+# game07:770
+g07074: Ikariii~
+# game07:788
+g07075: Toji's the one who showed up out of nowhere.
+# game07:795
+g07076: And my head's not fuzzy, and I'm not a ticket gate either.
+# game07:803
+g07077: Toji seems pretty close with Horaki himself.
+# game07:810
+g07078: He should hold a press conference about how far he's gotten.
+# game07:819
+g07079: No matter how you look at it, Toji's the one who's mad.
+# game07:826
+g07080: I'll slip away while I can.
+# game07:835
+g07081: Kensuke sure takes Asuka's side a lot.
+# game07:842
+g07082: Toji and Kensuke should team up and debut as a comedy duo, like Downtown.
+# game07:851
+g07083: He didn't have to come running after me.
+# game07:858
+g07084: When Toji runs, he looks just like a track team member.
+# game07:873
+g07085: Toji picks a fight with me over every little thing.
+# game07:880
+g07086: And Toji's got the wrong idea about Kirishima.
+# game07:888
+g07087: Eva pilots are ordinary people too.
+# game07:895
+g07088: Kirishima and I aren't like that.
+# game07:903
+g07089: Toji's the one who's hung up on it.
+# game07:910
+g07090: I really don't want him tagging along when I meet Kirishima.
+# game07:918
+g07091: Don't blame me for Asuka being mad...
+# game07:925
+g07092: Asuka's wrong to badmouth Kirishima, too...
+# game07:933
+g07093: I'd better get away from Toji.
+# game07:940
+g07094: Let's get out of here, fast.
+# game07:984
+g07096: I headed for the library.
+
+## game08
+# game08:50
+915bbfdf: Look (Silent)
+# game08:51
+32a59465: Think (Silent)
+# game08:52
+4f2d4e00: Block 1-1
+# game08:53
+df6a11ef: Block 1-4
+# game08:69
+g08001: I came to Block 1-1.
+# game08:76
+70508066: Block 1-2
+# game08:93
+g08002: I came to Block 1-2.
+# game08:100
+c9d3d6a0: Block 2-2
+# game08:101
+4e755009: Block 3-2
+# game08:118
+g08003: I came to Block 1-4.
+# game08:127
+c7649606: Block 5-1
+# game08:143
+g08004: I came to Block 2-2.
+# game08:150
+b3d8aadf: Block 6-2
+# game08:151
+4449054b: Block 2-3
+# game08:168
+g08005: I came to Block 2-3.
+# game08:176
+cc33050c: McDonald's
+# game08:193
+g08006: I came to Block 3-2.
+# game08:202
+7fc717c6: Block 3-3
+# game08:219
+g08007: I came to Block 3-3.
+# game08:227
+1f01d940: Block 4-3
+# game08:228
+407676e2: Renoir
+# game08:245
+g08008: There's a Renoir cafe right in front of me.
+# game08:269
+g08009: I came to Block 4-3.
+# game08:277
+a201e133: Block 5-3
+# game08:319
+g08011: I came to Block 5-1.
+# game08:328
+caeeb1b5: Block 5-4
+# game08:344
+g08012: I came to Block 5-3.
+# game08:353
+583c8408: Block 6-3
+# game08:370
+g08013: I came to Block 5-4.
+# game08:394
+g08014: I came to Block 6-2.
+# game08:418
+g08015: I came to Block 6-3.
+# game08:443
+g08016: Look....
+# game08:449
+g08017: Think....
+
+## game10
+# game10:144
+6c110d6c: Standby Room - Think
+# game10:157
+g10002: This room's surprisingly comfortable.
+# game10:163
+g10003: Ritsuko's lab is in a different building, the experiment wing.
+# game10:172
+g10004: I wonder if Ritsuko's in her lab?
+# game10:178
+g10005: I don't want to ask Father and get yelled at...
+# game10:184
+g10006: Ritsuko's lab is at the end of the corridor on the floor above, I think.
+# game10:203
+a6e397c2: GeoFront Gate - Think
+# game10:212
+g10007: I don't want to go outside dressed like this.
+# game10:218
+g10008: If I don't go see Ritsuko, I'll get yelled at again.
+# game10:237
+faf01127: Corridor B-1 - Think
+# game10:246
+g10009: Was it this way?
+# game10:267
+568ce792: Corridor B-2 - Think
+# game10:278
+g10010: Huh? Which way was it?
+# game10:284
+g10011: Ugh, what a pain.
+# game10:307
+91a346d7: Section D-5 - Think
+# game10:317
+g10012: Oops, this is the big bath.
+# game10:323
+g10013: It's a maze...
+# game10:329
+g10014: Give me a break, seriously.
+# game10:353
+g10014b: What is it, Shinji?
+# game10:355
+g10014c: Your game of maze is over.
+# game10:357
+g10014d: Get to the experiment wing. Now.
+# game10:366
+9a4669d6: Corridor A-1 - Think
+# game10:377
+g10015: It's a long way from here.
+# game10:383
+g10016: Let's go before somebody spots me.
+# game10:406
+cd2b5ec1: Escalator E-1 Down - Think
+# game10:436
+9233ce50: Escalator E-1 Up - Think
+# game10:444
+g10018: It's the escalator up to the surface.
+# game10:466
+aee68a9a: Corridor C-1 Outbound - Think
+# game10:474
+g10019: But all this A-1 and C-1 stuff...
+# game10:475
+g10020: Names that are just codes make no sense to me.
+# game10:497
+e7dbe7f7: Corridor C-1 Return - Think
+# game10:505
+g10021: A moving walkway through the atrium.
+# game10:530
+0b88b24c: Elevator Hall L-1 - Think
+# game10:539
+g10022: It's the elevator down to the underground facility.
+# game10:570
+26b0a2c8: Elevator V-1 - Think
+# game10:581
+g10023: Which floor had the passage to the experiment wing again?
+# game10:606
+442b54f7: Elevator Hall L-2 - Think
+# game10:615
+g10024: What's on this floor?
+# game10:639
+g10025: Sometimes a can of coffee in an empty hallway...
+# game10:641
+g10026: ...beats the fresh-brewed stuff in the command center...
+# game10:643
+g10027: ...it really does taste better...
+# game10:652
+fbb30a82: Vending Machines - Think
+# game10:661
+g10028: That juice looks good.
+# game10:681
+6b5c79a6: Boys' Locker Room - Look
+# game10:682
+302b7820: Boys' Locker Room - Think
+# game10:692
+g10029: No one's here.
+# game10:698
+g10030: It has that peculiar smell of LCL.
+# game10:726
+g10031: Shinji, how are you feeling?
+# game10:728
+g10032: Me? I feel like soaking in a hot spring.
+# game10:730
+g10033: We're short-handed just dealing with the Angels,
+# game10:732
+g10034: and now a humanoid weapon goes bathing in a waterfall basin.
+# game10:741
+e8ecd88e: Elevator Hall L-3 - Think
+# game10:743
+be533ff1: Corridor G-4
+# game10:753
+g10035: This is the floor with the Central Command Room.
+# game10:759
+g10036: The passage to the experiment wing is here too.
+# game10:783
+g10037: Shinji,
+# game10:785
+g10038: you're supposed to be headed to the experiment wing.
+# game10:787
+g10039: Do you object to your father's orders?
+# game10:796
+5f8a3494: Central Command Room - Think
+# game10:806
+g10040: This is the heart of NERV HQ.
+# game10:812
+g10041: It's a bit hectic because of the robot weapon incident.
+# game10:840
+g10042: Shinji, do you know Shiraito Falls?
+# game10:842
+g10043: That famous spot near Mt. Fuji where the humanoid weapon crashed.
+# game10:844
+g10044: One less place to look forward to visiting.
+# game10:853
+35a1d019: Elevator Hall L-4 - Think
+# game10:865
+g10045: The Eva cages are here.
+# game10:888
+g10046: Do as Commander Ikari says...
+# game10:897
+c0372218: Unit-00 Cage - Think
+# game10:910
+g10047: It's Unit-00, the one Ayanami pilots.
+# game10:916
+g10048: The first unit of the Evangelion series.
+# game10:922
+g10049: Rumor has it it went berserk once during an experiment.
+# game10:945
+c69ec412: Unit-01 Cage - Think
+# game10:958
+g10050: It's Unit-01, the one I pilot.
+# game10:964
+g10051: Though in the end I didn't get in it today.
+# game10:987
+4a2aec4f: Unit-02 Cage - Think
+# game10:998
+g10052: They're busy bringing Unit-02 back in.
+
+## game11
+# game11:127
+g11001: Asuka was working at the site, so maybe she can tell me something.
+# game11:148
+7d74c9cf: Dr. Akagi's Lab - Think
+# game11:186
+g11003: Anyway, I should go see Asuka.
+# game11:216
+g11004: Was it this way?
+# game11:248
+g11005: Huh? Which way was it?
+# game11:254
+g11006: Ugh, what a pain.
+# game11:287
+g11007: Oops, this is the big bath.
+# game11:293
+g11008: It's a maze...
+# game11:299
+g11009: Give me a break, seriously.
+# game11:333
+g11010: It's a long way from here.
+# game11:339
+g11011: Let's go before somebody spots me.
+# game11:434
+g11014: But all this A-1 and C-1 stuff...
+# game11:440
+g11015: Names that are just codes make no sense to me.
+# game11:471
+g11016: A moving walkway through the atrium.
+# game11:505
+g11017: It's the elevator down to the underground facility.
+# game11:547
+g11018: I wonder if Asuka's at the Unit-02 cage?
+# game11:581
+g11019: What's on this floor?
+# game11:613
+g11020: That juice looks good.
+# game11:642
+g11021: Of course Asuka wouldn't be in the boys' locker room...
+# game11:670
+g11024: Free to quit, free to fight. The choice is ours, I suppose.
+# game11:680
+g11023: It means we're free to quit.
+# game11:690
+g11022: Lots of people can't take how busy it gets, and they quit.
+# game11:713
+g11025: This is the floor with the Central Command Room.
+# game11:719
+g11026: The passage to the experiment wing is here too.
+# game11:743
+g11027: What is it?...
+# game11:753
+g11028: The experiment's called off? The schedule is going badly awry.
+# game11:774
+g11029: This is the heart of NERV HQ.
+# game11:780
+g11030: Asuka isn't here either.
+# game11:821
+g11031: The Eva cages are here.
+# game11:827
+g11032: Where Asuka's most likely to be is...
+# game11:851
+g11033: Asuka is back.
+# game11:873
+g11034: It's Unit-00, the one Ayanami pilots.
+# game11:879
+g11035: The first unit of the Evangelion series.
+# game11:885
+g11036: Rumor has it it went berserk once during an experiment.
+# game11:921
+g11037: It's Unit-01, the one I pilot.
+# game11:927
+g11038: Though in the end I didn't get in it today.
+# game11:992
+g11040: Ritsuko's lab is down this way.
+# game11:1024
+g11040b: The passage linking the experiment wing and command.
+# game11:1250
+g11041: Ritsuko said they took the pilot into custody, but...
+# game11:1254
+g11042: And get this, where they took him is the JSSDF hospital!
+# game11:1258
+g11043: Not NERV's central hospital...
+# game11:1261
+g11044: Huh? But Ritsuko said she'd go take a look.
+# game11:1265
+g11045: That makes me so mad!
+# game11:1267
+g11046: I'm part of NERV too, so they could let me in on the secret, right?
+# game11:1271
+g11047: A secret.
+
+## game11b
+# game11b:66
+g11b001: Let's get some fresh air.
+# game11b:81
+g11b002: Wow~ It's a bigger hospital than I thought.
+# game11b:89
+09c2a6c9: Entrance - Look
+# game11b:90
+2a302bb9: Entrance - Think
+# game11b:91
+853a4b09: Lobby
+# game11b:100
+g11b003: It's a big hospital.
+# game11b:106
+g11b004: Tokyo-3 needs a big hospital like this.
+# game11b:112
+g11b005: There's a notice posted.
+# game11b:118
+g11b006: Consultations until 12 noon, visiting hours until 7 p.m.
+# game11b:131
+g11b007: I went into the lobby.
+# game11b:136
+g11b008: I headed for the lobby.
+# game11b:150
+g11b009: Not a hospital name that makes you want to be admitted.
+# game11b:158
+468b8e93: Lobby - Look
+# game11b:159
+9ae548af: Lobby - Think
+# game11b:160
+9446ea73: Entrance
+# game11b:168
+g11b010: The reception desk is already closed.
+# game11b:180
+g11b011: We headed deeper into the hospital.
+# game11b:185
+g11b012: I came out into the hallway.
+# game11b:190
+g11b013: I went downstairs.
+# game11b:207
+g11b014: You lead the way.
+# game11b:218
+ba18ec3b: ICU
+# game11b:220
+26d0a6ce: Restroom
+# game11b:229
+g11b015: I don't know the way either!
+# game11b:233
+g11b016: The ICU is down this way.
+# game11b:241
+g11b017: Grr!
+# game11b:247
+g11b018: ICU means Intensive Care Unit.
+# game11b:253
+g11b019: If the boy rescued from the robot is anywhere, it's the ICU.
+# game11b:263
+g11b020: I went into the restroom...
+# game11b:277
+g11b021: Where do you think you're looking?!
+# game11b:286
+a29a6436: Restroom - Look
+# game11b:287
+79577150: Restroom - Think
+# game11b:295
+g11b022: Asuka's in a bad mood. Can't blame her.
+# game11b:307
+g11b023: I came out onto the roof.
+# game11b:321
+g11b024: You sure have time to kill...
+# game11b:340
+g11b025: No matter how busy the hospital is...
+# game11b:346
+g11b026: they wouldn't just dump an injured patient on the roof.
+# game11b:388
+g11b027: I headed for the ICU.
+
+## game11c
+# game11c:71
+g11c001: We headed for the ICU.
+# game11c:87
+g11c002: Shinji...
+# game11c:95
+9e7a6a41: ICU - Look
+# game11c:96
+01c3c421: ICU - Think
+# game11c:106
+g11c003: Ritsuko is talking with a doctor.
+# game11c:112
+g11c004: The boy lying in the bed is Mana's friend.
+# game11c:118
+g11c005: He's also the pilot of that humanoid weapon everyone's talking about.
+# game11c:124
+g11c006: Let's move before anyone comes.
+# game11c:134
+g11c007: Mana...
+# game11c:136
+g11c008: Asuka really is so quick to get angry!
+# game11c:143
+g11c009: First, I need to calm down.
+# game11c:145
+g11c010: I wish she'd keep a cooler head.
+# game11c:151
+g11c011: Either way, staying here is a bad idea.
+# game11c:161
+g11c012: We headed further in.
+# game11c:166
+g11c013: We came out into the hallway.
+# game11c:171
+g11c014: We went out into the hallway.
+# game11c:184
+g11c015: Shinji, you're going to protect me, aren't you?
+# game11c:204
+g11c016: Where should we go for now?
+# game11c:210
+46ab541c: Go outside, maybe?
+# game11c:211
+569f08ca: Or go up to the roof?
+# game11c:212
+21117f42: Or hide in the restroom?
+# game11c:217
+g11c017: It'd be bad to run into NERV people at the entrance.
+# game11c:223
+g11c018: Let's go up to the roof for now.
+# game11c:229
+g11c019: Hiding in the restroom won't help much...
+# game11c:238
+g11c020: Let's see what it's like outside.
+# game11c:254
+g11c021: You're going home... Right, of course...
+# game11c:272
+g11c022: What am I doing, making her anxious...
+# game11c:274
+g11c023: There's no one around, but just wandering outside...
+# game11c:282
+g11c024: Ritsuko is in the ICU, which means...
+# game11c:288
+g11c025: NERV intelligence agents might be prowling the hallways.
+# game11c:294
+g11c026: Maybe the roof is safe?
+# game11c:305
+g11c027: We headed for the lobby.
+# game11c:309
+g11c028: We went back to the lobby.
+# game11c:323
+g11c029: I'm sorry. I've made things complicated for you.
+# game11c:341
+g11c030: The reception desk is already closed.
+# game11c:347
+g11c031: What now...
+# game11c:357
+g11c032: We went into the restroom...
+# game11c:371
+g11c033: As long as I'm with you, Shinji, I'll follow you anywhere.
+# game11c:388
+g11c034: We can't hide in a cramped place like this forever.
+# game11c:396
+g11c035: Supposedly lovers in the old days used to meet in secret behind the outhouse.
+# game11c:402
+g11c036: That's why they say an affair "smells fishy."
+# game11c:408
+g11c037: This is no time to be impressed by trivia.
+# game11c:447
+g11c038: We came out onto the roof.
+# game11c:454
+g11c039: No one suspicious here. If anything, we're the suspicious ones.
+
+## game13
+# game13:75
+64bbe9e5: Screening
+# game13:76
+b0fa1c2b: Intermission
+
+## game19b
+# game19b:159
+g19b001: Father should be in the Command Room right now.
+# game19b:190
+g19b002: Was the Command Room this way?
+# game19b:221
+g19b003: This doesn't seem right...
+# game19b:251
+g19b004: The big bath, huh.
+# game19b:282
+g19b005: I hope Father isn't busy...
+# game19b:307
+g19b006: Morning, Shinji. Life throws a lot at you, but hang in there.
+# game19b:324
+g19b007: An escalator through the atrium.
+# game19b:355
+g19b008: It's the escalator up to the surface.
+# game19b:380
+g19b009: Oh, Shinji...
+# game19b:382
+g19b010: Come by and see the watermelons on your way home.
+# game19b:399
+g19b011: But all this A-1 and C-1 stuff... names that are just codes make no sense to me.
+# game19b:430
+g19b012: A moving walkway through the atrium.
+# game19b:457
+g19b013: Shinji, I heard what happened...
+# game19b:459
+g19b014: I'm sorry there's nothing I can do for you...
+# game19b:471
+9af4d8ab: Corridor C-2 Outbound
+# game19b:478
+g19b015: It's the elevator down to the underground facility.
+# game19b:500
+99a1c571: Corridor C-2 Outbound - Look
+# game19b:501
+b9b80fb1: Corridor C-2 Outbound - Think
+# game19b:502
+8cd50119: Kaji's Watermelon Patch
+# game19b:509
+g19b016: This passage leads out onto the floor of the GeoFront.
+# game19b:531
+db5dc97a: Corridor C-2 Return - Look
+# game19b:532
+dd2b2684: Corridor C-2 Return - Think
+# game19b:562
+e41355e3: Kaji's Watermelon Patch - Look
+# game19b:563
+41cb42df: Kaji's Watermelon Patch - Think
+# game19b:564
+31362bb2: Corridor C-2 Return
+# game19b:573
+g19b018: It's the watermelon patch Kaji grows.
+# game19b:579
+g19b019: That's it, if I ask Kaji, maybe I'll find something out.
+# game19b:585
+g19b020: But first, I have to ask Father.
+# game19b:620
+g19b021: How Commander Ikari's doing?
+# game19b:622
+g19b022: Hard to say...
+# game19b:624
+g19b023: He's at the commander's seat, but
+# game19b:626
+g19b024: I don't think you should push it.
+# game19b:646
+g19b025: The Command Room is on L-3, I think.
+# game19b:679
+g19b026: Is he on this floor?
+# game19b:711
+g19b027: That juice looks good.
+# game19b:744
+g19b028: No one's here.
+# game19b:750
+g19b029: It has that peculiar smell of LCL.
+# game19b:785
+g19b030: It's the floor with the Central Command Room.
+# game19b:818
+g19b030b: Ritsuko's lab is down this way.
+# game19b:850
+g19b031: The passage linking the experiment wing and command.
+# game19b:875
+g19b032: Shinji,
+# game19b:877
+g19b033: I know this is hard for you,
+# game19b:879
+g19b034: but don't forget about our mission.
+# game19b:898
+g19b035: Father wouldn't be here...
+# game19b:904
+g19b036: There's a faint scent of perfume. Ritsuko's, maybe?
+# game19b:931
+g19b037: I see...
+# game19b:933
+g19b038: You're going to talk to your father...
+# game19b:935
+g19b039: Commander Ikari is in the Central Command Room...
+# game19b:958
+g19b040: I think the Command Room where Father is might be on the floor above.
+# game19b:964
+g19b041: The Eva cages are here.
+# game19b:990
+g19b042: You can't trust your father?
+# game19b:1010
+g19b043: Unit-00, the first unit of the Evangelion series.
+# game19b:1046
+g19b044: It's Unit-01, the one I pilot.
+# game19b:1052
+g19b045: It seems to be important to Father.
+# game19b:1078
+g19b046: Why don't you just hurry up and go to your daddy?
+# game19b:1080
+g19b047: And leave me alone!
+# game19b:1102
+g19b048: It's Unit-02, the one Asuka pilots.
+# game19b:1108
+g19b049: Asuka's pride and joy.
+# game19b:1114
+g19b050: Father's not here. He must be in the Command Room.
+# game19b:1149
+g19b051: He wouldn't be in a place like this.
+# game19b:1353
+g19b053: I want to know the truth.
+# game19b:1359
+g19b054: Only a handful of people at NERV must have known the truth about the robot incident and Mana's spying.
+# game19b:1365
+g19b055: Even when Mana was taken away, everyone handled it so calmly.
+# game19b:1371
+g19b056: Is there any way to find out if Mana is alive?
+# game19b:1377
+g19b057: I also want to know why Father handed Mana over to them.
+# game19b:1383
+g19b058: I'm part of NERV too. I should have the right to know.
+# game19b:1387
+g19b059: I'll go see Father and ask him everything.
+# game19b:1411
+g19b060: ...
+# game19b:1425
+g19b061: Hm? Why, it's Shinji. What's the matter?
+# game19b:1430
+g19b062: ...
+# game19b:1437
+g19b063: Ikari, it seems Shinji wants to ask you something.
+# game19b:1443
+g19b064: What is it?
+# game19b:1448
+g19b065: ...
+# game19b:1452
+g19b066: Um...
+# game19b:1455
+g19b067: ...
+# game19b:1460
+g19b068: Shinji, I'm busy.
+# game19b:1463
+g19b069: Can't this wait until later?
+# game19b:1472
+g19b070: ...
+
+## game19c
+# game19c:138
+g19c001a: Who should I turn to at a time like this?
+# game19c:157
+462fb0b1: Central Command Room - Misato
+# game19c:158
+1014d6e4: Central Command Room - Ritsuko
+# game19c:159
+09a10bf4: Central Command Room - Kaji
+# game19c:160
+8884e964: Central Command Room - Asuka
+# game19c:168
+g19c001: Let's get going. I don't want to be treated like I'm in the way.
+# game19c:174
+g19c002: Asking Misato probably won't get me anywhere.
+# game19c:180
+g19c003: Ritsuko is wrapped up in her research. I can't talk to her about Mana.
+# game19c:186
+g19c004: That's right, Kaji might be okay to talk to.
+# game19c:192
+g19c005: Asuka?! No way!
+# game19c:220
+g19c006: The watermelon patch isn't on the surface. It's on the floor of the GeoFront.
+# game19c:252
+g19c007: Was the watermelon patch this way?
+# game19c:284
+g19c008: This doesn't seem right...
+# game19c:318
+g19c010: It's the big bath.
+# game19c:324
+g19c011: Isn't there a women's bath?
+# game19c:330
+g19c012: Maybe it's mixed bathing...
+# game19c:336
+g19c013: ...
+# game19c:369
+g19c014: Kaji's watermelon patch is on the floor of the GeoFront.
+# game19c:400
+g19c015: An escalator through the atrium.
+# game19c:431
+g19c016: It's the escalator up to the surface.
+# game19c:462
+g19c017: But all this A-1 and C-1 stuff... names that are just codes make no sense to me.
+# game19c:493
+g19c018: A moving walkway through the atrium.
+# game19c:529
+g19c019: The GeoFront floor is at the end of Corridor C-2.
+# game19c:560
+g19c020: This passage leads out onto the floor of the GeoFront.
+# game19c:591
+g19c021: This passage leads out onto the floor of the GeoFront.
+# game19c:633
+g19c022: L-1 is where you come out onto the GeoFront floor.
+# game19c:666
+g19c023: There wouldn't be a watermelon patch on this floor.
+# game19c:691
+g19c024: The important thing is not to give up.
+# game19c:739
+g19c025: No one's here.
+# game19c:745
+g19c026: It has that peculiar smell of LCL.
+# game19c:772
+g19c027: Kaji?
+# game19c:775
+g19c028: Isn't that guy somewhere upstairs?
+# game19c:777
+g19c029: You can't count on a guy like him!
+# game19c:796
+g19c030: Let's hurry to the watermelon patch.
+# game19c:822
+g19c031: Kaji was over by the watermelon patch.
+# game19c:824
+g19c032: You should talk things over with him.
+# game19c:826
+g19c033: He's so kind, after all...
+# game19c:843
+g19c033b: Ritsuko's lab is down this way.
+# game19c:875
+g19c034: The passage linking the experiment wing and command.
+# game19c:901
+g19c035: Kaji, tilling a field down in the GeoFront...
+# game19c:903
+g19c036: Does he think he's some kind of philosopher?
+# game19c:922
+g19c037: Ritsuko sure doesn't mince words...
+# game19c:929
+g19c038: I wonder if Kaji's here...
+# game19c:935
+g19c039: Looks like no one's here...
+# game19c:941
+g19c040: There's a faint scent of perfume.
+# game19c:968
+g19c041: We grow up by learning to endure things.
+# game19c:993
+g19c042: There wouldn't be a field this far down...
+# game19c:999
+g19c043: The Eva cages are here.
+# game19c:1025
+g19c044: Why do you come here...
+# game19c:1045
+g19c045: Unit-00, the first unit of the Evangelion series.
+# game19c:1081
+g19c046: It's Unit-01, the one I pilot.
+# game19c:1087
+g19c047: It seems to be important to Father.
+# game19c:1113
+g19c048: Daddy gave you the cold shoulder?
+# game19c:1115
+g19c049: That's got nothing to do with me.
+# game19c:1137
+g19c050: It's Unit-02, the one Asuka pilots.
+# game19c:1143
+g19c051: Asuka's pride and joy.
+# game19c:1178
+g19c052: It'd be scary if watermelons were growing in here.
+# game19c:1408
+g19c054: So there are hardly any leads...
+# game19c:1413
+g19c055: Sometimes I think maybe she's already been killed...
+# game19c:1415
+g19c056: That's what I think sometimes.
+# game19c:1419
+g19c057: And you can just give up on her like that, Shinji?
+# game19c:1423
+g19c058: That's not...
+# game19c:1425
+g19c059: But...
+# game19c:1427
+g19c060: Mana was taken away by the military!
+# game19c:1430
+g19c061: What can a junior high kid like me do?
+# game19c:1435
+g19c062: You're a man.
+# game19c:1437
+g19c063: A man has a duty to protect the one he loves, even with his life.
+# game19c:1439
+g19c064: You can't do that, so you come here looking for comfort.
+# game19c:1441
+g19c065: Aren't you ashamed of yourself?
+# game19c:1446
+g19c066: Once you're dead, it's all over, isn't it?
+# game19c:1451
+g19c067: No one's telling you to die.
+# game19c:1455
+g19c068: That's why!
+# game19c:1458
+g19c069: Because there's nothing I can do...
+# game19c:1465
+g19c070: What should I...
+# game19c:1468
+g19c071: Please tell me...
+# game19c:1471
+g19c072: What am I supposed to do...
+# game19c:1476
+g19c073: You're not just some junior high kid.
+# game19c:1478
+g19c074: You're the pilot of Evangelion Unit-01,
+# game19c:1480
+g19c075: the Third Child, Shinji Ikari.
+# game19c:1482
+g19c076: Have some pride in yourself!
+# game19c:1484
+g19c077: If it comes to it, you can move Unit-01.
+# game19c:1489
+g19c078: Unit-01...
+# game19c:1493
+g19c079: The Eva?
+# game19c:1498
+g19c080: Mana Kirishima...
+# game19c:1500
+g19c081: She's alive.
+# game19c:1504
+g19c082: Really?
+# game19c:1507
+g19c083: That's all I know.
+# game19c:1511
+g19c084: Thank you so much!
+
+## ja001
+# ja001:57
+ja0100: Potatoes, 150 yen a bag. Carrots, two for 100 yen. Onions, 80 yen each.
+# ja001:64
+ja0101: Green peppers, 150 yen a bag.
+# ja001:70
+ja0102: Green peppers are bitter.
+# ja001:76
+ja0103: Bitter stuff is good for you.
+# ja001:82
+ja0104: Fry the onions really well, okay? I hate it when they're sharp.
+# ja001:88
+ja0105: You could take a turn cooking once in a while. It's always me.
+# ja001:96
+ja0106: Hey, something happened between you and that Kirishima girl, didn't it?
+# ja001:102
+ja0107: Huh...? What do you mean, what?
+# ja001:108
+ja0108: You hugged her and snuck her into NERV, didn't you?
+# ja001:114
+ja0109: What?! Into NERV... I didn't do anything, not on my part...
+# ja001:123
+ja0110: There, all done... Shinji, prepare yourself!
+# ja001:145
+ja0111: Whoa! Asuka, what are you doing?!
+# ja001:157
+ja0112: Shinji! Shinji, come on~!
+# ja001:163
+ja0113: Don't press your face into me like that, it's hot!
+# ja001:169
+ja0114: Ah! I knew it, you smell like that woman!
+# ja001:181
+ja0115: Whoa! She bit me! Ow!
+# ja001:189
+ja0116: Grrrrrrr!
+# ja001:195
+ja0117: Waaaaaah!
+# ja001:204
+ja0118: Honestly, you are just...!
+# ja001:210
+ja0119: I'm sorry! I won't do it again!
+# ja001:216
+ja0120: Shinji!
+# ja001:228
+ja0121: Thanks for everything, always.
+# ja001:234
+ja0122: Asuka...
+# ja001:240
+ja0123: You're the one and only person in this world who...
+# ja001:248
+ja0124: ...stands in for Kaji as my guinea pig.
+# ja001:254
+ja0125: Huh?
+# ja001:271
+ja0126: Ah! There's something on my shirt!
+# ja001:277
+ja0127: They said this lipstick doesn't smudge, but I guess it does rub off.
+# ja001:283
+ja0128: Oh no... the devil's claw marks on my pure white shirt...
+# ja001:325
+ja0200: We bought you a new shirt, so forgive me, okay?
+# ja001:331
+ja0201: I bought this shirt with my own money.
+# ja001:337
+ja0202: But the great Asuka helped you pick it out, didn't she?
+# ja001:343
+ja0203: There's not much picking to do with a white shirt...
+# ja001:349
+ja0204: What are you muttering about?
+# ja001:355
+ja0205: Oh, look.
+# ja001:374
+ja0300: Rei Ayanami.
+# ja001:397
+ja0301: You're interested in girls like that too, aren't you?
+# ja001:403
+ja0302: I think it's normal to care about a teammate.
+# ja001:409
+ja0303: Oh, playing dumb.
+# ja001:415
+ja0304: What?
+# ja001:421
+ja0305: The quiet girl who always looks so lonely, huh?
+# ja001:427
+ja0306: Yeah...
+# ja001:433
+ja0307: So you ARE interested.
+# ja001:439
+ja0308: Who cares what I think of anyone?
+# ja001:445
+ja0309: Were you two close before?
+# ja001:451
+ja0310: You're always trying to pry things out of me like that.
+# ja001:457
+ja0311: Well, were you?
+# ja001:463
+ja0312: When I see Ayanami, it makes me want to try harder too.
+# ja001:466
+ja0313: We've always fought side by side.
+# ja001:469
+ja0314: It's like a kind of soul we share, I guess.
+# ja001:475
+ja0315: Hmm.
+# ja001:481
+ja0316: Ayanami!
+# ja001:499
+ja0317: Ikari.
+# ja001:505
+ja0318: On your way back from NERV?
+# ja001:511
+ja0319: That has nothing to do with you.
+# ja001:517
+ja0320: I see...
+# ja001:523
+ja0321: Everyone's got their own life, as they say.
+# ja001:529
+ja0322: What kind of books do you always read, Ayanami?
+# ja001:535
+ja0323: Do I need to tell you?
+# ja001:541
+ja0324: It's dangerous to read while you walk.
+# ja001:547
+ja0325: Don't worry about it.
+# ja001:553
+ja0326: Shinji, come on, let's go.
+# ja001:559
+ja0327: Asuka, just be quiet.
+# ja001:565
+ja0328: Hmph.
+# ja001:571
+ja0329: Are you still in uniform this late because of a special sync test
+# ja001:574
+ja0330: or something?
+# ja001:580
+ja0331: Repairs on the Pribnow Box.
+# ja001:586
+ja0332: Wait, you mean the one I broke?
+# ja001:592
+ja0333: Yes.
+# ja001:598
+ja0334: Sorry.
+# ja001:604
+ja0335: Why are you apologizing?
+# ja001:610
+ja0336: Well... I mean, um... I...
+# ja001:616
+ja0337: Argh! Come on! This is so frustrating!
+# ja001:710
+ja0400: Ayanami gets all kinds of work from my father,
+# ja001:713
+ja0401: does demanding jobs under orders, and works until sundown,
+# ja001:717
+ja0402: while we've got free time and just wander around like this...
+# ja001:729
+ja0403: Don't lump me in with you.
+# ja001:748
+ja0404: I've never tasted this before...
+# ja001:761
+ja0405: So, is it good?
+# ja001:767
+ja0406: It's all right...
+# ja001:773
+ja0407: Oh, good.
+# ja001:783
+ja0408: Lord Shinji certainly seems awfully concerned
+# ja001:786
+ja0409: about the First Lady.
+# ja001:792
+ja0410: There you go again, Asuka.
+# ja001:808
+ja0411: You were so wishy-washy about a girl that I set the whole thing up
+# ja001:811
+ja0412: for you, didn't I?
+# ja001:832
+ja0413: I just wanted to talk to her as a friend, that's all.
+# ja001:838
+ja0414: A friend...
+# ja001:844
+ja0415: But guess what? Shinji and I are more than friends, not quite lovers.
+# ja001:848
+ja0416: Shinji's such a pushover, so I do everything for him.
+# ja001:854
+ja0417: Ikari is a pushover...
+# ja001:860
+ja0418: Yep, yep.
+# ja001:873
+ja0419: Asuka's always picking on me like this.
+# ja001:883
+ja0420: Ikari.
+# ja001:895
+ja0421: Yes?
+# ja001:901
+ja0422: Be strong.
+# ja001:915
+ja0423: Okay...
+# ja001:921
+ja0424: Listen, listen! Maybe it's his age, but Shinji keeps
+# ja001:924
+ja0425: looking at me and touching me.
+# ja001:942
+ja0427: That's a misunderstanding. You're the one who teases me!
+# ja001:948
+ja0428: Just the other day he looked at my butt, so I kicked him without thinking.
+# ja001:954
+ja0429: Oh, come on! Only the stuff that makes me look bad!
+# ja001:960
+ja0430: I will report all of this to Commander Ikari.
+# ja001:972
+ja0431: What?!
+# ja001:989
+ja0432: The juice is good.
+# ja001:995
+ja0433: Please don't tell my father. I'll be careful from now on.
+# ja001:1001
+ja0434: ...
+# ja001:1015
+ja0435: Are you listening?
+# ja001:1021
+ja0436: Oh right, this is your treat.
+# ja001:1027
+ja0437: Huh?
+# ja001:1033
+ja0438: Why not? A gentleman with a pretty girl on each side.
+# ja001:1036
+ja0439: It's the perfect chance to show the princesses what a man you are.
+# ja001:1049
+ja0440: On top of buying a shirt, now I'm paying for three tropical drinks.
+# ja001:1052
+ja0441: That's a lot of spending for a junior high kid's wallet.
+# ja001:1058
+ja0442: It's fine. I'll pay for my own...
+# ja001:1135
+ja0443: Hi, everyone! Long time no see!
+# ja001:1146
+ja0444: Kirishima!
+# ja001:1157
+ja0445: Grr! What do you mean, long time no see? You only transferred in
+# ja001:1163
+ja0446: this morning!
+# ja001:1169
+ja0447: Shinji, perfect timing! Let's go home together!
+# ja001:1175
+ja0448: Huh?
+# ja001:1181
+ja0449: Shinji is going home with ME!
+# ja001:1187
+ja0450: Then I'll walk with you part of the way.
+# ja001:1193
+ja0451: We've got errands, so we're going separately!
+# ja001:1199
+ja0452: How about just to the elevator?
+# ja001:1205
+ja0453: Why are you following us?!
+# ja001:1211
+ja0454: Calm down!
+# ja001:1273
+ja0455: Yo! Everybody drinkin'? The teacher's gonna yell at ya!
+# ja001:1279
+ja0456: Toji!
+# ja001:1315
+ja0457: We could hear Asuka's voice from over there, so we came to see.
+# ja001:1321
+ja0458: The festival ain't over here, y'know.
+# ja001:1327
+ja0459: Oh, Kirishima's here, so this is a welcome party for the new girl!
+# ja001:1333
+ja0460: Nice to meet you!
+# ja001:1341
+ja0461: If it's a welcome party, you should've invited us!
+# ja001:1347
+ja0462: Wait! We were just having some juice, and then...
+# ja001:1353
+ja0463: I came to see Shinji.
+# ja001:1359
+ja0464: What did you say?!
+# ja001:1365
+ja0465: (flustered) No, no, that's not it!
+# ja001:1371
+ja0466: I'm jealous! Why does this guy get all the girls?
+# ja001:1379
+ja0467: Shinji Ikari. In the evening he sips sweet juice with beautiful girls,
+# ja001:1383
+ja0468: and at night he eats and sleeps under one roof with Misato and Asuka.
+# ja001:1387
+ja0469: What a carefree life! How enviable!
+# ja001:1392
+ja0470: Jealousy should strike at others, yet somehow it only wounds me. Ugh...
+# ja001:1396
+ja0471: Give me back my youth! (sobs)
+# ja001:1404
+ja0472: I'm going home...
+# ja001:1439
+ja0473: Shinji, you live with Asuka?
+# ja001:1445
+ja0474: Kirishima, it's the same apartment, but we each have our own room,
+# ja001:1448
+ja0475: so we're separate. Asuka and I are separate.
+# ja001:1454
+ja0476: Separate rooms, but our hearts are one!
+# ja001:1460
+ja0477: Separate baths too?
+# ja001:1466
+ja0478: Huh? No, there's just one of those.
+# ja001:1472
+ja0479: Indecent! That's way too indecent!
+# ja001:1478
+ja0480: Obviously we don't take baths together!
+# ja001:1484
+ja0481: All right! Kirishima! Everybody's got an equal chance!
+# ja001:1494
+ja0482: Go get 'im!
+# ja001:1526
+ja0483: Toji! Wait up! I'm gonna try hard too!
+# ja001:1560
+ja0484: We'll see each other again, right?
+# ja001:1566
+ja0485: See you tomorrow.
+# ja001:1619
+ja0486: What the... what is this... what is going on...
+# ja001:1669
+ja0500: What is that girl to you?
+# ja001:1675
+ja0501: Where'd that come from? Come on, take off your shoes and come in.
+# ja001:1685
+ja0502: So you like girls like her.
+# ja001:1693
+ja0503: You've been in a mood since the train ride home,
+# ja001:1696
+ja0504: and that's what you were thinking about?
+# ja001:1704
+ja0505: Me or her, which one's number one?
+# ja001:1711
+ja0506: There you go comparing again.
+# ja001:1719
+ja0507: I'm cuter, aren't I?
+# ja001:1725
+ja0508: At a time like this, how would a gentleman like Kaji
+# ja001:1728
+ja0509: handle it, I wonder?
+# ja001:1736
+ja0510: Say I'm cute.
+# ja001:1742
+ja0511: Asuka...
+# ja001:1748
+ja0512: You're a man, aren't you?
+# ja001:1757
+ja0513: Come on, tell me I'm cute.
+# ja001:1763
+ja0514: Geez.
+# ja001:1769
+ja0515: I'm teaching you how to sweet-talk a girl.
+# ja001:1775
+ja0516: You're cute...
+# ja001:1783
+ja0517: Say it like a man.
+# ja001:1789
+ja0518: You're cute. Asuka, you're the cutest.
+# ja001:1795
+ja0519: More.
+# ja001:1801
+ja0520: Asuka's the cutest in the world, the cutest in the solar system, the galaxy,
+# ja001:1804
+ja0521: the whole universe, even compared with aliens...
+# ja001:1812
+ja0522: Don't joke around.
+# ja001:1818
+ja0523: What do you think of me, Asuka?
+# ja001:1824
+ja0524: You're going to make ME say it?
+# ja001:1837
+ja0526: You're full of yourself. I'm not going to say "I like you."
+# ja001:1844
+ja0527: I didn't ask that. You're the one who's overconfident.
+# ja001:1850
+ja0528: You're just one guy out of many. So it's only right that you
+# ja001:1853
+ja0529: say it first.
+# ja001:1859
+ja0530: So you admit I'm a guy.
+# ja001:1869
+ja0531: What?
+# ja001:1875
+ja0532: What?
+# ja001:1889
+ja0533: Fine. I forgive you.
+# ja001:1958
+ja0600: Whether the affection she sometimes shows is how she really feels as a girl,
+# ja001:1961
+ja0601: or just a habit from living abroad, I can't tell.
+# ja001:2005
+ja0700: You still like grown-up men like Kaji, huh, Asuka?
+# ja001:2011
+ja0701: Obviously.
+# ja001:2032
+ja0706: Hey, let's change to something more interesting.
+# ja001:2038
+ja0707: Just ten more minutes.
+# ja001:2044
+ja0708: Why? This is stupid.
+# ja001:2050
+ja0709: Eek! Don't look over here! I'm drying my hair!
+# ja001:2056
+ja0710: Just hurry up and get dressed.
+# ja001:2062
+ja0711: If you look at my body, I'll kick you as hard as I can!
+# ja001:2068
+ja0712: Nobody wants to see you naked, Asuka.
+# ja001:2079
+ja0713: Owww! She threw a cup at me...
+# ja001:2084
+ja0714: Whoa, blood! My forehead's split open...
+# ja001:2089
+ja0715: Throwing china is dangerous!
+# ja001:2095
+ja0716: That's why I told you not to look!
+# ja001:2101
+ja0717: What the... Asuka, you're wrapped up in a bath towel anyway!
+# ja001:2107
+ja0718: Don't look!
+# ja001:2115
+ja0719: Whoa, I'm sorry!
+
+## ja002
+# ja002:61
+jb0100: We're soldiers, aren't we?
+# ja002:71
+jb0101: We're pilots. We just need to focus on operating the machines.
+# ja002:77
+jb0102: Those machines are weapons built to crush people, you know.
+# ja002:83
+jb0103: I know. But it's not decided yet that they'll be used.
+# ja002:89
+jb0104: Have a car and you want to drive it. Have a gun and you want to shoot it.
+# ja002:91
+jb0105: Build up weapons, and sooner or later you end up using them.
+# ja002:101
+jb0106: I guess. I might quit pilot training before that, though.
+# ja002:107
+jb0107: Climbing the barbed wire bare-handed and deserting sounds good too.
+# ja002:113
+jb0108: I'm transferring to the intelligence division.
+# ja002:119
+jb0109: What? You were hiding something that big?
+# ja002:125
+jb0110: The military has lots of secrets.
+# ja002:131
+jb0111: When are you going?
+# ja002:137
+jb0112: Actually, I'm starting espionage work. Mission: Impossible.
+# ja002:143
+jb0113: The kind where you dangle in midair on a wire?
+# ja002:149
+jb0114: Don't tell anyone, okay?
+# ja002:162
+jb0115: What would you do if an enemy soldier pointed a gun at you?
+# ja002:174
+jb0116: I saw it in a movie. You can't see the enemy soldiers from in here.
+# ja002:180
+jb0117: Sure you can. I'd shoot. I don't want to lose.
+# ja002:199
+jb0118: I'm being sent to a junior high classroom, anyway.
+# ja002:205
+jb0119: Trading your weapon for a pen, huh?
+# ja002:211
+jb0120: Look.
+# ja002:232
+jb0200: These two big stones are the father and the mother.
+# ja002:235
+jb0201: This little stone is the child.
+# ja002:248
+jb0202: The father goes off to be a soldier, leaving the mother and child.
+# ja002:251
+jb0203: If I shoot down this weapon...
+# ja002:265
+jb0204: the mother and child are left alone. They'd be so lonely.
+# ja002:268
+jb0205: I hate that.
+# ja002:314
+jb0206: Maybe he's single. And there are weapons with nobody
+# ja002:316
+jb0207: inside. You can't know that kind of thing.
+# ja002:333
+jb0208: You can tell if someone's inside just by looking.
+# ja002:343
+jb0209: No, you can't.
+# ja002:349
+jb0210: I can tell everything just by looking.
+# ja002:355
+jb0211: So if you hesitate to shoot and I get a bullet in me, that's fine with you?
+# ja002:368
+jb0212: Well, that's...
+# ja002:374
+jb0213: I get what you're saying. Life is what matters most. I think so too.
+# ja002:393
+jb0214: Musashi!
+# ja002:399
+jb0215: Keita! Did you manage to get the drinks?
+# ja002:405
+jb0216: The instructor's mad. He's using a recon satellite to look for us.
+# ja002:411
+jb0217: Crap. Let's get back, quick.
+# ja002:417
+jb0218: Huh? Did you make Mana cry again?
+# ja002:423
+jb0219: I'm not crying.
+# ja002:429
+jb0220: Run! Hurry!
+# ja002:441
+jb0221: Wait! What about the drinks?!
+# ja002:514
+jb0300: So this is the last time I'll see you in a pilot suit, Mana.
+# ja002:520
+jb0301: It's for the best.
+# ja002:526
+jb0302: Total weight, 3000 tons. Turbojet engines, 100,000 horsepower.
+# ja002:529
+jb0303: It can run over land, charge up mountains, and soar through the sky like a bird.
+# ja002:532
+jb0304: Underwater it's a submarine, and one tank of fuel lasts seven days.
+# ja002:538
+jb0305: It takes so much fuel to run this thing.
+# ja002:541
+jb0306: It feels kind of wasteful.
+# ja002:547
+jb0307: Now that you're quitting, you're having doubts?
+# ja002:553
+jb0308: I just have a feeling that it's all wrong somehow...
+# ja002:566
+jb0309: Don't tell anyone what I just said.
+# ja002:572
+jb0310: With just one of these, you could build a whole new country.
+# ja002:578
+jb0311: What do you mean?
+# ja002:584
+jb0312: You ride it to some southern island and declare,
+# ja002:586
+jb0313: "From today, this island is our country!" And if anyone tries to stop us,
+# ja002:588
+jb0314: the Raiden takes care of them.
+# ja002:594
+jb0315: Sounds like a dream. Going to write science fiction when you grow up?
+# ja002:600
+jb0316: I'm serious. That's how countries are born.
+# ja002:606
+jb0317: Then you'd be the president, Musashi.
+# ja002:612
+jb0318: You'd be the queen, Mana. We'll make it a kingdom.
+# ja002:618
+jb0319: A princess of a southern island.
+# ja002:624
+jb0320: We'll build paradise with our own hands.
+# ja002:630
+jb0321: I like that.
+# ja002:636
+jb0322: Nice, right? It's our secret.
+# ja002:658
+jb0323: Mana!
+# ja002:664
+jb0324: Keita.
+# ja002:733
+jb0400: Keita, your dinner... a mountain of pilaf, a huge pile of meatballs,
+# ja002:735
+jb0401: shredded cabbage spilling off the plate, fried stuff drowning in sauce...
+# ja002:737
+jb0402: Isn't that a bit much?
+# ja002:745
+jb0403: Eating this much is good for training!
+# ja002:751
+jb0404: It's just dinner. You planning to eat tomorrow's share too?
+# ja002:757
+jb0405: Well, you do sleep better on a full stomach.
+# ja002:763
+jb0406: Mana's right. (eating) Munch munch munch...
+# ja002:769
+jb0407: Just don't go sneaking donuts into the barracks.
+# ja002:780
+jb0408: About the food we're loading onto the Raiden,
+# ja002:782
+jb0409: Type 5 combat rations,
+# ja002:784
+jb0410: the mixed rice sets came in by the box at the warehouse.
+# ja002:786
+jb0411: How much will we eat? How many boxes should we load? Red bean rice too?
+# ja002:792
+jb0412: Keita, keep your voice down. Don't talk about that...
+# ja002:798
+jb0413: Huh? Talk about what?
+# ja002:804
+jb0414: We're escaping, to build a new country.
+# ja002:810
+jb0415: I said knock it off.
+# ja002:816
+jb0416: You were serious about escaping?
+# ja002:822
+jb0417: Yep. We've been planning the revolution for a whole month.
+# ja002:824
+jb0418: The three of us will set up a government. We'll even write a manifesto!
+# ja002:837
+jb0419: Obviously that's just a fairy tale.
+# ja002:843
+jb0420: What?!
+# ja002:849
+jb0421: It was a lie! Just something to hope for so we could survive here.
+# ja002:855
+jb0422: No way...
+# ja002:861
+jb0423: Besides, Mana says she doesn't want to pilot.
+# ja002:863
+jb0424: She thinks killing machines should be sunk in the sea or something.
+# ja002:869
+jb0425: Stop it. This isn't something to talk about over dinner.
+# ja002:893
+jb0426: So it was a lie.
+# ja002:899
+jb0427: Calm down, Keita. They'll have their eye on you again.
+# ja002:906
+jb0428: Musashi, you traitor. I believed you.
+# ja002:910
+jb0429: Musashi, you jerk! I hate you too, Mana! (crying) Waaaaah!
+# ja002:937
+jb0430: Keita!
+# ja002:943
+jb0431: That Keita...
+# ja002:1006
+jb0500: This sucks...
+# ja002:1026
+jb0501: Keita.
+# ja002:1050
+jb0503: Keita, about what I said earlier...
+# ja002:1056
+jb0504: It hurts...
+# ja002:1062
+jb0505: What?
+# ja002:1068
+jb0506: It hurts.
+# ja002:1105
+jb0507: Your face is covered in bruises!
+# ja002:1111
+jb0508: Keita, who did this to you?
+# ja002:1117
+jb0509: I said it's fine...
+# ja002:1123
+jb0510: It's not fine.
+# ja002:1129
+jb0511: Tell me who did it.
+# ja002:1135
+jb0512: It's all your fault, Musashi.
+# ja002:1141
+jb0513: We were supposed to defect in the Raiden, but you got scared and backed out.
+# ja002:1147
+jb0514: That's why everyone picks on me!
+# ja002:1158
+jb0515: Should we show the grown-ups what we're made of?
+# ja002:1164
+jb0516: We're doing it?
+# ja002:1170
+jb0517: Musashi, what are you going to do?
+# ja002:1176
+jb0518: Go wild outside the fence. It'll feel great!
+# ja002:1182
+jb0519: Hooray! That's the Musashi I know!
+# ja002:1188
+jb0520: Stop it!
+# ja002:1306
+jb0600: Musashi...
+# ja002:1328
+jb0601: I wish we'd been together sooner...
+
+## ja003
+# ja003:67
+jc0200: Shinji, even if it's just coffee, after thirteen cups
+# ja003:69
+jc0201: you'll ruin your health.
+# ja003:75
+jc0202: Another refill, please.
+# ja003:81
+jc0203: Amazing that you can get this drunk on coffee.
+# ja003:87
+jc0204: Cup number fourteen, please.
+# ja003:93
+jc0205: This is the last one.
+# ja003:101
+jc0206: Something's weird... Your voice sounds different, Toku.
+# ja003:111
+jc0207: (flustered) Oh, come on~, what are you saying? It's just your imagination.
+# ja003:113
+jc0208: You come in here all the time, Shinji, really! (laughs)
+# ja003:125
+jc0209: Asuka saved me, but inside, my heart is full
+# ja003:127
+jc0210: of Mana.
+# ja003:133
+jc0211: That's the start of love, that is.
+# ja003:139
+jc0212: I want to believe Mana is alive.
+# ja003:146
+jc0213: A man's heart torn between duty and feeling. It brings a tear to my eye.
+# ja003:152
+jc0214: I feel bad about Asuka. But my memories of Mana
+# ja003:155
+jc0215: are tormenting me.
+# ja003:161
+jc0216: Shinji, you're so popular with the girls. I'm jealous.
+# ja003:169
+jc0217: Am I wrong?!
+# ja003:175
+jc0218: (flustered) Don't ask me!
+# ja003:236
+jc0300: I can't even save one girl. I'm a useless guy.
+# ja003:278
+jc0301: Get close to a guy like me and you'll get hurt.
+# ja003:286
+jc0302: The earth is burning. If I can't save the one I love, how can I
+# ja003:288
+jc0303: save mankind?
+# ja003:300
+jc0304: Shinji, it's me.
+# ja003:306
+jc0305: That's Mana's voice...
+# ja003:312
+jc0306: You're soaking wet out here in the rain.
+# ja003:320
+jc0307: Mana! You made it?!
+# ja003:326
+jc0308: Keep it a secret that I'm here. If anyone gets suspicious, they'll take me away again.
+# ja003:332
+jc0309: Thank goodness... thank goodness. You're alive.
+# ja003:338
+jc0310: We should wash and dry your clothes, Shinji. Come with me.
+# ja003:395
+jc0400: Drying my wet clothes in the dryer is fine, but out here,
+# ja003:397
+jc0401: wearing nothing but a bath towel, I look like a pervert!
+# ja003:403
+jc0402: What are you talking about? You've still got something on underneath.
+# ja003:409
+jc0403: Huh, these too?
+# ja003:415
+jc0404: Take it all off!
+# ja003:421
+jc0405: Someone will see me naked!
+# ja003:427
+jc0406: Wet underwear feels gross, right? Hurry up!
+# ja003:433
+jc0407: They might be dirty, though...
+# ja003:439
+jc0408: Then I'll wash them, so take them off.
+# ja003:445
+jc0409: This is so embarrassing in front of a girl.
+# ja003:451
+jc0410: Boys, show some guts and get moving!
+# ja003:457
+jc0411: Okay, okay, I'm doing it already!
+# ja003:498
+jc0500: This thing I'm wearing, is it yours, Mana?
+# ja003:504
+jc0501: Cute, isn't it?
+# ja003:510
+jc0502: It fits me perfectly.
+# ja003:518
+jc0503: I'm so glad you're safe, Shinji.
+# ja003:524
+jc0504: When that disaster happened, I couldn't save you, Mana.
+# ja003:528
+jc0505: I just stood there staring, stunned.
+# ja003:534
+jc0506: It's okay. I was only thinking about Musashi, too.
+# ja003:540
+jc0507: So that boy saved you.
+# ja003:546
+jc0508: Musashi put me in the escape capsule, and that was the last I saw of him.
+# ja003:552
+jc0509: A brave soldier, huh. If only I could do something like that.
+# ja003:560
+jc0510: How did you get out, Shinji?
+# ja003:566
+jc0511: Asuka saved me. So I'm grateful to her.
+# ja003:572
+jc0512: You like Asuka, don't you?
+# ja003:578
+jc0513: I'm alone with you, Mana, and here I am talking about this.
+# ja003:586
+jc0514: If it had been just you and me back then,
+# ja003:588
+jc0515: you would've tried to save me, right?
+# ja003:594
+jc0516: Of course. I'd do everything I could.
+# ja003:598
+jc0517: There has to be something even I can do.
+# ja003:601
+jc0518: If only Unit-01 had had power left back then...
+# ja003:604
+jc0519: Sure, it's true I only got out because Asuka's Unit-02 was there,
+# ja003:607
+jc0520: and I never imagined it would turn out like that,
+# ja003:610
+jc0521: and after you turned me down I was stunned, just standing there...
+# ja003:614
+jc0522: It's all just excuses, isn't it.
+# ja003:617
+jc0523: I'm losing confidence more and more.
+# ja003:621
+jc0524: I really am a useless person.
+# ja003:627
+jc0525: So what if you're useless?
+# ja003:639
+jc0526: Huh?
+# ja003:651
+jc0527: She's hugging me...
+# ja003:657
+jc0528: I won't let go of you, Shinji. I don't want to lose anyone else.
+# ja003:663
+jc0529: Mana's body is so warm.
+# ja003:669
+jc0530: You can feel my heart beating, can't you?
+# ja003:675
+jc0531: Your heart?
+# ja003:681
+jc0532: Put your hand on my chest.
+# ja003:702
+jc0533: I can feel it, faintly.
+# ja003:708
+jc0534: This is my first time doing something like this, you know.
+# ja003:716
+jc0535: I didn't know skin could be this soft.
+# ja003:733
+jc0536: Be gentle.
+# ja003:927
+jc0600: I ain't acceptin' this, no way!
+# ja003:934
+jc0601: Come on, Toji, easy.
+# ja003:940
+jc0602: Buyin' people's sympathy, justifyin' yourself, steppin' over
+# ja003:942
+jc0603: the dead to be happy? You're ten years too early for that!
+# ja003:950
+jc0604: Maybe so. But I want to be with Mana.
+# ja003:956
+jc0605: And Shinji's the one I want, too.
+# ja003:962
+jc0606: Everyone in class is worried about you and Kirishima, Shinji.
+# ja003:968
+jc0607: I don't care if they despise me for being selfish. I'm leaving with Mana.
+# ja003:974
+jc0608: We've decided.
+# ja003:980
+jc0609: You idiot! You blockhead! You numbskull!
+# ja003:986
+jc0610: Oh well. So this is goodbye to the Third Child, Shinji Ikari?
+# ja003:992
+jc0611: I'm sorry.
+# ja003:999
+jc0612: If you're gonna apologize...! ...Eh, sayin' any more
+# ja003:1055
+jc0613: won't help, I guess.
+# ja003:1062
+jc0614: Well, that's one less rival, so at long last the pilot of the Evangelion
+# ja003:1064
+jc0615: might just be yours truly, the great Kensuke!
+# ja003:1066
+jc0616: (laughing loudly) Ha! Ha! Ha! Ha!
+# ja003:1072
+jc0617: Hey, Shinji. I can't tell right now if you're doin' the right thing.
+# ja003:1075
+jc0618: Just don't forget about us, okay? Partin' like this is too lonely.
+# ja003:1128
+jc0700: The sun's so bright.
+# ja003:1134
+jc0701: "Plenty of sunlight," as they say.
+# ja003:1140
+jc0702: Did you rent this room, Mana?
+# ja003:1146
+jc0703: It's my last hideout. The military will take it back eventually.
+# ja003:1152
+jc0704: That's bad! We have to get out of here!
+# ja003:1160
+jc0705: "A true warrior knows compassion."
+# ja003:1166
+jc0706: Huh? What does that mean?
+# ja003:1172
+jc0707: There are people who care about us and made a place for us to escape to.
+# ja003:1178
+jc0708: You're so grown-up, Mana. I just go with the flow.
+# ja003:1184
+jc0709: I became a woman, and you became a man, Shinji.
+# ja003:1192
+jc0710: That sounds kind of dirty.
+# ja003:1198
+jc0711: Does it?
+# ja003:1219
+jc0712: Hey, we're taking the train to our new home.
+# ja003:1225
+jc0713: I just have to follow you, right?
+# ja003:1231
+jc0714: Also, someone from NERV has something to take care of for us.
+# ja003:1237
+jc0715: The last of the paperwork, huh.
+# ja003:1280
+jc0800: If you follow the manual in these files,
+# ja003:1282
+jc0801: you're guaranteed at least a basic living. When you don't need them anymore,
+# ja003:1284
+jc0802: please burn them.
+# ja003:1292
+jc0803: Each one's easily a thousand pages. I never knew there was this much
+# ja003:1294
+jc0804: paperwork for someone who's leaving.
+# ja003:1302
+jc0805: A living guide for retired special agency personnel,
+# ja003:1304
+jc0806: a handbook of government procedures, forms for school, forms for the employment office,
+# ja003:1306
+jc0807: a career guidance booklet, a health insurance card,
+# ja003:1308
+jc0808: and a beginner's guide to home network systems.
+# ja003:1316
+jc0809: All of Kirishima's records have been erased from the database.
+# ja003:1319
+jc0810: You're free as of today.
+# ja003:1325
+jc0811: Thank you very much.
+# ja003:1333
+jc0812: Also, I have a message for you.
+# ja003:1339
+jc0813: From who?
+# ja003:1347
+jc0814: From Misato. She couldn't come, but she sends her regards.
+# ja003:1353
+jc0815: I see.
+# ja003:1361
+jc0816: You're wondering about Asuka, aren't you?
+# ja003:1367
+jc0817: Did something happen?
+# ja003:1373
+jc0818: Asuka went to live with Kaji.
+# ja003:1379
+jc0819: Asuka... with Kaji.
+# ja003:1385
+jc0820: It's just a rumor, but apparently they're living under the same roof.
+# ja003:1391
+jc0821: I see.
+# ja003:1399
+jc0822: I hear Misato is living all alone now.
+# ja003:1405
+jc0823: That's my fault, isn't it.
+# ja003:1411
+jc0824: That's not true. If anything, I'm glad.
+# ja003:1417
+jc0825: You work in operations command, Hyuga, so for NERV's sake
+# ja003:1419
+jc0826: it's natural you'd think this was for the best.
+# ja003:1425
+jc0827: That's not it.
+# ja003:1431
+jc0828: Huh?
+# ja003:1437
+jc0829: I've never told anyone this before, but...
+# ja003:1443
+jc0830: Okay.
+# ja003:1449
+jc0831: I'm in love with Misato.
+# ja003:1455
+jc0832: You are, Hyuga?
+# ja003:1461
+jc0833: Misato and I share a secret, just the two of us. I feel bad
+# ja003:1463
+jc0834: about Kaji. I might end up hurting
+# ja003:1465
+jc0835: a lot of people. But I'm going to keep moving forward.
+# ja003:1468
+jc0836: I want Misato. That's who I really am.
+# ja003:1474
+jc0837: Hyuga and Misato, huh.
+# ja003:1480
+jc0838: So rather than advise you on what's right, I'd rather just
+# ja003:1482
+jc0839: watch over you.
+# ja003:1523
+jc0900: Yo!
+# ja003:1529
+jc0901: Asuka!
+# ja003:1535
+jc0902: A housewife apron, a shopping basket to save on plastic bags, a hairstyle
+# ja003:1537
+jc0903: that keeps hair out of the pot, sandals for hopping into the kitchen... so the rumor's true...
+# ja003:1546
+jc0904: Stop! Don't say another word.
+# ja003:1552
+jc0905: You always show up at the best moment, Asuka.
+# ja003:1558
+jc0906: This is the last time, so I want to say goodbye on a good note.
+# ja003:1564
+jc0907: Asuka, about everything... I don't know what to say, but...
+# ja003:1570
+jc0908: It's fine.
+# ja003:1576
+jc0909: I'm grateful you saved me, too.
+# ja003:1582
+jc0910: Forget the words. Just send me a big bottle of soy sauce.
+# ja003:1584
+jc0911: Or actually, rice might be better~ Just kidding.
+# ja003:1593
+jc0912: I'm going now. Be happy, Kirishima.
+# ja003:1599
+jc0913: I will.
+# ja003:1605
+jc0914: Asuka, wait!
+# ja003:1611
+jc0915: What?
+# ja003:1617
+jc0916: Are you done piloting Eva?
+# ja003:1623
+jc0917: Right now, just getting by day to day is all I can handle.
+# ja003:1629
+jc0918: ...
+# ja003:1640
+jc0919: But if the time comes to pilot again, maybe that would make me happy
+# ja003:1642
+jc0920: in its own way.
+# ja003:1656
+jc0921: Let's meet again someday! Take care, you two!
+# ja003:1710
+jc1000: It feels like everyone is drifting away from me.
+# ja003:1716
+jc1001: Lonely?
+# ja003:1722
+jc1002: Just a little.
+# ja003:1728
+jc1003: I see.
+# ja003:1734
+jc1004: It can't be helped. It's the path I chose.
+# ja003:1740
+jc1005: Maybe you and I belong in different worlds, Shinji.
+# ja003:1746
+jc1006: What are you saying? We're going to keep going together from now on.
+# ja003:1755
+jc1007: You're right. Of course we are.
+# ja003:1763
+jc1008: Let's do this together.
+# ja003:1783
+jc1009: Thank you.
+
+## saveload
+# saveload:28
+41a3df9c: Quit Game
+# saveload:28
+3e311c67: Return to Title
+# saveload:28
+f7324e7c: Back to Game
+# saveload:127
+23ea1350: Save
+# saveload:127
+7971be4a: Don't Save
+# saveload:147
+27f9fc96: Load
+# saveload:147
+4ae2f6ad: Don't Load
+# saveload:197
+9804a23c: Delete
+# saveload:197
+885be03e: Don't Delete
+
+## stafroll
+# stafroll:21
+892e4ca0: wait
+
+## starmenu
+# starmenu:40
+36b4171d: New Game
+# starmenu:40
+dc966beb: Continue
+# starmenu:40
+1998cebd: Album
+# starmenu:40
+dd667b44: Quit
+# starmenu:58
+6ac8bb92: Quit the game
+# starmenu:58
+ec3a47de: Back to the menu
+
+## test026cmnd
+# test026cmnd:90
+6a8e75aa: 
+# test026cmnd:91
+59432301: 
+# test026cmnd:92
+56431e48: 
+# test026cmnd:93
+57431fdb: 
+# test026cmnd:248
+b3ea9154: 
+# test026cmnd:249
+895e2308: 
+# test026cmnd:251
+e95b0850: 
+# test026cmnd:251
+34f3a9a1: 
+# test026cmnd:253
+365a9e7b: 
+# test026cmnd:254
+33412733: 
+# test026cmnd:255
+760db68e: 
+# test026cmnd:257
+03075741: 
+# test026cmnd:258
+865b77f6: 
+# test026cmnd:259
+b7e29edc: 
+# test026cmnd:260
+e77d8d07: 
+# test026cmnd:261
+262d768d: 
+# test026cmnd:262
+56e18fee: 
+# test026cmnd:263
+75ffdcb8: 
+# test026cmnd:264
+898576c7: 
+# test026cmnd:265
+48ea6501: 
+# test026cmnd:266
+1855de4e: 
+# test026cmnd:267
+3e5bd90c: 
+# test026cmnd:268
+7390303d: 
+# test026cmnd:269
+ce02311d: 
+# test026cmnd:270
+43534684: 
+# test026cmnd:271
+37a788ac: 
+# test026cmnd:272
+cd4ac5d1: 
+# test026cmnd:273
+e265d0c5: 
+# test026cmnd:274
+d96551b0: 
+# test026cmnd:275
+8e0b2a5c: 
+# test026cmnd:276
+32235715: 
+# test026cmnd:277
+cd95c1fd: 
+# test026cmnd:278
+beda1d00: 
+# test026cmnd:279
+bc381639: 
+# test026cmnd:280
+8c625371: 
+# test026cmnd:281
+f97c94a0: 
+# test026cmnd:282
+9a7479e0: 
+# test026cmnd:283
+210acd25: 
+# test026cmnd:284
+aeb7ee09: 
+# test026cmnd:285
+de13ba34: 
+# test026cmnd:286
+36879ff0: 
+# test026cmnd:305
+cf64a3f3: 
+# test026cmnd:313
+652b04df: 
+# test026cmnd:320
+031c3802: 
+# test026cmnd:325
+66f704ec: 
+# test026cmnd:2405
+c2cbd863: 
+# test026cmnd:2408
+ba53ed50: 
+# test026cmnd:2415
+373ab280: 
+# test026cmnd:2440
+4db211e5: 
+# test026cmnd:2443
+ada7afdb: 
+# test026cmnd:2589
+91da658b: 
+# test026cmnd:2592
+96da6d6a: 
+# test026cmnd:2595
+97da6efd: 
+# test026cmnd:2598
+94da6a44: 
+# test026cmnd:2623
+5f4a6bb5: 
+# test026cmnd:2623
+5c4a66fc: 
+# test026cmnd:2623
+760a4e4f: 
+# test026cmnd:2707
+a41f978c: 
+# test026cmnd:2707
+afe73515: 
+# test026cmnd:2707
+6cef5c42: 
+# test026cmnd:2707
+24e6add6: 
+# test026cmnd:2707
+1ceb2bd7: 
+# test026cmnd:2723
+e6953c6c: 
+# test026cmnd:2724
+7dfc0e79: 
+# test026cmnd:2725
+3fb646ed: 
+# test026cmnd:3403
+89b1645c: 
+# test026cmnd:3404
+8cb16915: 
+# test026cmnd:3405
+8bb16782: 
+# test026cmnd:3406
+86b15fa3: 

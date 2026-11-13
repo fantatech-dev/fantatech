@@ -1,0 +1,3 @@
+# The original Japanese: no entries, so every line, menu and name falls back to the game's own
+# text. It's here so the settings screen lists Japanese like any other table.
+@name: 日本語

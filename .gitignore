@@ -1,0 +1,17 @@
+# game data (never committed)
+/mana01/
+*.iso
+
+# build output
+/bin/
+/obj/
+/build/
+.vs/
+*.user
+*.aps
+*.ipch
+*.VC.db
+*.VC.opendb
+
+__pycache__/
+.cache/

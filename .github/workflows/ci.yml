@@ -1,0 +1,185 @@
+# Builds every push and pull request on Windows (MSVC and MSYS2), Linux (Steam Runtime) and macOS,
+# with warnings in our own code as errors. SDL3 and SDL3_ttf come from the submodules and link
+# statically. There's no game data here (it's the player's own copy), so this checks the build only.
+#
+# A v* tag also publishes a GitHub Release: the Windows zip and the Linux tarball (each with the
+# licenses of everything linked in), SHA256SUMS.txt, and a signed build-provenance attestation for
+# each archive (gh attestation verify, see the README's Security section).
+name: ci
+
+on:
+  push:
+    branches: [master]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  # the release tag, or "dev" for every other build; shown in the title bar and --version
+  FT_VER: ${{ github.ref_type == 'tag' && github.ref_name || 'dev' }}
+
+jobs:
+  windows-msvc:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      id-token: write      # attestations
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      - name: Configure
+        run: cmake --preset msvc-ninja -DFANTATECH_WERROR=ON "-DFANTATECH_VERSION=${{ env.FT_VER }}"
+      - name: Build
+        run: |
+          cmake --build --preset msvc-ninja-release
+          cmake --build --preset msvc-ninja-debug
+      - name: Package
+        shell: bash
+        run: |
+          d="fantatech-$FT_VER-windows-x64"
+          sh packaging/stage-release.sh "$d" build/msvc-ninja/bin/Release .exe
+          7z a -tzip "$d.zip" "$d" > /dev/null
+          echo "PKG=$d.zip" >> "$GITHUB_ENV"
+      - name: Attest
+        if: github.ref_type == 'tag'
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: ${{ env.PKG }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-windows-x64
+          path: ${{ env.PKG }}
+
+  windows-msys2:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-cmake
+            mingw-w64-ucrt-x86_64-ninja
+      - name: Configure
+        run: cmake --preset msys2 -DFANTATECH_WERROR=ON
+      - name: Build
+        run: cmake --build --preset msys2-release
+
+  # Built in Valve's Steam Runtime 3 "sniper" SDK (Debian 11, glibc 2.31), so the binary runs on
+  # practically any current distro and the Steam Deck. SDL is static and dlopens its X11/Wayland/
+  # audio backends, so the only hard dependency is glibc; the check below keeps it that way.
+  linux:
+    runs-on: ubuntu-latest
+    container: registry.gitlab.steamos.cloud/steamrt/sniper/sdk:latest
+    permissions:
+      contents: read
+      id-token: write      # attestations
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Tools
+        run: |
+          # the SDK's CMake may predate presets v6: use a pinned release (the image has no /opt)
+          t="$RUNNER_TEMP/tools"
+          mkdir -p "$t/bin"
+          curl -fsSL https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-linux-x86_64.tar.gz | tar -xz -C "$t"
+          echo "$t/cmake-3.31.6-linux-x86_64/bin" >> "$GITHUB_PATH"
+          echo "$t/bin" >> "$GITHUB_PATH"
+          if ! command -v ninja; then
+            curl -fsSL -o "$t/ninja.zip" https://github.com/ninja-build/ninja/releases/download/v1.12.1/ninja-linux.zip
+            python3 -c "import sys, zipfile; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])" "$t/ninja.zip" "$t/bin"
+            chmod +x "$t/bin/ninja"
+          fi
+          cc --version | head -1
+      - name: Configure
+        run: cmake --preset linux -DFANTATECH_WERROR=ON "-DFANTATECH_VERSION=$FT_VER"
+      - name: Build
+        run: cmake --build --preset linux-release
+      - name: Check dependencies
+        run: |
+          readelf -d build/linux/bin/Release/fantatech | grep NEEDED
+          bad=$(readelf -d build/linux/bin/Release/fantatech | sed -n 's/.*Shared library: \[\(.*\)\]/\1/p' \
+                | grep -vE '^(libc|libm|libdl|libpthread|librt|ld-linux-x86-64)\.so' || true)
+          if [ -n "$bad" ]; then echo "unexpected hard dependencies: $bad"; exit 1; fi
+      - name: Package
+        run: |
+          d="fantatech-$FT_VER-linux-x86_64"
+          sh packaging/stage-release.sh "$d" build/linux/bin/Release
+          strip "$d/fantatech" "$d/ftconv"
+          tar -czf "$d.tar.gz" "$d"
+          echo "PKG=$d.tar.gz" >> "$GITHUB_ENV"
+      - name: Attest
+        if: github.ref_type == 'tag'
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: ${{ env.PKG }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-linux-x86_64
+          path: ${{ env.PKG }}
+
+  macos: # built and checked, not released yet (no .app bundle)
+    runs-on: macos-latest # Apple Silicon; the universal build covers Intel too
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Tools
+        run: brew install ninja
+      - name: Configure
+        run: cmake --preset macos -DFANTATECH_WERROR=ON "-DFANTATECH_VERSION=$FT_VER"
+      - name: Build
+        run: |
+          cmake --build --preset macos-release
+          lipo -info build/macos/bin/Release/fantatech
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fantatech-macos-universal
+          path: |
+            build/macos/bin/Release/fantatech
+            build/macos/bin/Release/ftconv
+            i18n/
+
+  release:
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    needs: [windows-msvc, windows-msys2, linux]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4 # for the notes template
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: release-*
+          path: dist
+          merge-multiple: true
+      - name: Checksums
+        run: cd dist && sha256sum * > SHA256SUMS.txt && cat SHA256SUMS.txt
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* --verify-tag \
+            --title "fantatech $GITHUB_REF_NAME" \
+            --notes-file .github/release-notes.md --generate-notes

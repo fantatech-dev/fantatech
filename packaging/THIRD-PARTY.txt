@@ -1,0 +1,14 @@
+fantatech is free software under the GNU General Public License v3 (see LICENSE).
+
+It includes the following libraries, linked statically. Their licenses are in
+the licenses/ folder.
+
+- SDL 3 (zlib license), https://libsdl.org - licenses/SDL3.txt
+- SDL_ttf 3 (zlib license) - licenses/SDL3_ttf.txt
+- FreeType (FreeType License) - licenses/FreeType*.txt
+  Portions of this software are copyright (C) 2006-2023 The FreeType Project
+  (https://freetype.org). All rights reserved.
+- HarfBuzz (MIT license) - licenses/HarfBuzz.txt
+
+fantatech contains no code or data from the original game. It runs on the
+player's own copy of the game data.
