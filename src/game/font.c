@@ -6,19 +6,28 @@
 #include <string.h>
 
 static TTF_Font *g_font;
+static char g_path[512];        /* the file g_font came from, for bug reports */
 
 /* FT_FONT overrides; otherwise MS Gothic (face 0 of msgothic.ttc) from the Windows fonts,
    or the platform's stock Japanese gothic elsewhere. */
-static TTF_Font *open_font(void)
+static TTF_Font *open_path(const char *path, char *used)
+{
+    TTF_Font *f = TTF_OpenFont(path, 24.0f);
+    if (f)
+        SDL_strlcpy(used, path, sizeof g_path);
+    return f;
+}
+
+static TTF_Font *open_font(char *used)
 {
     const char *env = SDL_getenv("FT_FONT");
     if (env && env[0])
-        return TTF_OpenFont(env, 24.0f);
+        return open_path(env, used);
 #ifdef _WIN32
     const char *windir = SDL_getenv("WINDIR");
     char path[512];
     SDL_snprintf(path, sizeof path, "%s\\Fonts\\msgothic.ttc", windir && windir[0] ? windir : "C:\\Windows");
-    return TTF_OpenFont(path, 24.0f);
+    return open_path(path, used);
 #else
     static const char *const paths[] = {
         "/Library/Fonts/msgothic.ttc",
@@ -31,7 +40,7 @@ static TTF_Font *open_font(void)
         "/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc",
     };
     for (size_t i = 0; i < SDL_arraysize(paths); i++) {
-        TTF_Font *f = TTF_OpenFont(paths[i], 24.0f);
+        TTF_Font *f = open_path(paths[i], used);
         if (f)
             return f;
     }
@@ -48,7 +57,7 @@ bool ft_font_open(void)
         ft_set_error("SDL_ttf: %s", SDL_GetError());
         return false;
     }
-    g_font = open_font();
+    g_font = open_font(g_path);
     if (!g_font) {
         ft_set_error("font: %s (set FT_FONT to a Japanese .ttf/.ttc)", SDL_GetError());
         TTF_Quit();
@@ -61,11 +70,13 @@ bool ft_font_open_file(const char *path)
 {
     if (!ft_font_open())
         return false;
-    TTF_Font *f = TTF_OpenFont(path, 24.0f);
+    char used[sizeof g_path];
+    TTF_Font *f = open_path(path, used);
     if (!f) {
         ft_set_error("font %s: %s", path, SDL_GetError());
         return false;
     }
+    SDL_strlcpy(g_path, used, sizeof g_path);
     TTF_CloseFont(g_font);
     g_font = f;
     return true;
@@ -75,11 +86,13 @@ bool ft_font_reset(void)
 {
     if (!g_font)
         return ft_font_open();
-    TTF_Font *f = open_font();
+    char used[sizeof g_path];
+    TTF_Font *f = open_font(used);
     if (!f) {
         ft_set_error("font: %s", SDL_GetError());
         return false;
     }
+    SDL_strlcpy(g_path, used, sizeof g_path);
     TTF_CloseFont(g_font);
     g_font = f;
     return true;
@@ -91,7 +104,21 @@ void ft_font_close(void)
         return;
     TTF_CloseFont(g_font);
     g_font = NULL;
+    g_path[0] = 0;
     TTF_Quit();
+}
+
+void ft_font_describe(char *out, size_t cap)
+{
+    int v = TTF_Version();
+    if (!g_font) {
+        SDL_snprintf(out, cap, "none (SDL_ttf %d.%d.%d)", SDL_VERSIONNUM_MAJOR(v), SDL_VERSIONNUM_MINOR(v),
+                     SDL_VERSIONNUM_MICRO(v));
+        return;
+    }
+    const char *family = TTF_GetFontFamilyName(g_font), *style = TTF_GetFontStyleName(g_font);
+    SDL_snprintf(out, cap, "%s %s, %s (SDL_ttf %d.%d.%d)", family ? family : "?", style ? style : "", g_path,
+                 SDL_VERSIONNUM_MAJOR(v), SDL_VERSIONNUM_MINOR(v), SDL_VERSIONNUM_MICRO(v));
 }
 
 static bool render(const char *utf8, int pixel_height, int wrap_w, ft_image *out)

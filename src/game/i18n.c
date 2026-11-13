@@ -146,5 +146,7 @@ const char *const ft_ui_strings[] = {
     "設定", "システム設定", "言語", "音量", "マスター", "音楽", "音声", "効果音", "画面", "フルスクリーン",
     "↑↓：項目　Enter：決定　←→：音量　Esc：戻る",
     "スクリーンショットを保存しました", "スクリーンショットを保存できませんでした",
+    "不具合を報告", "不具合レポートを保存しました", "不具合レポートを保存できませんでした",
+    "GitHubのIssueに、このフォルダの .txt と .png を添付してください", "GitHubで報告する", "フォルダを開く",
 };
 const size_t ft_ui_string_count = sizeof ft_ui_strings / sizeof ft_ui_strings[0];

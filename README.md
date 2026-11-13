@@ -35,6 +35,8 @@ The game starts in fullscreen. F11 switches between fullscreen and a window, and
 
 S (or F2) saves a screenshot of the game (at its own 1024×768, without the window) as a PNG in `screenshots/`, next to the `save/` folder.
 
+Found a bug? Choose Report a bug in the Esc menu at the moment it happens. It saves a screenshot and a description of the game's state in `reports/`, next to the `save/` folder, and can open a new GitHub issue for you to attach them to.
+
 ## Security
 
 Release builds are made by GitHub Actions from the tagged source, never on a personal machine. Each download has a signed attestation that proves which commit and workflow built it. With the [GitHub CLI](https://cli.github.com):

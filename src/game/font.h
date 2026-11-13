@@ -15,6 +15,8 @@ bool ft_font_open_file(const char *path);
 /* Goes back to the default font (FT_FONT or the platform's Japanese gothic) after ft_font_open_file. */
 bool ft_font_reset(void);
 void ft_font_close(void);
+/* The open font's family, style and file, and the SDL_ttf version, for bug reports. */
+void ft_font_describe(char *out, size_t cap);
 bool ft_font_render(const char *utf8, int pixel_height, ft_image *out);
 /* Word-wrapped to `wrap_w` pixels, lines centred; "\n" breaks a line. */
 bool ft_font_render_wrapped(const char *utf8, int pixel_height, int wrap_w, ft_image *out);

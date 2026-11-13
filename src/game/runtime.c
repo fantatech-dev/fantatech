@@ -369,6 +369,8 @@ struct ft_runtime {
     ft_savepanel *panel;
     char save_dir[1024];
     char shot_dir[1024];        /* S / F2 screenshots (FT_SHOT_DIR, else screenshots/ beside save/) */
+    char report_dir[1024];      /* Esc menu bug reports (FT_REPORT_DIR, else reports/ beside save/) */
+    char report_name[96];       /* the last report's file name, without .txt / .png */
     bool want_shot;
     SDL_Texture *shot_notice;   /* "saved" / "failed", shown for a moment (not in the picture) */
     float shot_notice_w, shot_notice_h;
@@ -406,6 +408,9 @@ struct ft_runtime {
      */
     ft_titlemenu *pause;
     bool pause_quit;            /* showing the quit prompt */
+    bool pause_report;          /* showing where the bug report went (report_msg above the entries) */
+    SDL_Texture *report_msg;
+    float report_msg_w, report_msg_h;
     bool pause_panel;           /* the save panel was opened from it: back returns to it */
     bool paused;
     uint64_t pause_start_ms, paused_ms;
@@ -444,6 +449,7 @@ static void pause_close(ft_runtime *rt);
 static bool any_save(const ft_runtime *rt);
 static void settings_open(ft_runtime *rt, bool from_title);
 static void choicemenu_open(ft_runtime *rt, const ft_interp *in, const ft_choice *c, int count);
+static void draw_scene(ft_runtime *rt);
 static void host_entered(void *user, ft_interp *in, const ft_script *s);
 static void reset_scene(ft_runtime *rt, uint64_t now);
 static void checkpoint_take(ft_runtime *rt);
@@ -2151,13 +2157,17 @@ ft_runtime *ft_runtime_create(SDL_Renderer *renderer, const char *game_dir, cons
     }
     rt->panel = ft_savepanel_create(renderer, rt->save_dir);
     const char *shot_dir = SDL_getenv("FT_SHOT_DIR");
-    if (shot_dir && shot_dir[0]) {
+    const char *report_dir = SDL_getenv("FT_REPORT_DIR");
+    char *user_dir = SDL_GetPrefPath("fantatech", "kotetsu");
+    if (shot_dir && shot_dir[0])
         snprintf(rt->shot_dir, sizeof rt->shot_dir, "%s", shot_dir);
-    } else {
-        char *pref = SDL_GetPrefPath("fantatech", "kotetsu");
-        snprintf(rt->shot_dir, sizeof rt->shot_dir, "%sscreenshots", pref ? pref : "");
-        SDL_free(pref);
-    }
+    else
+        snprintf(rt->shot_dir, sizeof rt->shot_dir, "%sscreenshots", user_dir ? user_dir : "");
+    if (report_dir && report_dir[0])
+        snprintf(rt->report_dir, sizeof rt->report_dir, "%s", report_dir);
+    else
+        snprintf(rt->report_dir, sizeof rt->report_dir, "%sreports", user_dir ? user_dir : "");
+    SDL_free(user_dir);
     /* settings: FT_CONFIG, else settings.txt in the per-user data folder */
     const char *cfg = SDL_getenv("FT_CONFIG");
     if (cfg && cfg[0]) {
@@ -2213,6 +2223,8 @@ void ft_runtime_destroy(ft_runtime *rt)
     ft_titlemenu_destroy(rt->pause);
     if (rt->shot_notice)
         SDL_DestroyTexture(rt->shot_notice);
+    if (rt->report_msg)
+        SDL_DestroyTexture(rt->report_msg);
     SDL_DestroySurface(rt->thumb);
     SDL_DestroySurface(rt->checkpoint.thumb);
     ft_vars_free(&rt->checkpoint.vars);
@@ -2844,20 +2856,31 @@ static void panel_event(ft_runtime *rt, const SDL_Event *ev)
 
 /* ---- Esc menu ---------------------------------------------------------- */
 
-enum { PAUSE_SAVE, PAUSE_LOAD, PAUSE_SETTINGS, PAUSE_QUIT, PAUSE_RESUME, PAUSE_ITEMS };
+enum { PAUSE_SAVE, PAUSE_LOAD, PAUSE_SETTINGS, PAUSE_REPORT, PAUSE_QUIT, PAUSE_RESUME, PAUSE_ITEMS };
+enum { REPORT_GITHUB, REPORT_FOLDER, REPORT_BACK };
+
+static bool write_report(ft_runtime *rt);
+static void report_github(void);
+static void report_folder(const ft_runtime *rt);
 
 /* The entries (`sel` highlighted, or the first available), or the quit prompt. Away from a save
  * point, Save writes the last one the game passed (see save_slot). */
 static void pause_show(ft_runtime *rt, int sel)
 {
-    static const char *const items[PAUSE_ITEMS] = { "セーブ", "ロード", "設定", "終了する", "ゲームに戻る" };
+    static const char *const items[PAUSE_ITEMS] = { "セーブ", "ロード", "設定", "不具合を報告", "終了する", "ゲームに戻る" };
     static const char *const quit[2] = { "ゲームを終了する", "メニューに戻る" };
+    static const char *const report[3] = { "GitHubで報告する", "フォルダを開く", "戻る" };
     if (rt->pause_quit) { /* no by default */
         ft_titlemenu_open(rt->pause, quit, NULL, 2, SCREEN_H / 2, &rt->i18n);
         ft_titlemenu_select(rt->pause, 1);
         return;
     }
-    bool enabled[PAUSE_ITEMS] = { true, true, true, true, true };
+    if (rt->pause_report) { /* under report_msg */
+        bool enabled[3] = { true, rt->report_name[0] != 0, true };
+        ft_titlemenu_open(rt->pause, report, enabled, 3, SCREEN_H / 2 + 60, &rt->i18n);
+        return;
+    }
+    bool enabled[PAUSE_ITEMS] = { true, true, true, true, true, true };
     enabled[PAUSE_SAVE] = (ft_choicemenu_is_open(rt->menu) && rt->in.menu == FT_MENU_CMND) || rt->checkpoint.valid;
     enabled[PAUSE_LOAD] = any_save(rt);
     ft_titlemenu_open(rt->pause, items, enabled, PAUSE_ITEMS, SCREEN_H / 2, &rt->i18n);
@@ -2872,7 +2895,7 @@ static void pause_open(ft_runtime *rt)
         if (rt->audio)
             SDL_PauseAudioDevice(rt->audio);
     }
-    rt->pause_quit = false;
+    rt->pause_quit = rt->pause_report = false;
     rt->want_thumb = true; /* the scene as it is, for a save */
     pause_show(rt, -1);
 }
@@ -2899,6 +2922,17 @@ static void pause_pick(ft_runtime *rt, int pick)
         pause_show(rt, PAUSE_QUIT);
         return;
     }
+    if (rt->pause_report) {
+        if (pick == REPORT_GITHUB)
+            report_github();
+        else if (pick == REPORT_FOLDER)
+            report_folder(rt);
+        else {
+            rt->pause_report = false;
+            pause_show(rt, PAUSE_REPORT);
+        }
+        return;
+    }
     switch (pick) {
     case PAUSE_SAVE:
     case PAUSE_LOAD:
@@ -2907,6 +2941,11 @@ static void pause_pick(ft_runtime *rt, int pick)
         break;
     case PAUSE_SETTINGS:
         settings_open(rt, false);
+        break;
+    case PAUSE_REPORT:
+        write_report(rt);
+        rt->pause_report = true;
+        pause_show(rt, -1);
         break;
     case PAUSE_QUIT:
         rt->pause_quit = true;
@@ -2922,9 +2961,10 @@ static void pause_event(ft_runtime *rt, const SDL_Event *ev)
 {
     if ((ev->type == SDL_EVENT_KEY_DOWN && (ev->key.key == SDLK_ESCAPE || ev->key.key == SDLK_BACKSPACE)) ||
         (ev->type == SDL_EVENT_MOUSE_BUTTON_DOWN && ev->button.button == SDL_BUTTON_RIGHT)) { /* like the panels */
-        if (rt->pause_quit) {
-            rt->pause_quit = false;
-            pause_show(rt, PAUSE_QUIT);
+        if (rt->pause_quit || rt->pause_report) {
+            int back = rt->pause_quit ? PAUSE_QUIT : PAUSE_REPORT;
+            rt->pause_quit = rt->pause_report = false;
+            pause_show(rt, back);
         } else {
             pause_close(rt);
         }
@@ -3658,6 +3698,11 @@ static void draw_frame(ft_runtime *rt)
     } else if (ft_titlemenu_is_open(rt->pause)) {
         SDL_SetRenderDrawColor(rt->r, 0, 0, 0, 160);
         SDL_RenderFillRect(rt->r, NULL);
+        if (rt->pause_report && rt->report_msg) {
+            SDL_FRect dst = { SDL_floorf((SCREEN_W - rt->report_msg_w) / 2), 330 - rt->report_msg_h, rt->report_msg_w,
+                              rt->report_msg_h };
+            SDL_RenderTexture(rt->r, rt->report_msg, NULL, &dst);
+        }
         ft_titlemenu_render(rt->pause);
     } else {
         ft_titlemenu_render(rt->title);
@@ -3707,6 +3752,156 @@ static void take_screenshot(ft_runtime *rt)
         SDL_DestroyTexture(rt->shot_notice);
     rt->shot_notice = text_texture(rt, tr ? tr : msg, &rt->shot_notice_w, &rt->shot_notice_h);
     rt->shot_notice_until = SDL_GetTicks() + 2000;
+}
+
+/* ---- bug reports (the Esc menu's 不具合を報告) --------------------------- */
+
+#ifndef FT_VERSION
+#define FT_VERSION "unknown"
+#endif
+#define REPORT_ISSUES_URL "https://github.com/fantatech-dev/fantatech/issues/new"
+
+/* The scene and the game's own menus, without the Esc menu over them, at 1024x768. */
+static SDL_Surface *report_frame(ft_runtime *rt)
+{
+    SDL_Texture *target = SDL_CreateTexture(rt->r, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_TARGET, SCREEN_W, SCREEN_H);
+    if (!target)
+        return NULL;
+    SDL_Texture *old = SDL_GetRenderTarget(rt->r);
+    SDL_SetRenderTarget(rt->r, target);
+    draw_scene(rt);
+    ft_titlemenu_render(rt->title);
+    ft_choicemenu_render(rt->menu);
+    SDL_Surface *shot = SDL_RenderReadPixels(rt->r, NULL);
+    SDL_SetRenderTarget(rt->r, old);
+    SDL_DestroyTexture(target);
+    return shot;
+}
+
+/* Version, platform and settings, then the dev overlay's report of the scene (dbg_report). */
+static size_t report_text(const ft_runtime *rt, char *buf, size_t size)
+{
+    int v = SDL_GetVersion();
+    int pw = 0, ph = 0;
+    SDL_Window *win = SDL_GetRenderWindow(rt->r);
+    if (win)
+        SDL_GetWindowSizeInPixels(win, &pw, &ph);
+    const char *rname = SDL_GetRendererName(rt->r);
+    size_t n = 0;
+    n = dbg_append(buf, size, n, "fantatech %s\n", FT_VERSION);
+    n = dbg_append(buf, size, n, "platform %s, SDL %d.%d.%d, renderer %s, %dx%d px%s\n", SDL_GetPlatform(),
+                   SDL_VERSIONNUM_MAJOR(v), SDL_VERSIONNUM_MINOR(v), SDL_VERSIONNUM_MICRO(v), rname ? rname : "?", pw,
+                   ph, rt->cfg.fullscreen ? " fullscreen" : "");
+    n = dbg_append(buf, size, n, "language %s, volume %d/%d/%d/%d, audio %s\n", rt->lang[0] ? rt->lang : "jp",
+                   rt->cfg.volume[FT_VOL_MASTER], rt->cfg.volume[FT_VOL_MUSIC], rt->cfg.volume[FT_VOL_VOICE],
+                   rt->cfg.volume[FT_VOL_SE], rt->audio ? "on" : "off");
+    char font[700];
+    ft_font_describe(font, sizeof font);
+    n = dbg_append(buf, size, n, "font %s\n", font);
+    n = dbg_append(buf, size, n, "played %llu s, %u dialogue lines\n\n", (unsigned long long)(game_ms(rt) / 1000),
+                   rt->dialogue_count);
+    dbg_report(rt, buf + n, size - n);
+    return n + strlen(buf + n);
+}
+
+/* reports/fantatech_report_<date>_<time>.txt and .png; report_msg says where, or that it failed. */
+static bool write_report(ft_runtime *rt)
+{
+    SDL_Time now = 0;
+    SDL_DateTime dt = { 0 };
+    if (SDL_GetCurrentTime(&now))
+        SDL_TimeToDateTime(now, &dt, true);
+    char path[1200];
+    for (int n = 1; n < 100; n++) { /* a second report in the same second gets _2, _3, ... */
+        int len = snprintf(rt->report_name, sizeof rt->report_name, "fantatech_report_%04d-%02d-%02d_%02d-%02d-%02d",
+                           dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second);
+        if (n > 1)
+            snprintf(rt->report_name + len, sizeof rt->report_name - (size_t)len, "_%d", n);
+        snprintf(path, sizeof path, "%s/%s.txt", rt->report_dir, rt->report_name);
+        if (!SDL_GetPathInfo(path, NULL))
+            break;
+    }
+
+    static char text[16384];
+    size_t len = report_text(rt, text, sizeof text);
+    bool ok = ft_mkdirs(rt->report_dir);
+    if (ok) {
+        snprintf(path, sizeof path, "%s/%s.txt", rt->report_dir, rt->report_name);
+        FILE *f = ft_fopen(path, "wb");
+        ok = f && fwrite(text, 1, len, f) == len;
+        if (f && fclose(f) != 0)
+            ok = false;
+    }
+    SDL_Surface *shot = report_frame(rt);
+    if (ok && shot) {
+        snprintf(path, sizeof path, "%s/%s.png", rt->report_dir, rt->report_name);
+        if (!SDL_SavePNG(shot, path))
+            SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "report: %s", SDL_GetError());
+    }
+    SDL_DestroySurface(shot);
+    if (ok)
+        SDL_Log("bug report: %s/%s.txt", rt->report_dir, rt->report_name);
+    else {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "bug report: could not write to %s", rt->report_dir);
+        rt->report_name[0] = 0;
+    }
+
+    char msg[2048];
+    const char *head = ok ? "不具合レポートを保存しました" : "不具合レポートを保存できませんでした";
+    const char *tr = ft_i18n_text(&rt->i18n, head);
+    int k = snprintf(msg, sizeof msg, "%s", tr ? tr : head);
+    if (ok) {
+        const char *hint = "GitHubのIssueに、このフォルダの .txt と .png を添付してください";
+        tr = ft_i18n_text(&rt->i18n, hint);
+        snprintf(msg + k, sizeof msg - (size_t)k, "\n%s\n%s/%s", tr ? tr : hint, rt->report_dir, rt->report_name);
+    }
+    if (rt->report_msg)
+        SDL_DestroyTexture(rt->report_msg);
+    rt->report_msg = NULL;
+    ft_image img;
+    if (ft_font_render_wrapped(msg, 20, SCREEN_W - 80, &img)) {
+        rt->report_msg = texture_from(rt, &img);
+        rt->report_msg_w = (float)img.w;
+        rt->report_msg_h = (float)img.h;
+        ft_image_free(&img);
+    }
+    return ok;
+}
+
+/* Percent-encodes `in` onto out[*n] for a URL, keeping letters, digits and `keep`. */
+static void url_append(char *out, size_t cap, size_t *n, const char *in, const char *keep)
+{
+    static const char hex[] = "0123456789ABCDEF";
+    for (const unsigned char *p = (const unsigned char *)in; *p && *n + 4 < cap; p++) {
+        if (SDL_isalnum(*p) || strchr("-._~", *p) || strchr(keep, *p)) {
+            out[(*n)++] = (char)*p;
+        } else {
+            out[(*n)++] = '%';
+            out[(*n)++] = hex[*p >> 4];
+            out[(*n)++] = hex[*p & 15];
+        }
+    }
+    out[*n] = 0;
+}
+
+/* A new, empty issue: the player writes it and attaches the report's files. */
+static void report_github(void)
+{
+    if (!SDL_OpenURL(REPORT_ISSUES_URL))
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "open %s: %s", REPORT_ISSUES_URL, SDL_GetError());
+}
+
+static void report_folder(const ft_runtime *rt)
+{
+    char path[1100], url[3400];
+    snprintf(path, sizeof path, "%s", rt->report_dir);
+    for (char *p = path; *p; p++)
+        if (*p == '\\')
+            *p = '/';
+    size_t n = (size_t)snprintf(url, sizeof url, path[0] == '/' ? "file://" : "file:///");
+    url_append(url, sizeof url, &n, path, "/:");
+    if (!SDL_OpenURL(url))
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "open %s: %s", url, SDL_GetError());
 }
 
 void ft_runtime_render(ft_runtime *rt)

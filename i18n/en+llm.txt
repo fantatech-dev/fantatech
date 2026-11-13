@@ -64,6 +64,18 @@ abc63d25: Display
 5882bcb2: Screenshot saved
 # engine  スクリーンショットを保存できませんでした
 54eeb653: Could not save the screenshot
+# engine  不具合を報告
+d5fff037: Report a bug
+# engine  不具合レポートを保存しました
+b47e4633: Bug report saved
+# engine  不具合レポートを保存できませんでした
+c46e4daa: Could not save the bug report
+# engine  GitHubのIssueに、このフォルダの .txt と .png を添付してください
+79fc2d6d: Please attach the .txt and .png in this folder to a GitHub issue
+# engine  GitHubで報告する
+8ee8acd4: Report on GitHub
+# engine  フォルダを開く
+b40c04c3: Open folder
 
 ## Ai00
 # Ai00:70

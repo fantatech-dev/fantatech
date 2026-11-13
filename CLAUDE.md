@@ -440,8 +440,8 @@ animation). Their UI text is `ft_ui_strings` (`i18n.c`), which `ftconv i18n-temp
   entering that script opens ours, and closing goes back with `load starmenu`. During play, the save
   panel's 設定 button and the Esc menu open it. Stored in `settings.txt` beside the saves
   (`FT_CONFIG` overrides); `--lang` / `FT_LANG` override the language for one run.
-- **Esc menu** (`pause_*` in runtime.c, drawn with `titlemenu.c`): セーブ, ロード, 設定, 終了する
-  (asks first), ゲームに戻る. It pauses the game: `game_ms()` stands still (every timer, fade, hold
+- **Esc menu** (`pause_*` in runtime.c, drawn with `titlemenu.c`): セーブ, ロード, 設定, 不具合を報告,
+  終了する (asks first), ゲームに戻る. It pauses the game: `game_ms()` stands still (every timer, fade, hold
   and the script clock run on it) and the audio device stops, so a voiced scene carries on exactly
   where it was. Save is on whenever a game is going: at a command menu it saves there (resuming
   after its `%cmnd.wait`, like the system verb's), elsewhere the last save point (see above);
@@ -464,6 +464,12 @@ animation). Their UI text is `ft_ui_strings` (`i18n.c`), which `ftconv i18n-temp
 - **Screenshots:** S, F2 or Print Screen draws the frame off screen at 1024×768
   (`take_screenshot`) and saves `screenshots/fantatech_<date>_<time>.png` beside `save/`
   (`FT_SHOT_DIR` overrides).
+- **Bug reports** (the Esc menu's 不具合を報告, `write_report`): writes
+  `reports/fantatech_report_<date>_<time>.txt` beside `save/` (`FT_REPORT_DIR` overrides): version,
+  platform, renderer, font (`ft_font_describe`), settings, then the dev overlay's state report (`dbg_report`: script, line,
+  label, waits, layers, audio, the last 12 lines), and a `.png` of the scene with the game's own
+  menus but not the Esc menu. The screen after it says where they went and offers GitHubで報告する
+  (opens a new, empty issue) and フォルダを開く.
 - **Translations** (`i18n/<lang>.txt`; format in `i18n/README.md` and `src/game/i18n.h`): keys are
   the dialogue `$id`, or an FNV-1a hash of the Japanese for menus. `ftconv i18n-template mana01 -o
   i18n\xx.txt [--from old] [--bare]` writes every key; `--bare` drops the Japanese comments for

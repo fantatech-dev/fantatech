@@ -16,7 +16,7 @@
  *               --after-ms T plays in real time without input and captures after T ms
  *
  * Space / Enter / click advances, Up / Down picks in menus, Esc opens the menu (save, load,
- * settings, quit), F11 toggles fullscreen (the default; also in the settings), S or F2 takes a
+ * settings, bug report, quit), F11 toggles fullscreen (the default; also in the settings), S or F2 takes a
  * screenshot.
  */
 
