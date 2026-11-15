@@ -2269,13 +2269,25 @@ static int i18n_dirs(char dirs[I18N_DIRS][1024])
     return n;
 }
 
+/* The original Japanese: no table, or jp.txt (an empty table, listed so the settings can pick it). */
+static bool lang_is_japanese(const char *lang)
+{
+    return !lang || !lang[0] || ft_stricmp(lang, "jp") == 0;
+}
+
+/* Japanese keeps the game's gothic; other languages get a Latin font in front of it. */
+static void reset_font(const char *lang)
+{
+    if (!ft_font_reset(!lang_is_japanese(lang)))
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "%s", ft_get_error());
+}
+
 bool ft_runtime_set_language(ft_runtime *rt, const char *lang)
 {
     ft_i18n_free(&rt->i18n);
     rt->lang[0] = 0;
     if (!lang || !lang[0]) {
-        if (!ft_font_reset())
-            SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "%s", ft_get_error());
+        reset_font(NULL);
         return true;
     }
     char dirs[I18N_DIRS][1024];
@@ -2287,12 +2299,14 @@ bool ft_runtime_set_language(ft_runtime *rt, const char *lang)
             continue;
         snprintf(rt->lang, sizeof rt->lang, "%s", lang);
         SDL_Log("language %s: %u strings from %s", lang, rt->i18n.count, path);
-        if (!(rt->i18n.font[0] ? ft_font_open_file(rt->i18n.font) : ft_font_reset()))
+        if (rt->i18n.font[0] && !ft_font_open_file(rt->i18n.font))
             SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "%s", ft_get_error());
+        else if (!rt->i18n.font[0])
+            reset_font(lang);
         return true;
     }
     SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "no translation table i18n/%s.txt", lang);
-    ft_font_reset();
+    reset_font(NULL);
     return false;
 }
 

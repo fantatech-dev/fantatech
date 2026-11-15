@@ -259,10 +259,18 @@ or `ftconv run`'s headless host. `ft_interp_boot` follows the engine's boot sequ
 - **`runtime.c`** is the SDL `ft_host`. It draws the picture planes, sprites, selSpeed pans, films,
   8 face slots and the dialogue line, runs the menus and `%timer*` waits, and plays audio. Commands
   it doesn't handle are logged once each.
-- **`font.c`** rasterizes menu and translated text with SDL_ttf in MS Gothic, the font
-  `ktxp01.ini` names, from the player's `%WINDIR%\Fonts\msgothic.ttc` (face 0). Elsewhere it tries
-  `msgothic.ttc`, then Hiragino Kaku Gothic W3 (macOS), IPA Gothic and Noto Sans CJK. `FT_FONT=path`
-  overrides it; without a font, menus are blank and play goes on.
+- **`font.c`** rasterizes menu and translated text with SDL_ttf.
+  - Japanese (no table or `jp`): MS Gothic, the font `ktxp01.ini` names, from the player's
+    `%WINDIR%\Fonts\msgothic.ttc` (face 0). Elsewhere it tries `msgothic.ttc`, then Hiragino Kaku
+    Gothic W3 (macOS), IPA Gothic and Noto Sans CJK.
+  - Other languages (`ft_font_reset(true)`, from `ft_runtime_set_language`): a proportional Latin
+    font in front, with the gothic as `TTF_AddFallbackFont` for Japanese characters (日本語 in the
+    language list, untranslated lines). Tahoma (Windows XP's UI font, the game's era) or Arial on Windows, Helvetica or Arial on macOS,
+    DejaVu Sans, Noto Sans or Liberation Sans on Linux (fixed paths: SDL_ttf has no fontconfig).
+    No Latin font found means the gothic alone, as before. SDL_ttf resizes only the font it's
+    given, so `render()` sizes the fallback too.
+  - A table's `@font:` replaces the Latin font (the gothic stays behind it); `FT_FONT=path` replaces
+    both. Without any font, menus are blank and play goes on.
 
 ### Frames and the script clock (verified)
 
