@@ -8,7 +8,7 @@
 # Visual Studio: open build/msvc/fantatech.sln (fantatech starts with the repo's mana01\).
 
 cmake_minimum_required(VERSION 3.24)
-project(fantatech VERSION 0.1.0 LANGUAGES C)
+project(fantatech VERSION 0.1.1 LANGUAGES C)
 
 option(FANTATECH_WERROR "Treat warnings in fantatech's own code as errors (CI does)" OFF)
 set(FANTATECH_VERSION "dev" CACHE STRING "Version shown in the title bar and --version (CI passes the release tag)")
