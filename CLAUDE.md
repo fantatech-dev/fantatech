@@ -390,7 +390,9 @@ or `ftconv run`'s headless host. `ft_interp_boot` follows the engine's boot sequ
   font instead (28 px, wrapped at 960, centred).
 - Faces are 160×180 portraits (`FACE_SCALE=3`) at the formation x with their top at y 432. The
   formation is centred on x 496 in the original; we shift it 16 px right (`FACE_SHIFT_X`) so the
-  centre face sits over the screen-centred text. The original frames them with `frmface1`
+  centre face sits over the screen-centred text. y follows `%faceFormation` (FUN_0040f090 /
+  FUN_0040ef90): formation 4 is an arch (outer slots at y 441, inner ones clamped to the top at
+  y 16), and `%face2` draws a face 10 px higher; no top goes above y 16. The original frames them with `frmface1`
   (frame.lb5) drawn 188×199 from (x−18, y−9); we draw a plain border instead.
 
 ### Audio
