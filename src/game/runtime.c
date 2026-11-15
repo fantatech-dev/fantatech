@@ -180,7 +180,27 @@ typedef struct film {
     int rate;                   /* n: n/14 frames per tick */
     float acc;
     uint64_t last_ms;
+    bool bure;                  /* +0x38: SpeedThreadPicRepBureON's shake */
+    uint64_t bure_ms;           /* when it started */
 } film;
+
+/*
+ * The film shake (FUN_00405410 with +0x38 set): the clips are drawn offset by an oscillator
+ * (+0x3c, FUN_00437c90(0, 0, 0, 2, 6) at %film.new, stepped by FUN_00437d40 once per frame).
+ * It has x amplitude 0 and y amplitude 2 and advances 0xa000/6 of its 0x9f8f-unit circle a
+ * frame, wrapping to 0, so it repeats every 6 frames: y = trunc(trunc(-4096 cos a) * 2 / 4096)
+ * negated, times 0.65 (0x4cba44). The draw uses the value from the step before.
+ */
+static float film_bure_y(const film *f, uint64_t now)
+{
+    if (!f->bure)
+        return 0;
+    uint64_t k = now > f->bure_ms ? (now - f->bure_ms) / FRAME_MS : 0;
+    int phase = k == 0 ? 0 : (int)((k - 1) % 6) * (0xa000 / 6);
+    double a = (double)(phase / 10) * 0.0015339808305725455;
+    int c = (int)(SDL_cos(a) * -4096.0);
+    return (float)-(c * 2 / 4096) * 0.65f;
+}
 
 /*
  * %sprite (kt_cmd_sprite 0x426410): every load adds a picture, every draw01.setCell adds a
@@ -650,7 +670,7 @@ static void film_clear(film *f)
     for (int i = 0; i < f->count; i++)
         clip_free(&f->clip[i]);
     f->count = 0;
-    f->playing = f->thread = f->hidden = f->blocking = false;
+    f->playing = f->thread = f->hidden = f->blocking = f->bure = false;
 }
 
 /* Shows the clip's current frame. */
@@ -1980,6 +2000,17 @@ static bool run_command(ft_runtime *rt, ft_interp *in, const ft_sline *l)
          */
         rt->film.thread = true;
         film_restart(rt, &rt->film, 0);
+    } else if (strcmp(h, "%film.SpeedThreadPicRepBureON") == 0) {
+        /*
+         * kt_cmd_film 0x425403: like RepartON without a still, every clip set to repeat
+         * (FUN_00405ac0(i, 1, ...)), then +0x38 turns on the shake (film_bure_y) and
+         * FUN_004051f0 rewinds. Ava033's van (c195) bobs on the mountain road this way.
+         */
+        rt->film.hidden = false;
+        rt->film.thread = true;
+        rt->film.bure = true;
+        rt->film.bure_ms = now;
+        film_restart(rt, &rt->film, -1);
     } else if (strcmp(h, "%film.SpeedThreadPicRepartON") == 0) {
         /*
          * The looping films of the NERV HQ walkways: the corridors and escalators load a film
@@ -3148,8 +3179,8 @@ static void dbg_report(const ft_runtime *rt, char *buf, size_t size)
     for (int i = 0; i < FACE_SLOTS; i++)
         if (rt->face[i].tex)
             n = dbg_append(buf, size, n, " %d=%s", i, rt->face[i].code);
-    n = dbg_append(buf, size, n, "\nfilm: rate %d%s%s%s", rt->film.rate, rt->film.hidden ? " hidden" : "",
-                   rt->film.playing ? " playing" : "", rt->film.thread ? " thread" : "");
+    n = dbg_append(buf, size, n, "\nfilm: rate %d%s%s%s%s", rt->film.rate, rt->film.hidden ? " hidden" : "",
+                   rt->film.playing ? " playing" : "", rt->film.thread ? " thread" : "", rt->film.bure ? " bure" : "");
     for (int i = 0; i < rt->film.count; i++)
         n = dbg_append(buf, size, n, " %s(%u/%u)", rt->film.clip[i].code, rt->film.clip[i].zdf.next_frame,
                        rt->film.clip[i].zdf.frame_count);
@@ -3639,12 +3670,13 @@ static void draw_scene(ft_runtime *rt)
     sel_render(rt);
     sprite_render(rt);
     /* film clips at their ZDF x/y within the CG area, in the units of their archive */
+    float bure_y = film_bure_y(&rt->film, game_ms(rt));
     for (int i = 0; !rt->film.hidden && i < rt->film.count; i++) {
         const film_clip *c = &rt->film.clip[i];
         if (!c->tex)
             continue;
         float k = c->scale;
-        SDL_FRect dst = { SDL_roundf((float)c->zdf.x * k), SDL_roundf((float)c->zdf.y * k), c->w * k, c->h * k };
+        SDL_FRect dst = { SDL_roundf((float)c->zdf.x * k), SDL_roundf((float)c->zdf.y * k) + bure_y * k, c->w * k, c->h * k };
         SDL_RenderTexture(rt->r, c->tex, NULL, &dst);
     }
     draw_plane(rt, &rt->event);

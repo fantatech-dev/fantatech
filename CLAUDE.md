@@ -379,7 +379,12 @@ or `ftconv run`'s headless host. `ft_interp_boot` follows the engine's boot sequ
   - `SpeedThreadPicRepartON [still]` starts the loaded film looping without waiting, over `still`
     as the background: the NERV HQ walkways (GFRONT7A over GFRONT7B, the escalator strip gfront06)
     and the V-1 elevator's floor indicator (gfront11, after `SpeedThreadPictuer`), until
-    `%film.delete` / `SpeedThreadPicOFF`. Read from the scripts, not traced in Ghidra.
+    `%film.delete` / `SpeedThreadPicOFF`. In kt_cmd_film (0x42538f) it sets every clip to repeat
+    (`FUN_00405ac0(i, 1, …)`) and rewinds.
+  - `SpeedThreadPicRepBureON` (0x425403) does the same without a still and turns on the film
+    shake (+0x38, `FUN_00405410`): an oscillator (`FUN_00437c90(0,0,0,2,6)`, stepped per frame
+    by `FUN_00437d40`) bobs the clips by y = 2, 1, 0, −1, −1, 0 × 0.65 px over 6 frames. Ava033's
+    van (c195) on the mountain road.
 - **Accepted but not done:** `cover.*`, `bg*.Set*` transforms (user matrix, rotation, resize,
   scroll, picture anime mode), `bg03.*`, `select02.*` styling, `%HoldScreen`.
 
