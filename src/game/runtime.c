@@ -32,13 +32,19 @@
  *   3:   0,4 -> 416                                           4: 140, 248, 596, 704
  * With ktxp01.ini's FACE_SCALE=3 ("small") the portrait is 160x180 (the face tier-1 size)
  * with its top at y 432, over the CG's bottom edge. The original frames it with frmface1
- * (frame.lb5) drawn 188x199 from (x - 18, y - 9); we draw a plain border instead (draw_face_frame). y is camera maths in the original (FUN_0040ef90); slot 3
- * in formation 2 uses base 200 instead of 544, so it sits 344 higher.
+ * (frame.lb5) drawn 188x199 from (x - 18, y - 9); we draw a plain border instead (draw_face_frame).
+ * y (+0x390) is base + offset with base = 300 - 260 * 0.703125 - 230 = -112.8 (FUN_0040f090):
+ *   2: 0,1,2 -> +544 (431, our FACE_Y)  3 -> +200 (87)      0/1: 2,3 -> +544, 0,1 a face higher
+ *   3: +544                                                  4: 0,3 -> +554 (441)  1,2 -> +0
+ * then FUN_0040ef90 lifts a %face2 face by 10 and keeps the top at y >= 16, so formation 4's
+ * inner pair sits at the screen top: an arch over the outer two.
  */
 #define FACE_SLOTS 8
 #define FACE_W 160.0f
 #define FACE_H 180.0f
 #define FACE_Y 432.0f
+#define FACE2_LIFT 10.0f
+#define FACE_TOP_MIN 16.0f
 /*
  * The original's slots are centred on x 496 (centre slot 416..576, left and right mirrored about
  * it), 16 px left of the screen centre the dialogue line is centred on. We move them all right by
@@ -306,6 +312,7 @@ struct ft_runtime {
     int logo_next, logo_count, logo_hold, logo_white;
     uint64_t last_frame;        /* frames of FRAME_MS: the render loop's pace */
     layer face[FACE_SLOTS];
+    bool face_lifted[FACE_SLOTS]; /* shown with %face2 (mode 2, +0x398) */
     int face_formation;
 
     SDL_Texture *text;
@@ -1839,6 +1846,7 @@ static bool run_command(ft_runtime *rt, ft_interp *in, const ft_sline *l)
         if (slot >= 0 && slot < FACE_SLOTS && ft_assets_face(&rt->assets, code, &b)) {
             layer_set(rt, &rt->face[slot], b);
             snprintf(rt->face[slot].code, sizeof rt->face[slot].code, "%s", code);
+            rt->face_lifted[slot] = strcmp(h, "%face2") == 0; /* FUN_0040ec90 mode 2 */
         }
     } else if (strcmp(h, "%faceclose") == 0 || strcmp(h, "%facecloseAll") == 0) {
         /* kt_cmd_face 0x427292 / 0x4272c0: both close the face(s), then FUN_00415eb0 takes the
@@ -2694,6 +2702,10 @@ static bool capture_save(ft_runtime *rt, ft_save *sv)
         if (rt->face[i].tex) {
             snprintf(key, sizeof key, "face.%d", i);
             ft_save_set(sv, key, rt->face[i].code);
+            if (rt->face_lifted[i]) {
+                snprintf(key, sizeof key, "face.%d.lifted", i);
+                save_int(sv, key, 1);
+            }
         }
     save_int(sv, "face.formation", rt->face_formation);
     ft_save_set(sv, "music", rt->ch[CH_MUSIC].code);
@@ -2803,6 +2815,8 @@ static bool load_slot(ft_runtime *rt, int slot)
         ft_blob b;
         if ((v = ft_save_get(&sv, key)) && ft_assets_face(&rt->assets, v, &b) && layer_set(rt, &rt->face[i], b))
             snprintf(rt->face[i].code, sizeof rt->face[i].code, "%s", v);
+        snprintf(key, sizeof key, "face.%d.lifted", i);
+        rt->face_lifted[i] = save_get_int(&sv, key, 0) != 0;
     }
     rt->face_formation = save_get_int(&sv, "face.formation", rt->face_formation);
     rt->ch[CH_MUSIC].gain = (float)save_get_int(&sv, "music.volume", 1000) / 1000.0f;
@@ -3507,27 +3521,41 @@ void ft_runtime_update(ft_runtime *rt)
     }
 }
 
-/* Slot placement per %faceFormation (see FACE_SLOTS); `raise` lifts a slot above the base row. */
-static void face_slot_pos(int formation, int slot, float h, float *x, float *raise)
+/*
+ * A slot's top edge (FUN_0040ef90): the formation's y, 10 px higher for a %face2 face, and kept at
+ * least 16 px below the screen top (it clamps the top to 768 - 16 in its bottom-up coordinates).
+ * Its other correction, lifting a face whose bottom would leave the screen onto a 24 px grid,
+ * never fires for these formations.
+ */
+static float face_top(float y, bool lifted)
+{
+    return SDL_max(y - (lifted ? FACE2_LIFT : 0), FACE_TOP_MIN);
+}
+
+/* Slot placement per %faceFormation (FUN_0040f090, see FACE_SLOTS): left edge and top edge. */
+static void face_slot_pos(const ft_runtime *rt, int slot, float *x, float *y)
 {
     static const float centre = 416, left = 168, right = 664;
     static const float f4[4] = { 140, 248, 596, 704 };
-    *raise = 0;
+    const bool *lift = rt->face_lifted;
     *x = centre;
-    switch (formation) {
+    *y = face_top(FACE_Y, lift[slot]);
+    switch (rt->face_formation) {
     case 0:
     case 1:
         if (slot <= 3) {
             *x = (slot & 1) ? right : left;
-            if (slot <= 1)
-                *raise = h; /* 0/1 above 2/3 */
+            if (slot <= 1) /* 0/1 a face height above 2/3 */
+                *y = face_top(face_top(FACE_Y, lift[slot + 2]) - FACE_H, lift[slot]);
         }
         break;
     case 3:
         break;
-    case 4:
-        if (slot <= 3)
+    case 4: /* the arch: outer slots 10 px under the row, inner ones at the screen top */
+        if (slot <= 3) {
             *x = f4[slot];
+            *y = face_top(slot == 0 || slot == 3 ? FACE_Y + 10 : FACE_Y - 544, lift[slot]);
+        }
         break;
     default: /* 2, the formation the game sets at boot */
         if (slot == 0)
@@ -3535,7 +3563,7 @@ static void face_slot_pos(int formation, int slot, float h, float *x, float *rai
         else if (slot == 1)
             *x = right;
         else if (slot == 3)
-            *raise = 544 - 200;
+            *y = face_top(FACE_Y - (544 - 200), lift[slot]);
         break;
     }
 }
@@ -3635,10 +3663,9 @@ static void draw_scene(ft_runtime *rt)
         const layer *f = &rt->face[i];
         if (!f->tex)
             continue;
-        float x, raise = 0;
-        face_slot_pos(rt->face_formation, i, FACE_H, &x, &raise);
+        float x, y;
+        face_slot_pos(rt, i, &x, &y);
         x += FACE_SHIFT_X;
-        float y = FACE_Y - raise;
         draw_face_frame(rt, x, y);
         SDL_FRect dst = { x, y, FACE_W, FACE_H };
         SDL_RenderTexture(rt->r, f->tex, NULL, &dst);
