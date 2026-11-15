@@ -372,6 +372,20 @@ or `ftconv run`'s headless host. `ft_interp_boot` follows the engine's boot sequ
     46 beats in mode 0. `Draw n` shows a still, and `Loop n` cycles pictures.
 - **`%film`** (kt_cmd_film 0x424d10): clips advance `rate`/14 frames per frame. `%film.new` resets
   the rate to 4 (`FUN_00405630`), and `%film.Timer`/`SpeedThreadTimer` set it.
+  - A clip is a frame list: each `%film.load`/`load2` adds its ZDF's frames to clip 0
+    (`FUN_00405b90` → `FUN_00403d40`/`FUN_00403990`), so numbered parts play back to back as one
+    film (Ava023's C065X1 head + C065X2 plug, ava022b C047X1–2, Ava028 c157a–c, Ava037
+    C253X1–3); `addload` starts a new clip. Each part's last frame is recorded
+    (`FUN_00403650`) and drawn under every later frame (`FUN_00403310`), so the head's final
+    pose stays behind the plug. load2's third argument only sets texture-edge insets
+    (`FUN_0043d940`).
+  - A loaded film isn't drawn yet: the frame update (`FUN_00424bd0`) steps and draws it only
+    while +0x9c is set and `%film.OFF` (+0xa0) isn't. `SpeedPlay`, `SpeedDraw`, `SpeedPlayLoop`
+    and the `SpeedThreadPic*ON` forms set +0x9c; `new`, `delete` and `SpeedThreadPicOFF` clear
+    it. `SpeedDraw n` shows clip 0's frame n as a still until the next play rewinds it (Ava023's
+    entry plug). `SpeedPlayDataMaking`, `SpeedPlayDataDelete` and `BGEnable` aren't in the
+    binary, so they do nothing. `SpeedPlayRepart` and `SpeedPlayEx` aren't done; they show a
+    still for now.
   - `SpeedPlay` and `SpeedPlayLoop n` hold the script (`FUN_00419240` → `FUN_00424b60`) until the
     first clip has played through, n passes are done, or a loopcut fires (`FUN_004053c0`).
   - `SpeedThreadPicON`/`SpeedThreadPictuer` don't wait; the clips play once and hold the last frame

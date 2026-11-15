@@ -159,21 +159,33 @@ enum { CH_SOUND, CH_VOICE, CH_SE1, CH_SE2, CH_MUSIC, CH_COUNT };
  * a loaded clip takes the current rate (FUN_00405b90).
  */
 #define FILM_RATE_NEW 4
+/*
+ * A clip is a dfs01bmp (FilmPlayer): a frame list that every %film.load / load2 into its slot
+ * extends (FUN_00403990 appends a texture per ZDF frame, +0x38c is the running count), so the
+ * ZDFs loaded into one slot play back to back as one film. Ava023's entry plug is C065X1 (the
+ * Eva's head, 13 frames) then C065X2 (the plug, 11). Each part keeps its own ZDF x/y and scale.
+ */
+#define FILM_CLIP_ZDFS 8
 typedef struct film_clip {
-    ft_blob blob;
-    ft_zdf zdf;
+    ft_blob part[FILM_CLIP_ZDFS];
+    float part_scale[FILM_CLIP_ZDFS];
+    char part_code[FILM_CLIP_ZDFS][32];
+    SDL_Texture *part_last[FILM_CLIP_ZDFS]; /* each part's last frame, drawn under later parts */
+    float part_x[FILM_CLIP_ZDFS], part_y[FILM_CLIP_ZDFS], part_w[FILM_CLIP_ZDFS], part_h[FILM_CLIP_ZDFS];
+    int parts, cur;             /* loaded ZDFs; the one playing */
+    ft_zdf zdf;                 /* part `cur` */
     bool open, done;
     SDL_Texture *tex;
     float w, h;
-    float scale;                /* ft_assets_scale: event clips (740 units) x 1024/740 */
+    float scale;                /* ft_assets_scale of part `cur`: event clips (740 units) x 1024/740 */
     int loops;                  /* extra plays after the first; -1 = forever */
-    char code[32];
 } film_clip;
 
 typedef struct film {
     film_clip clip[FILM_PARTS];
     int count;
-    bool hidden, playing, thread;
+    bool hidden, playing, thread;   /* only a film with thread set (and not hidden) is drawn */
+    bool still;                 /* +0x6c: SpeedDraw's frozen frame */
     bool blocking;              /* SpeedPlay / SpeedPlayLoop: the script waits */
     int wait_passes;            /* SpeedPlayLoop n: release after n passes; 0 = when clip 0 ends */
     int passes;                 /* +0x60: passes of clip 0 since the play started */
@@ -661,7 +673,11 @@ static void clip_free(film_clip *c)
         ft_zdf_close(&c->zdf);
     if (c->tex)
         SDL_DestroyTexture(c->tex);
-    free(c->blob.data);
+    for (int i = 0; i < c->parts; i++) {
+        free(c->part[i].data);
+        if (c->part_last[i])
+            SDL_DestroyTexture(c->part_last[i]);
+    }
     memset(c, 0, sizeof *c);
 }
 
@@ -670,7 +686,7 @@ static void film_clear(film *f)
     for (int i = 0; i < f->count; i++)
         clip_free(&f->clip[i]);
     f->count = 0;
-    f->playing = f->thread = f->hidden = f->blocking = f->bure = false;
+    f->playing = f->thread = f->hidden = f->blocking = f->bure = f->still = false;
 }
 
 /* Shows the clip's current frame. */
@@ -679,6 +695,10 @@ static void clip_upload(ft_runtime *rt, film_clip *c)
     ft_image img;
     if (!c->open || !ft_zdf_to_image(&c->zdf, &img))
         return;
+    if (c->tex && (c->w != (float)img.w || c->h != (float)img.h)) { /* a part of another size */
+        SDL_DestroyTexture(c->tex);
+        c->tex = NULL;
+    }
     if (!c->tex) {
         c->tex = texture_from(rt, &img);
         c->w = (float)img.w;
@@ -689,18 +709,41 @@ static void clip_upload(ft_runtime *rt, film_clip *c)
     ft_image_free(&img);
 }
 
-/* Back to the keyframe. */
-static void clip_restart(ft_runtime *rt, film_clip *c)
+/* Opens part `i` on its keyframe. */
+static void clip_open_part(film_clip *c, int i)
 {
     if (c->open)
         ft_zdf_close(&c->zdf);
-    c->open = ft_zdf_open(&c->zdf, c->blob.data, c->blob.size) && ft_zdf_next(&c->zdf, NULL);
+    c->cur = i;
+    c->scale = c->part_scale[i];
+    c->open = ft_zdf_open(&c->zdf, c->part[i].data, c->part[i].size) && ft_zdf_next(&c->zdf, NULL);
+}
+
+/* One frame on, into the next part after a part's last frame; false at the clip's end. */
+static bool clip_advance(film_clip *c)
+{
+    if (!c->open)
+        return false;
+    if (c->zdf.next_frame < c->zdf.frame_count)
+        return ft_zdf_next(&c->zdf, NULL);
+    if (c->cur + 1 >= c->parts)
+        return false;
+    clip_open_part(c, c->cur + 1);
+    return c->open;
+}
+
+/* Back to the first part's keyframe. */
+static void clip_restart(ft_runtime *rt, film_clip *c)
+{
+    if (c->parts > 0)
+        clip_open_part(c, 0);
     c->done = false;
     clip_upload(rt, c);
 }
 
 static void film_restart(ft_runtime *rt, film *f, int loops)
 {
+    f->still = false; /* FUN_004051f0 clears +0x6c */
     f->acc = 0;
     f->last_ms = game_ms(rt);
     for (int i = 0; i < f->count; i++) {
@@ -709,7 +752,10 @@ static void film_restart(ft_runtime *rt, film *f, int loops)
     }
 }
 
-/* %film.load (slot 0) / %film.addload (a new clip). */
+/*
+ * %film.load / load2 add a part to clip 0 (FUN_00405b90 picks slot 0 and FUN_00403d40 extends
+ * its frame list); %film.addload / addload2 start a new clip (FUN_00405cc0). Either rewinds.
+ */
 static void film_load(ft_runtime *rt, const char *code, bool append)
 {
     film *f = &rt->film;
@@ -721,23 +767,41 @@ static void film_load(ft_runtime *rt, const char *code, bool append)
         return;
     }
     int slot = append ? f->count : 0;
-    if (slot >= FILM_PARTS) {
+    if (slot >= FILM_PARTS || (slot < f->count && f->clip[slot].parts >= FILM_CLIP_ZDFS)) {
         free(b.data);
         return;
     }
-    if (slot < f->count)
-        clip_free(&f->clip[slot]);
-    else
+    if (slot >= f->count)
         f->count = slot + 1;
-    f->clip[slot].blob = b;
-    f->clip[slot].scale = ft_assets_scale(b.arc);
-    clip_restart(rt, &f->clip[slot]);
-    snprintf(f->clip[slot].code, sizeof f->clip[slot].code, "%s", code);
+    film_clip *c = &f->clip[slot];
+    int p = c->parts;
+    c->part[p] = b;
+    c->part_scale[p] = ft_assets_scale(b.arc);
+    snprintf(c->part_code[p], sizeof c->part_code[0], "%s", code);
+    /* FUN_00403d40 → FUN_00403650 records the part's last frame; FUN_00403310 draws it
+       under every later frame */
+    ft_zdf z;
+    if (ft_zdf_open(&z, b.data, b.size)) {
+        while (ft_zdf_next(&z, NULL) && z.next_frame < z.frame_count)
+            ;
+        ft_image img;
+        if (ft_zdf_to_image(&z, &img)) {
+            c->part_last[p] = texture_from(rt, &img);
+            c->part_w[p] = (float)img.w;
+            c->part_h[p] = (float)img.h;
+            ft_image_free(&img);
+        }
+        c->part_x[p] = (float)z.x;
+        c->part_y[p] = (float)z.y;
+        ft_zdf_close(&z);
+    }
+    c->parts++;
+    clip_restart(rt, c);
 }
 
 static void film_tick(ft_runtime *rt, film *f, uint64_t now)
 {
-    if (f->count == 0 || !(f->playing || f->thread)) {
+    if (f->count == 0 || !f->thread || f->hidden || f->still) {
         f->last_ms = now;
         return;
     }
@@ -749,8 +813,8 @@ static void film_tick(ft_runtime *rt, film *f, uint64_t now)
         film_clip *c = &f->clip[i];
         bool changed = false;
         for (int s = 0; s < steps && c->open && !c->done; s++) {
-            if (c->zdf.next_frame < c->zdf.frame_count) {
-                changed = ft_zdf_next(&c->zdf, NULL) || changed;
+            if (clip_advance(c)) {
+                changed = true;
                 continue;
             }
             if (i == 0)
@@ -758,8 +822,7 @@ static void film_tick(ft_runtime *rt, film *f, uint64_t now)
             if (c->loops != 0) {
                 if (c->loops > 0)
                     c->loops--;
-                ft_zdf_close(&c->zdf);
-                c->open = ft_zdf_open(&c->zdf, c->blob.data, c->blob.size) && ft_zdf_next(&c->zdf, NULL);
+                clip_open_part(c, 0);
                 changed = true;
             } else {
                 c->done = true; /* hold the last frame */
@@ -1976,6 +2039,7 @@ static bool run_command(ft_runtime *rt, ft_interp *in, const ft_sline *l)
     } else if (strcmp(h, "%film.SpeedPlay") == 0 || strcmp(h, "%film.SpeedThreadPictuer") == 0) {
         int n = arg_int(l, 0, in);
         rt->film.playing = true;
+        rt->film.thread = true; /* LAB_0042554c */
         film_restart(rt, &rt->film, n > 0 ? n - 1 : 0);
         if (strcmp(h, "%film.SpeedThreadPictuer") == 0) /* threaded: doesn't wait */
             return false;
@@ -2024,11 +2088,40 @@ static bool run_command(ft_runtime *rt, ft_interp *in, const ft_sline *l)
         rt->film.hidden = false;
         rt->film.thread = true;
         film_restart(rt, &rt->film, -1);
-    } else if (strcmp(h, "%film.SpeedThreadPicOFF") == 0 || strcmp(h, "%film.SpeedPlayDataDelete") == 0) {
+    } else if (strcmp(h, "%film.SpeedDraw") == 0) {
+        /*
+         * kt_cmd_film: FUN_00405a20(0, n) puts clip 0 on frame n + 1 (1-based, +0x24) in still
+         * mode (+0x3b0 = 3) and sets +0x6c, which stops the stepping (FUN_00405240) until the
+         * next rewind (FUN_004051f0, i.e. SpeedPlay); then +0x9c shows the film. Ava023 shows
+         * the entry plug's first frame this way for 0.6 s before SpeedPlay.
+         */
+        int n = arg_int(l, 0, in);
+        film *f = &rt->film;
+        if (f->count > 0) {
+            film_clip *c = &f->clip[0];
+            clip_restart(rt, c);
+            for (int i = 0; i < n && clip_advance(c); i++)
+                ;
+            clip_upload(rt, c);
+        }
+        f->still = true;
+        f->thread = true;
+    } else if (strcmp(h, "%film.SpeedPlayRepart") == 0 || strcmp(h, "%film.SpeedPlayEx") == 0) {
+        /*
+         * Not done yet (Ava037, ava037c, Ava043). Both end at LAB_0042554c, which shows the film,
+         * so until they're traced they show the current frame as a still.
+         */
+        rt->film.thread = true;
+        rt->film.still = true;
+    } else if (strcmp(h, "%film.SpeedThreadPicOFF") == 0) {
+        /* clears +0x9c: the film stops and is no longer drawn (FUN_00424bd0) */
         rt->film.thread = false;
         rt->film.playing = false;
     } else if (strncmp(h, "%film.", 6) == 0) {
-        /* SpeedPlayDataMaking, BGEnable, CopyToSel, SpeedPlayEx/PlEx*, SpeedDraw, ...: not done yet */
+        /*
+         * CopyToSel, SpeedPlEx*, SpeedThreadKoma*, ...: not done yet. SpeedPlayDataMaking,
+         * SpeedPlayDataDelete and BGEnable aren't in the binary at all, so they do nothing.
+         */
     }
     /*
      * FSystem n (FUN_00442f10): 1 frees the save / album panels and falls into 3, which frees
@@ -3182,8 +3275,8 @@ static void dbg_report(const ft_runtime *rt, char *buf, size_t size)
     n = dbg_append(buf, size, n, "\nfilm: rate %d%s%s%s%s", rt->film.rate, rt->film.hidden ? " hidden" : "",
                    rt->film.playing ? " playing" : "", rt->film.thread ? " thread" : "", rt->film.bure ? " bure" : "");
     for (int i = 0; i < rt->film.count; i++)
-        n = dbg_append(buf, size, n, " %s(%u/%u)", rt->film.clip[i].code, rt->film.clip[i].zdf.next_frame,
-                       rt->film.clip[i].zdf.frame_count);
+        n = dbg_append(buf, size, n, " %s(%u/%u%s)", rt->film.clip[i].part_code[rt->film.clip[i].cur], rt->film.clip[i].zdf.next_frame,
+                       rt->film.clip[i].zdf.frame_count, rt->film.clip[i].parts > 1 ? ", +parts" : "");
     n = dbg_append(buf, size, n, "\nsprite: %d pics, %d cells, Timer %d%s%s", rt->sprite_pics, rt->sprite_cells,
                    rt->sprite_timer, rt->sprite_drawing ? " drawing" : "", rt->sprite_running ? " running" : "");
     for (int i = 0; i < rt->sprite_pics && i < 12; i++)
@@ -3671,10 +3764,17 @@ static void draw_scene(ft_runtime *rt)
     sprite_render(rt);
     /* film clips at their ZDF x/y within the CG area, in the units of their archive */
     float bure_y = film_bure_y(&rt->film, game_ms(rt));
-    for (int i = 0; !rt->film.hidden && i < rt->film.count; i++) {
+    for (int i = 0; rt->film.thread && !rt->film.hidden && i < rt->film.count; i++) {
         const film_clip *c = &rt->film.clip[i];
         if (!c->tex)
             continue;
+        for (int p = 0; p < c->cur; p++) /* earlier parts' last frames (FUN_00403310) */
+            if (c->part_last[p]) {
+                float pk = c->part_scale[p];
+                SDL_FRect under = { SDL_roundf(c->part_x[p] * pk), SDL_roundf(c->part_y[p] * pk) + bure_y * pk,
+                                    c->part_w[p] * pk, c->part_h[p] * pk };
+                SDL_RenderTexture(rt->r, c->part_last[p], NULL, &under);
+            }
         float k = c->scale;
         SDL_FRect dst = { SDL_roundf((float)c->zdf.x * k), SDL_roundf((float)c->zdf.y * k) + bure_y * k, c->w * k, c->h * k };
         SDL_RenderTexture(rt->r, c->tex, NULL, &dst);
